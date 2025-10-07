@@ -1,0 +1,495 @@
+body {
+  font-family: "Georgia", serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f6f2;
+  color: #333;
+}
+
+header {
+  background-color: #1f1f1f;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+/* --- HEADER FIXE ET MINCE --- */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000; /* noir */
+  z-index: 1000;
+  padding: 10px 0; /* plus fin */
+  border-bottom: 1px solid #222; /* ligne discrète */
+  text-align: center;
+}
+
+/* --- Titre du site --- */
+header h1 {
+  color: white;
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+/* --- Menu de navigation --- */
+header nav ul {
+  list-style: none;
+  padding: 5px 0 0 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: white; /* texte blanc */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* --- Changement de couleur au survol --- */
+header nav a:hover {
+  color: #00aaff; /* bleu au survol */
+}
+
+/* --- Pour éviter que le header ne cache le contenu --- */
+body {
+  margin: 0;
+  padding-top: 80px; /* ajuste selon la taille réelle du header */
+}
+/* --- Image de la section d’accueil --- */
+.hero {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.hero .portrait {
+  width: 400px;          /* taille de la photo */
+  max-width: 90%;        /* pour éviter qu’elle dépasse sur petits écrans */
+  border-radius: 10px;   /* coins légèrement arrondis (optionnel) */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* petite ombre pour la mettre en valeur */
+  display: block;
+  margin: 0 auto 20px;   /* centre la photo et ajoute un espace en bas */
+}
+/* Justification du texte */
+.justifie {
+  text-align: justify;
+  line-height: 1.6; /* espacement agréable */
+}
+
+/* Décalage vers la droite */
+.decale-gauche {
+  margin-left: 2cm;
+}
+.bio, .livres {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+.justifie {
+  text-align: justify;   /* texte justifié */
+  line-height: 1.6;      /* espacement agréable entre les lignes */
+}
+
+.decale-gauche {
+  margin-left: 2cm;      /* décale le texte vers la droite */
+}
+
+./* === AGRANDIR UNIQUEMENT LES PHOTOS DES LIVRES === */
+.livre img {
+  width: 700px;       /* agrandit la photo */
+  height: auto;       /* garde les bonnes proportions */
+  display: block;     /* permet de la centrer */
+  margin: 30px auto;  /* centre la photo avec de l'espace autour */
+}
+
+/* === MISE EN PAGE PLUS LISIBLE === */
+
+body {
+  font-size: 20px; /* texte global plus grand */
+  line-height: 1.8;
+}
+
+/* --- SECTIONS LIVRES --- */
+.livre {
+  max-width: 900px;
+  margin: 60px auto;
+  background: #fffaf3;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+/* --- TITRES DES LIVRES --- */
+.livre h2 {
+  font-size: 2.2em; /* très lisible */
+  margin-bottom: 25px;
+  color: #2c2c2c;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- IMAGES --- */
+/* === ENCADREMENT LARGE ET ÉLÉGANT POUR LES PHOTOS === */
+.livre img {
+  width: 550px;                  /* grande taille (tu peux ajuster) */
+  height: auto;
+  display: block;
+  margin: 30px auto;             /* centre la photo */
+  border-radius: 12px;           /* coins légèrement arrondis */
+  border: 10px solid #f4e8d3;    /* large bordure beige clair, style “livre ancien” */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* ombre élégante */
+  background-color: #fffdf8;     /* léger fond clair à l’intérieur */
+}
+/* --- TEXTE DU LIVRE --- */
+.livre p {
+  font-size: 1.3em; /* texte plus grand */
+  text-align: justify;
+  margin: 0 60px;
+  line-height: 1.9;
+}
+
+/* --- TITRE PRINCIPAL DU SITE --- */
+header h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+}
+
+/* --- MENU --- */
+nav a {
+  font-size: 1.2em;
+  padding: 10px 15px;
+}
+.livre img {
+  width: 100%;
+  border-radius: 10px;
+}
+.portrait {
+  width: 200px;          /* taille de la photo */
+  border-radius: 50%;    /* rend la photo ronde */
+  display: block;
+  margin: 20px auto;     /* centre l'image */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+.bouton {
+  display: inline-block;        /* les boutons s’alignent côte à côte */
+  background-color: #333;       /* couleur du fond */
+  color: white;                 /* couleur du texte */
+  padding: 12px 24px;           /* espace intérieur */
+  border-radius: 6px;           /* coins arrondis */
+  text-decoration: none;        /* retire le soulignement du lien */
+  font-weight: bold;
+  margin: 10px 10px 0 0;        /* espace entre les boutons */
+  transition: background 0.3s;  /* effet au survol */
+}
+
+.bouton:hover {
+  background-color: #555;       /* couleur quand la souris passe dessus */
+}
+.bouton {
+  display: block;
+  width: 200px;
+  margin: 10px auto; /* centre chaque bouton */
+}
+#Contact { text-align:center !important; font-size:0.9rem !important; }
+/* Centrage de la section Contact */
+#Contact {
+  text-align: center;      /* centre le texte du titre et du paragraphe */
+  margin-top: 40px;
+}
+
+/* Centrage du formulaire lui-même */
+#Contact form {
+  display: inline-block;   /* permet de centrer le bloc */
+  text-align: left;        /* pour que les labels et champs restent alignés à gauche à l’intérieur */
+  margin: 0 auto;          /* centre le formulaire horizontalement */
+  padding: 20px;
+  border: 1px solid #ccc;  /* (optionnel) encadré discret */
+  border-radius: 10px;     /* coins arrondis */
+  background-color: #f9f9f9; /* fond clair pour démarquer la zone */
+}
+
+/* Styles des champs pour une meilleure présentation */
+#Contact input, 
+#Contact textarea {
+  width: 300px;
+  max-width: 90%;          /* pour s’adapter aux petits écrans */
+  padding: 8px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+/* Boutons */
+#Contact input[type="submit"],
+#Contact input[type="reset"] {
+  width: auto;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#Contact input[type="submit"]:hover,
+#Contact input[type="reset"]:hover {
+  background-color: #555;
+}
+
+.avis {
+  background-color: #f9f9f9;       /* fond léger */
+  border-radius: 10px;             /* coins arrondis */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* petite ombre */
+  padding: 15px 20px;
+  margin-bottom: 20px;             /* espace entre les avis */
+  font-size: 0.95rem;              /* texte plus petit */
+  line-height: 1.5;
+}
+
+.avis p {
+  {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+.justifie {
+  text-align: justify;   /* texte justifié */
+  line-height: 1.6;      /* espacement agréable entre les lignes */
+}
+
+.decale-gauche {
+  margin-left: 2cm;      /* décale le texte vers la droite */
+}
+
+.avis {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+
+  /* ➕ Ajoute ce retrait à gauche */
+  margin-left: 2cm;
+}
+.avis .auteur {
+  {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+.justifie {
+  text-align: justify;   /* texte justifié */
+  line-height: 1.6;      /* espacement agréable entre les lignes */
+}
+
+.decale-gauche {
+  margin-left: 2cm;      /* décale le texte vers la droite */
+}
+
+
+/* Responsive : avis s’adapte aux petits écrans */
+@media screen and (max-width: 600px) {
+  .avis {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vos avis | Franck CHICH - Auteur</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* --- Styles pour la page Avis --- */
+    #Avis {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    #Avis form {
+      display: inline-block;
+      text-align: left;
+      margin: 20px auto;
+      padding: 20px 30px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      width: 350px;
+      max-width: 90%;
+    }
+
+    #Avis input,
+    #Avis textarea,
+    #Avis select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+      display: block;
+    }
+
+    #Avis input[type="submit"],
+    #Avis input[type="reset"] {
+      width: auto;
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #Avis input[type="submit"]:hover,
+    #Avis input[type="reset"]:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+
+<body>
+  <body>
+  <header>
+    <h1>[Franck CHICH - Auteur]</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="livres.html">Mes livres</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="avis.html">Vos avis</a></li>
+        <li><a href="ventes_en_ligne.html">Vente en ligne</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main>
+    <section id="Avis">
+      <h2>Laissez votre avis</h2>
+      <p>Partagez votre ressenti sur mes livres :</p>
+
+      <form action="mailto:franckchichauteur@gmail.com" method="post" enctype="text/plain">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="livre">Livre concerné :</label>
+        <select id="livre" name="livre" required>
+          <option value="">-- Sélectionnez un livre --</option>
+          <option value="L'affaire Morin">L'affaire Morin</option>
+          <option value="Ce matin là...">Ce matin là...</option>
+          <option value="Au coeur du passé">Au coeur du passé</option>
+          <option value="Les fréquences du chaos">Les fréquences du chaos</option>
+        </select>
+
+        <label for="avis">Votre avis :</label>
+        <textarea id="avis" name="avis" rows="5" required></textarea>
+
+        <input type="submit" value="Envoyer">
+        <input type="reset" value="Effacer">
+      </form>
+    </section>
+  </main>
+<section class="avis-lecteurs">
+  
+<div class="avis">
+  
+<p>Je viens tout juste de terminer <strong>L’affaire Morin</strong>. (Je suis la lectrice venue hier avec ma fille, nous avons acheté le livre ensemble.) Un grand bravo pour cette enquête passionnante ! J’ai été complètement happée par l’intrigue, et le dénouement est à la hauteur des plus grands auteurs — brillant et surprenant.</p>
+    <p class="auteur">Sonia M. [L’affaire Morin]</p>
+  </div>
+
+  <div class="avis">
+    <p>J’ai beaucoup aimé <strong>L’affaire Morin</strong>.</p>
+    <p class="auteur">Elody D. [L’affaire Morin]</p>
+  </div>
+
+  <div class="avis">
+    <p>Je n’ai pas lâché votre livre une seule seconde. C’est palpitant et magnifiquement écrit. Bravo vous avez trouvé une nouvelle lectrice pour vos polars.</p>
+    <p class="auteur">Françoise L. [L’affaire Morin]</p>
+  </div>
+
+  <div class="avis">
+    <p>Bonsoir Franck, je viens de finir ton livre, je n’ai qu’un mot : Bravo. J’attends la dédicace.</p>
+    <p class="auteur">Nathalie C. [L’affaire Morin]</p>
+  </div>
+
+  <div class="avis">
+    <p>Intrigue prenante. On ne décroche plus dès les premières pages. Personnages attachants, passion, enquête qui tient en haleine jusqu’au bout. Bon moment de lecture.</p>
+    <p class="auteur">Odette C. [L’affaire Morin]</p>
+  </div>
+
+  <div class="avis">
+    <p>Belle histoire, historique & passionnelle. On ne reste pas sur sa faim. Les personnages sont très attachants.</p>
+    <p class="auteur">Odette C. [Au cœur du passé]</p>
+  </div>
+</section>
+  <footer style="text-align:center;font-size:0.9rem;color:#555;margin-top:40px;padding:20px 0;background-color:#f8f8f8;border-top:1px solid #ddd;">
+    <p>© 2025 Franck CHICH. Tous droits réservés.</p>
+  .avis-lecteurs h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+<footer>
+    <h3>Contact</h3>
+    <p>📧 <a href="mailto:franckchichauteur@mail.com">franckchichauteur@mail.com</a></p>
+    <p>© 2025 Franck CHICH. Tous droits réservés.</p>
+  </footer>
+ 
+/* ==========================
+   AVIS LECTEURS — JUSTIFIÉ
+   Retrait gauche et droite = 2cm
+   (placer CE BLOC EN FIN DE style.css)
+   ========================== */
+
+.avis-lecteurs {
+  box-sizing: border-box;   /* garantit que le padding ne change pas la largeur */
+  padding-left: 2cm;        /* retrait gauche intérieur */
+  padding-right: 2cm;       /* retrait droit intérieur */
+  /* Si tu veux aussi que le bloc soit limité en largeur, tu peux ajouter :
+     max-width: 900px;
+     margin: 0 auto;
+  */
+}
+
+.avis-lecteurs h2 {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+/* Paragraphes justifiés à l'intérieur du conteneur */
+.avis-lecteurs p {
+  text-align: justify !important;
+  line-height: 1.6;
+  margin: 0 0 1em 0;
+}
+
+/* Sur petits écrans, on annule le grand retrait pour éviter le scroll horizontal */
+@media (max-width: 700px) {
+  .avis-lecteurs {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .avis-lecteurs p { text-align: left; } /* plus lisible sur mobile */
+}
+ </body>
+</html>
+</section>
+  </main>
