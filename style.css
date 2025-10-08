@@ -489,7 +489,54 @@ nav a {
   }
   .avis-lecteurs p { text-align: left; } /* plus lisible sur mobile */
 }
- </body>
+/* 🌐 Écrans larges (PC) */
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* 📱 Tablettes */
+@media screen and (max-width: 1024px) and (min-width: 601px) {
+  body {
+    font-size: 16px;
+  }
+
+  header nav ul {
+    flex-wrap: wrap; /* permet de passer sur deux lignes si besoin */
+    gap: 15px;
+  }
+
+  .livre img {
+    max-width: 80%;
+  }
+}
+
+/* 📱 Smartphones */
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .livre img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #Contact form, #Avis form {
+    width: 100%;
+    padding: 10px;
+  }
+}
+ 
+  </body>
 </html>
 </section>
   </main>
+
