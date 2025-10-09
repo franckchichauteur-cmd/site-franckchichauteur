@@ -98,6 +98,14 @@ Les fréquences du chaos est donc à la fois un thriller et une méditation sur 
 </body>
 
 </html>
+<!-- Fenêtre vidéo (popup) -->
+<div id="lecteurVideo" class="video-popup" onclick="fermerVideo()">
+  <div class="video-wrapper" onclick="event.stopPropagation()">
+    <video id="videoLocal" controls autoplay></video>
+    <button class="fermer" onclick="fermerVideo()">✖</button>
+  </div>
+</div>
+
 
 
 
