@@ -27,7 +27,7 @@
   <!-- L'affaire Morin -->
   
 <section class="livre">
-  <h2 class="titre-livre" onclick="jouerVideo('videos/au coeur du passé.mp4')">
+  <h2 class="titre-livre" onclick="ouvrirVideo('videos/au-coeur-du-passe.mp4')">
     L'affaire Morin
   </h2>
   
@@ -47,23 +47,17 @@
         J’ai eu envie d’explorer, à travers la fiction, les failles, les hasards et les zones d’ombre que l’on peut rencontrer même dans les lieux les plus tranquilles.
 </p>
 
-<!-- Balise vidéo (placée après toutes les sections de livres ou à la fin de <main>) -->
-<video id="video-livre" width="640" controls style="display:none; margin-top:20px;">
-  <source id="source-video" src="" type="video/mp4">
-  Votre navigateur ne supporte pas la lecture de vidéos.
-</video>
-
-<!-- Script pour lancer la vidéo au clic -->
-<script>
-  function jouerVideo(chemin) {
-    const video = document.getElementById('video-livre');
-    const source = document.getElementById('source-video');
-    source.src = chemin;   // change la source de la vidéo
-    video.load();          // recharge la vidéo
-    video.style.display = 'block';  // affiche la vidéo
-    video.play();          // lance la lecture
-  }
-</script>
+<!-- Fenêtre pop-up pour la vidéo -->
+  <div id="popup-video" class="popup" onclick="fermerVideo(event)">
+    <div class="popup-content">
+      <span class="fermer" onclick="fermerVideo()">&times;</span>
+      <video id="video-livre" controls>
+        <source id="source-video" src="" type="video/mp4">
+        Votre navigateur ne supporte pas la lecture de vidéos.
+      </video>
+    </div>
+  </div>
+</main>
     </section>
 
     <!-- Livre 2 -->
@@ -145,6 +139,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
