@@ -25,12 +25,16 @@
   
 <main>
   <!-- L'affaire Morin -->
-  <section class="livre">
-    <h2 class="L'affaire Morin" onclick="jouerVideo('videos/affaire-morin.mp4')">L'affaire Morin</h2>
-    <img src="Images/AM.jpg" alt="L'affaire Morin" class="petite-photo">
+  
+<section class="livre">
+  <h2 class="titre-livre" onclick="jouerVideo('videos/affaire-morin.mp4')">
+    L'affaire Morin
+  </h2>
+  
+  <img src="Images/AM.jpg" alt="L'affaire Morin" class="petite-photo">
 
-    <p class="justifie decale-gauche justifie-serre">
-          <strong>Comment est né mon livre : "L’Affaire Morin"</strong><br><br>
+  <p class="justifie decale-gauche">
+    <strong>Comment est né mon livre : "L’Affaire Morin"</strong><br><br>
         L’idée d’écrire "L’Affaire Morin" m’est venue d’une envie de raconter une histoire sombre dans un cadre familier : un petit village tranquille de l’Essonne, Videlles.
         Pourquoi Videlles ? Tout simplement parce que j’y habite. J’aime l’atmosphère de ce village, à la fois paisible et chargé de mystères pour qui sait regarder derrière les apparences.
         Les personnages de ce roman sont pour la plupart inspirés de personnes que j’ai croisées ou que je connais depuis toujours.
@@ -42,26 +46,23 @@
         C’est de cette situation un peu surréaliste qu’est née l’idée de L’Affaire Morin.
         J’ai eu envie d’explorer, à travers la fiction, les failles, les hasards et les zones d’ombre que l’on peut rencontrer même dans les lieux les plus tranquilles.
 </p>
+</section>
 
-    
+<!-- Balise vidéo (placée après toutes les sections de livres ou à la fin de <main>) -->
 <video id="video-livre" width="640" controls style="display:none; margin-top:20px;">
   <source id="source-video" src="" type="video/mp4">
   Votre navigateur ne supporte pas la lecture de vidéos.
 </video>
-  </section>
-</main>
 
-<!-- Script pour activer la lecture -->
+<!-- Script pour lancer la vidéo au clic -->
 <script>
   function jouerVideo(chemin) {
     const video = document.getElementById('video-livre');
     const source = document.getElementById('source-video');
-    
-    // Change la source de la vidéo
-    source.src = chemin;
-    video.load();
-    video.style.display = 'block'; // rend visible
-    video.play(); // lance la lecture
+    source.src = chemin;   // change la source de la vidéo
+    video.load();          // recharge la vidéo
+    video.style.display = 'block';  // affiche la vidéo
+    video.play();          // lance la lecture
   }
 </script>
     </section>
@@ -145,6 +146,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
