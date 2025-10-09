@@ -76,7 +76,7 @@ body {
 /* Justification du texte */
 .justifie {
   text-align: justify;
-  line-height: 1.6; /* espacement agréable */
+  line-height: 1.2; /* espacement agréable */
 }
 
 /* Décalage vers la droite */
@@ -90,7 +90,7 @@ body {
 }
 .justifie {
   text-align: justify;   /* texte justifié */
-  line-height: 1.6;      /* espacement agréable entre les lignes */
+  line-height: 1.2;      /* espacement agréable entre les lignes */
 }
 
 .decale-gauche {
@@ -109,7 +109,7 @@ body {
 
 body {
   font-size: 20px; /* texte global plus grand */
-  line-height: 1.8;
+  line-height: 1.2;
 }
 
 /* --- SECTIONS LIVRES --- */
@@ -149,7 +149,7 @@ body {
   font-size: 1.3em; /* texte plus grand */
   text-align: justify;
   margin: 0 60px;
-  line-height: 1.9;
+  line-height: 1.2;
 }
 
 /* --- TITRE PRINCIPAL DU SITE --- */
@@ -249,7 +249,7 @@ nav a {
   padding: 15px 20px;
   margin-bottom: 20px;             /* espace entre les avis */
   font-size: 0.95rem;              /* texte plus petit */
-  line-height: 1.5;
+  line-height: 1.2;
 }
 
 .avis p {
@@ -260,7 +260,7 @@ nav a {
 }
 .justifie {
   text-align: justify;   /* texte justifié */
-  line-height: 1.6;      /* espacement agréable entre les lignes */
+  line-height: 1.2;      /* espacement agréable entre les lignes */
 }
 
 .decale-gauche {
@@ -274,7 +274,7 @@ nav a {
   padding: 15px 20px;
   margin-bottom: 20px;
   font-size: 0.95rem;
-  line-height: 1.5;
+  line-height: 1.2;
 
   /* ➕ Ajoute ce retrait à gauche */
   margin-left: 2cm;
@@ -287,7 +287,7 @@ nav a {
 }
 .justifie {
   text-align: justify;   /* texte justifié */
-  line-height: 1.6;      /* espacement agréable entre les lignes */
+  line-height: 1.2;      /* espacement agréable entre les lignes */
 }
 
 .decale-gauche {
@@ -477,7 +477,7 @@ nav a {
 /* Paragraphes justifiés à l'intérieur du conteneur */
 .avis-lecteurs p {
   text-align: justify !important;
-  line-height: 1.6;
+  line-height: 1.2;
   margin: 0 0 1em 0;
 }
 
@@ -589,3 +589,4 @@ nav a {
   cursor: pointer;
   padding: 5px 10px;
 }
+
