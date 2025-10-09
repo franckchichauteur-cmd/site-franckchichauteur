@@ -147,69 +147,54 @@
         La même harmonie qui émeut pourrait devenir chaos.
         "Les fréquences du chaos" est donc à la fois un thriller et une méditation sur la dualité de l’art :
         sa lumière, sa part d’ombre, et ce pouvoir mystérieux qu’il exerce sur nos émotions.
-      </p>
-      <!-- Fenêtre pop-up pour la vidéo -->
-      <div class="popup-content">
-      <span class="fermer" onclick="fermerVideo()">&times;</span>
-      <video id="video-livre" controls>
-        <source id="source-video" src="" type="video/mp4">
-        Votre navigateur ne supporte pas la lecture de vidéos.
-      </video>
-    </div>
-<div id="popup-video" class="popup" onclick="fermerVideo(event)">
-  <div class="popup-content">
-    <span class="fermer" onclick="fermerVideo()">&times;</span>
-    <video id="video-livre" controls>
-      <source id="source-video" src="" type="video/mp4">
-      Votre navigateur ne supporte pas la lecture de vidéos.
-    </video>
-  </div>
-  </main>
+      
+</p>
     </section>
-  <main>
-<script>
-  function jouerVideo(chemin) {
-    const video = document.getElementById('video-livre');
-    const source = document.getElementById('source-video');
-    source.src = chemin;   // change la source
-    video.load();          // recharge la vidéo
-    video.style.display = 'block';  // affiche la vidéo
-    video.play();          // lance la lecture
-  }
-</script>
 
-    <footer id="Contact" style="text-align:center;font-size:0.9rem;color:#555;margin-top:40px;padding:20px 0;background-color:#f8f8f8;border-top:1px solid #ddd;">
+    <!-- Fenêtre pop-up unique -->
+    <div id="popup-video" class="popup" onclick="fermerVideo(event)">
+      <div class="popup-content">
+        <span class="fermer" onclick="fermerVideo()">&times;</span>
+        <video id="video-livre" controls>
+          <source id="source-video" src="" type="video/mp4">
+          Votre navigateur ne supporte pas la lecture de vidéos.
+        </video>
+      </div>
+    </div>
+
+  </main>
+
+  <footer id="Contact" style="text-align:center;font-size:0.9rem;color:#555;margin-top:40px;padding:20px 0;background-color:#f8f8f8;border-top:1px solid #ddd;">
     <h3 style="margin:0 0 8px;font-size:1.05rem;color:#333;">Contact</h3>
     <p style="margin:6px 0;">📧 <a href="mailto:franckchichauteur@mail.com">franckchichauteur@mail.com</a></p>
     <p style="margin:6px 0;font-size:0.85rem;">© 2025 Franck CHICH. Tous droits réservés.</p>
   </footer>
-<script>
-  function ouvrirVideo(chemin) {
-    const popup = document.getElementById('popup-video');
-    const video = document.getElementById('video-livre');
-    const source = document.getElementById('source-video');
 
-    source.src = chemin;
-    video.load();
-    popup.style.display = 'flex'; // affiche la pop-up
-    video.play();
-  }
-
-  function fermerVideo(event) {
-    const popup = document.getElementById('popup-video');
-    const video = document.getElementById('video-livre');
-
-    // Fermer si on clique sur le fond sombre ou sur la croix
-    if (!event || event.target === popup || event.target.classList.contains('fermer')) {
-      popup.style.display = 'none';
-      video.pause();
-      video.currentTime = 0;
+  <script>
+    function ouvrirVideo(chemin) {
+      const popup = document.getElementById('popup-video');
+      const video = document.getElementById('video-livre');
+      const source = document.getElementById('source-video');
+      source.src = chemin;
+      video.load();
+      popup.style.display = 'flex';
+      video.play();
     }
-  }
-</script>
+
+    function fermerVideo(event) {
+      const popup = document.getElementById('popup-video');
+      const video = document.getElementById('video-livre');
+      if (!event || event.target === popup || event.target.classList.contains('fermer')) {
+        popup.style.display = 'none';
+        video.pause();
+        video.currentTime = 0;
+      }
+    }
+  </script>
 
 </body>
 </html>
+
 
 
 
