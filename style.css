@@ -607,6 +607,12 @@ nav a {
   margin-left: 2cm;       /* décale le texte vers la droite */
   margin-right: 2cm;      /* optionnel : décale aussi à droite */
 }
+.titre-livre {
+  cursor: pointer;        /* Montre que c'est cliquable */
+  color: #007BFF;         /* Couleur bleu type lien */
+  text-decoration: underline;
+}
+
 
 
 
