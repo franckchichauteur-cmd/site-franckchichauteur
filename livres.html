@@ -105,37 +105,12 @@
     </section>
   </main>
 
-  <!-- Fenêtre vidéo (popup) -->
-  <div id="lecteurVideo" class="video-popup" onclick="fermerVideo()">
-    <div class="video-wrapper" onclick="event.stopPropagation()">
-      <video id="videoLocal" controls></video>
-      <button class="fermer" onclick="fermerVideo()">✖</button>
-    </div>
-  </div>
-
-  <script>
-    function jouerVideo(src) {
-      const lecteur = document.getElementById('lecteurVideo');
-      const video = document.getElementById('videoLocal');
-      video.src = src;
-      lecteur.style.display = 'flex';
-      video.play();
-    }
-
-    function fermerVideo() {
-      const lecteur = document.getElementById('lecteurVideo');
-      const video = document.getElementById('videoLocal');
-      video.pause();
-      video.src = '';
-      lecteur.style.display = 'none';
-    }
-  </script>
-
-  <footer id="Contact" style="text-align:center;font-size:0.9rem;color:#555;margin-top:40px;padding:20px 0;background-color:#f8f8f8;border-top:1px solid #ddd;">
+    <footer id="Contact" style="text-align:center;font-size:0.9rem;color:#555;margin-top:40px;padding:20px 0;background-color:#f8f8f8;border-top:1px solid #ddd;">
     <h3 style="margin:0 0 8px;font-size:1.05rem;color:#333;">Contact</h3>
     <p style="margin:6px 0;">📧 <a href="mailto:franckchichauteur@mail.com">franckchichauteur@mail.com</a></p>
     <p style="margin:6px 0;font-size:0.85rem;">© 2025 Franck CHICH. Tous droits réservés.</p>
   </footer>
 </body>
 </html>
+
 
