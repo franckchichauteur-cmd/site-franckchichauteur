@@ -22,13 +22,15 @@
     </nav>
   </header>
 
-  <main>
-    <!-- Livre 1 -->
-    <section class="livre">
-      <h2 class="titre-livre" onclick="jouerVideo('videos/affaire-morin.mp4')">L'affaire Morin</h2>
-      <img src="Images/AM.jpg" alt="L'affaire Morin" class="petite-photo">
-      <p class="justifie decale-gauche">
-<p class="justifie-serre">
+  
+<main>
+  <!-- Livre 1 -->
+  <section class="livre">
+    <h2 class="titre-livre" onclick="jouerVideo('videos/affaire-morin.mp4')">L'affaire Morin</h2>
+
+    <img src="Images/AM.jpg" alt="L'affaire Morin" class="petite-photo">
+
+    <p class="justifie decale-gauche justifie-serre">
           <strong>Comment est né mon livre : "L’Affaire Morin"</strong><br><br>
         L’idée d’écrire "L’Affaire Morin" m’est venue d’une envie de raconter une histoire sombre dans un cadre familier : un petit village tranquille de l’Essonne, Videlles.
         Pourquoi Videlles ? Tout simplement parce que j’y habite. J’aime l’atmosphère de ce village, à la fois paisible et chargé de mystères pour qui sait regarder derrière les apparences.
@@ -40,7 +42,29 @@
         J’ai trouvé leur démarche complètement absurde. J'étais tout de même rassuré, je n'avais pas cambriolé mon domicile.
         C’est de cette situation un peu surréaliste qu’est née l’idée de L’Affaire Morin.
         J’ai eu envie d’explorer, à travers la fiction, les failles, les hasards et les zones d’ombre que l’on peut rencontrer même dans les lieux les plus tranquilles.
-      </p>
+</p>
+
+    <!-- Balise vidéo (cachée au départ) -->
+    <video id="video-livre" width="640" controls style="display:none; margin-top: 20px;">
+      <source id="source-video" src="" type="video/mp4">
+      Ton navigateur ne supporte pas la vidéo.
+    </video>
+  </section>
+</main>
+
+<!-- Script pour activer la lecture -->
+<script>
+  function jouerVideo(chemin) {
+    const video = document.getElementById('video-livre');
+    const source = document.getElementById('source-video');
+    
+    // Change la source de la vidéo
+    source.src = chemin;
+    video.load();
+    video.style.display = 'block'; // rend visible
+    video.play(); // lance la lecture
+  }
+</script>
     </section>
 
     <!-- Livre 2 -->
@@ -112,5 +136,6 @@
   </footer>
 </body>
 </html>
+
 
 
