@@ -555,9 +555,8 @@ nav a {
   color: #0066ff;
 }
 
-/* Popup vidéo */
 .video-popup {
-  display: none; /* cachée au départ */
+  display: none;
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
@@ -566,19 +565,15 @@ nav a {
   align-items: center;
   z-index: 1000;
 }
-
 .video-wrapper {
   position: relative;
   width: 80%;
   max-width: 800px;
 }
-
 .video-wrapper video {
   width: 100%;
-  height: auto;
   border-radius: 10px;
 }
-
 .fermer {
   position: absolute;
   top: -10px;
@@ -586,10 +581,11 @@ nav a {
   background: red;
   color: white;
   border: none;
-  font-size: 20px;
   border-radius: 50%;
+  font-size: 20px;
   cursor: pointer;
   padding: 5px 10px;
 }
+
 
 
