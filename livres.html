@@ -7,6 +7,23 @@
   <title>Mes livres | Franck CHICH - Auteur</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<script>
+function jouerVideo(chemin) {
+  const lecteur = document.getElementById('lecteurVideo');
+  const video = document.getElementById('videoLocal');
+  video.src = chemin;
+  lecteur.style.display = "flex";
+  video.play();
+}
+
+function fermerVideo() {
+  const lecteur = document.getElementById('lecteurVideo');
+  const video = document.getElementById('videoLocal');
+  video.pause();
+  video.currentTime = 0;
+  lecteur.style.display = "none";
+}
+</script>
 
 <body>
   <header>
@@ -107,6 +124,7 @@
   </script>
 </body>
 </html>
+
 
 
 
