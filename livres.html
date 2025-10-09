@@ -153,6 +153,17 @@
         "Les fréquences du chaos" est donc à la fois un thriller et une méditation sur la dualité de l’art :
         sa lumière, sa part d’ombre, et ce pouvoir mystérieux qu’il exerce sur nos émotions.
       </p>
+      <!-- Fenêtre pop-up pour la vidéo -->
+  <div id="popup-video" class="popup" onclick="fermerVideo(event)">
+    <div class="popup-content">
+      <span class="fermer" onclick="fermerVideo()">&times;</span>
+      <video id="video-livre" controls>
+        <source id="source-video" src="" type="video/mp4">
+        Votre navigateur ne supporte pas la lecture de vidéos.
+      </video>
+    </div>
+  </div>
+</main>
     </section>
   </main>
 <script>
@@ -198,6 +209,7 @@
 
 </body>
 </html>
+
 
 
 
