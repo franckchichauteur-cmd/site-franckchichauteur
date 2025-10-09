@@ -128,6 +128,16 @@
       </p>
     </section>
   </main>
+<script>
+  function jouerVideo(chemin) {
+    const video = document.getElementById('video-livre');
+    const source = document.getElementById('source-video');
+    source.src = chemin;   // change la source
+    video.load();          // recharge la vidéo
+    video.style.display = 'block';  // affiche la vidéo
+    video.play();          // lance la lecture
+  }
+</script>
 
     <footer id="Contact" style="text-align:center;font-size:0.9rem;color:#555;margin-top:40px;padding:20px 0;background-color:#f8f8f8;border-top:1px solid #ddd;">
     <h3 style="margin:0 0 8px;font-size:1.05rem;color:#333;">Contact</h3>
@@ -136,6 +146,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
