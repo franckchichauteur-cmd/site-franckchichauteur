@@ -78,6 +78,13 @@
     <h3 style="margin:0 0 8px;font-size:1.05rem;color:#333;">Contact</h3>
     <p style="margin:6px 0;">📧 <a href="mailto:franckchichauteur@mail.com">franckchichauteur@mail.com</a></p>
     <p style="margin:6px 0;font-size:0.85rem;">© 2025 Franck CHICH. Tous droits réservés.</p>
+  
+<div id="lecteurVideo" class="video-popup" onclick="fermerVideo()">
+  <div class="video-wrapper" onclick="event.stopPropagation()">
+    <video id="videoLocal" controls autoplay></video>
+    <button class="fermer" onclick="fermerVideo()">✖</button>
+  </div>
+</div>
   </footer>
 
   <!-- Script pour la lecture vidéo -->
@@ -100,6 +107,7 @@
   </script>
 </body>
 </html>
+
 
 
 
