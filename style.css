@@ -589,4 +589,11 @@ nav a {
   cursor: pointer;
   padding: 5px 10px;
 }
+.justifie-serre {
+  text-align: justify;    /* garde le texte justifié */
+  line-height: 1.2;       /* réduit l'interligne */
+  margin-left: 2cm;       /* décale le texte vers la droite */
+  margin-right: 2cm;      /* optionnel : décale aussi à droite */
+}
+
 
