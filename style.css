@@ -706,6 +706,41 @@ nav ul li a:hover {
     padding: 8px;
   }
 }
+.table-actualites {
+  width: 80%;                  /* Moins large pour un centrage harmonieux */
+  max-width: 1000px;           /* Limite la largeur sur grands écrans */
+  margin: 40px auto;           /* Centre le tableau horizontalement */
+  border-collapse: separate;   /* Permet d'ajouter de l'espace entre les cellules */
+  border-spacing: 0 10px;      /* Espace vertical entre les lignes */
+  font-family: "Georgia", serif;
+  font-size: 1.05rem;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.table-actualites th, 
+.table-actualites td {
+  border: 1px solid #ccc;
+  padding: 16px 24px;          /* Plus d’espace dans chaque cellule */
+  background-color: #fff;
+}
+
+.table-actualites th {
+  background-color: #2e7d32;   /* Vert élégant */
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.table-actualites tr:nth-child(even) td {
+  background-color: #f5f5f5;
+}
+
+.table-actualites tr:hover td {
+  background-color: #e8f5e9;   /* Vert clair au survol */
+  transition: background-color 0.3s ease;
+}
+
 
 
 
