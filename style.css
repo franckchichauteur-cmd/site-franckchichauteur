@@ -740,6 +740,49 @@ nav ul li a:hover {
   background-color: #e8f5e9;   /* Vert clair au survol */
   transition: background-color 0.3s ease;
 }
+.table-actualites {
+  width: 80%;
+  max-width: 1000px;
+  margin: 60px auto;           /* <-- centre horizontalement le tableau */
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  font-family: "Georgia", serif;
+  font-size: 1.05rem;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.table-actualites th, 
+.table-actualites td {
+  border: 1px solid #ccc;
+  padding: 16px 24px;
+  background-color: #fff;
+}
+
+.table-actualites th {
+  background-color: #2e7d32;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.table-actualites tr:nth-child(even) td {
+  background-color: #f5f5f5;
+}
+
+.table-actualites tr:hover td {
+  background-color: #e8f5e9;
+  transition: background-color 0.3s ease;
+}
+body {
+  display: flex;
+  justify-content: center;   /* centre horizontalement */
+  align-items: center;       /* centre verticalement */
+  min-height: 100vh;         /* occupe toute la hauteur de la fenêtre */
+  background-color: #f9f9f9; /* optionnel, pour un fond doux */
+  flex-direction: column;    /* garde les éléments verticaux */
+}
+
 
 
 
