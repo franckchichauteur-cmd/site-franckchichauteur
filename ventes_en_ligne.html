@@ -82,13 +82,13 @@
     L'affaire Morin
   </a>
 <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.querySelector('#menu ul');
 
-    menuToggle.addEventListener('click', () => {
-      menu.classList.toggle('active');
-    });
-  </script>
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+</script>
 </body>
 <footer id="Contact"
   style="text-align:center;font-size:0.9rem;color:#555;margin-top:40px;padding:20px 0;background-color:#f8f8f8;border-top:1px solid #ddd;">
@@ -97,6 +97,7 @@
   <p style="margin:6px 0;font-size:0.85rem;">© 2025 Franck CHICH. Tous droits réservés.</p>
 </footer>
 </html>
+
 
 
 
