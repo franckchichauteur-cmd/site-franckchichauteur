@@ -612,6 +612,68 @@ nav a {
   color: #007BFF;         /* Couleur bleu type lien */
   text-decoration: underline;
 }
+/* --- Style général du menu --- */
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #f0c040;
+}
+
+/* --- Bouton hamburger --- */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  text-align: right;
+  padding-right: 20px;
+}
+
+/* --- Version mobile --- */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    width: 100%;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul li {
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
 
 
 
