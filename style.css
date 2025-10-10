@@ -685,17 +685,7 @@ nav ul li a:hover {
 }
 
 /* --- Menu mobile --- */
-@media (max-width: 768px) {
-  nav ul {
-    display: none;
-    flex-direction: column;
-    background-color: #333;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 200px;
-    border-radius: 8px;
-  }
+
 
   nav ul.active {
     display: flex;
@@ -710,6 +700,13 @@ nav ul li a:hover {
     display: block;
   }
 }
+@media (max-width: 900px) {
+  nav ul li a {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+}
+
 
 
 
