@@ -139,10 +139,8 @@ menuToggle.addEventListener('click', () => {
   </script>
 <script>
 function ouvrirVideoIndependante(chemin) {
-  // Ouvre une nouvelle fenêtre
   const fenetre = window.open('', '_blank', 'width=1000,height=650,resizable=yes,scrollbars=no');
-  
-  // Code HTML de la fenêtre vidéo
+
   fenetre.document.write(`
     <!DOCTYPE html>
     <html lang="fr">
@@ -155,16 +153,32 @@ function ouvrirVideoIndependante(chemin) {
           padding: 0;
           background-color: #000;
           height: 100%;
-          overflow: hidden;
           display: flex;
           justify-content: center;
           align-items: center;
+          overflow: hidden;
         }
         video {
-          width: 100vw;
-          height: 100vh;
+          width: 100%;
+          height: 100%;
           object-fit: cover;
-          background-color: #000;
+          background: #000;
+        }
+        button {
+          position: absolute;
+          top: 15px;
+          right: 20px;
+          padding: 10px 15px;
+          background: rgba(255,255,255,0.2);
+          color: white;
+          border: none;
+          border-radius: 8px;
+          font-size: 16px;
+          cursor: pointer;
+          transition: background 0.3s;
+        }
+        button:hover {
+          background: rgba(255,255,255,0.4);
         }
       </style>
     </head>
@@ -173,12 +187,14 @@ function ouvrirVideoIndependante(chemin) {
         <source src="${chemin}" type="video/mp4">
         Votre navigateur ne supporte pas la lecture de vidéos.
       </video>
+      <button id="fermer">✖ Fermer</button>
 
       <script>
         const video = document.getElementById('videoLecture');
+        const fermerBtn = document.getElementById('fermer');
 
-        // Passe en plein écran automatique
-        video.addEventListener('canplay', () => {
+        // Fonction pour activer le plein écran de façon fiable
+        function activerPleinEcran() {
           if (video.requestFullscreen) {
             video.requestFullscreen();
           } else if (video.webkitRequestFullscreen) {
@@ -186,10 +202,20 @@ function ouvrirVideoIndependante(chemin) {
           } else if (video.msRequestFullscreen) {
             video.msRequestFullscreen();
           }
+        }
+
+        // Lance le plein écran au premier clic sur la vidéo
+        video.addEventListener('play', () => {
+          activerPleinEcran();
+        }, { once: true });
+
+        // Ferme automatiquement à la fin de la vidéo
+        video.addEventListener('ended', () => {
+          window.close();
         });
 
-        // Ferme la fenêtre quand la vidéo est terminée
-        video.addEventListener('ended', () => {
+        // Bouton manuel de fermeture
+        fermerBtn.addEventListener('click', () => {
           window.close();
         });
       <\/script>
@@ -203,6 +229,7 @@ function ouvrirVideoIndependante(chemin) {
 
 </body>
 </html>
+
 
 
 
