@@ -660,19 +660,31 @@ nav ul li a:hover {
     width: 100%;
   }
 
-  nav ul.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  nav ul li {
+ 
+   nav ul li {
     text-align: center;
     padding: 10px 0;
   }
 }
+
+
+  nav ul li {
+    text-align: right;
+    padding: 10px 15px;
+  }
+
+  }
+/* --- Bouton hamburger --- */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  text-align: right;
+  padding: 10px 20px;
+}
+
+/* --- Menu mobile --- */
 @media (max-width: 768px) {
   nav ul {
     display: none;
@@ -698,6 +710,7 @@ nav ul li a:hover {
     display: block;
   }
 }
+
 
 
 
