@@ -155,8 +155,18 @@ L’idée d’écrire "Au cœur du passé" m’est venue d’un fait tout simple
             <source src="${chemin}" type="video/mp4">
             Votre navigateur ne supporte pas la lecture de vidéos.
           </video>
-        </body>
-        </html>
+        
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
+       
       `);
       fenetre.document.close();
     }
@@ -164,6 +174,7 @@ L’idée d’écrire "Au cœur du passé" m’est venue d’un fait tout simple
 
 </body>
 </html>
+
 
 
 
