@@ -123,38 +123,12 @@ L’idée d’écrire "Au cœur du passé" m’est venue d’un fait tout simple
     <p style="margin:6px 0;font-size:0.85rem;">© 2025 Franck CHICH. Tous droits réservés.</p>
   </footer>
 
-  <script>
-    function ouvrirVideoIndependante(chemin) {
-      const fenetre = window.open('', '_blank', 'width=900,height=600,resizable=yes,scrollbars=no');
-      fenetre.document.write(`
-        <!DOCTYPE html>
-        <html lang="fr">
-        <head>
-          <meta charset="UTF-8">
-          <title>Lecture vidéo</title>
-          <style>
-            body {
-              margin: 0;
-              background-color: #000;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              height: 100vh;
-            }
-            video {
-              width: 90%;
-              height: auto;
-              border: 3px solid #fff;
-              border-radius: 10px;
-              box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-            }
-          </style>
-        </head>
-        <body>
-          <video controls autoplay>
-            <source src="${chemin}" type="video/mp4">
-            Votre navigateur ne supporte pas la lecture de vidéos.
-          </video>
+  
+<script>
+  function ouvrirVideoIndependante(chemin) {
+    window.open(`video.html?src=${encodeURIComponent(chemin)}`, '_blank', 'width=900,height=600,resizable=yes');
+  }
+</script>
         
 <script>
 const menuToggle = document.getElementById('menu-toggle');
@@ -174,6 +148,7 @@ menuToggle.addEventListener('click', () => {
 
 </body>
 </html>
+
 
 
 
