@@ -706,6 +706,10 @@ nav ul li a:hover {
     padding: 8px;
   }
 }
+header nav ul {
+  flex-wrap: wrap;
+}
+
 
 
 
