@@ -5,6 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mon Actualités | Franck CHICH - Auteur</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Conteneur principal centré */
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    /* Styles des tableaux */
+    table {
+      width: 90%;
+      max-width: 1000px;
+      border-collapse: separate;
+      border-spacing: 0 10px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    th, td {
+      padding: 16px 24px;
+      border: 1px solid #ccc;
+    }
+
+    th {
+      background-color: #2e7d32;
+      color: white;
+      text-transform: uppercase;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #f5f5f5;
+    }
+
+    /* Paragraphes sous tableaux */
+    .texte-projet {
+      max-width: 800px;
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+      line-height: 1.4;
+    }
+
+    /* Responsive pour petits écrans */
+    @media (max-width: 768px) {
+      table {
+        width: 100%;
+      }
+      th, td {
+        padding: 12px 8px;
+      }
+      .texte-projet {
+        padding: 0 10px;
+      }
+    }
+  </style>
 </head>
 <body>
 <header>
@@ -12,87 +73,79 @@
   <div class="menu-toggle" id="menu-toggle">☰</div>
   <nav id="menu">
     <ul>
-    <li><a href="https://franckchichauteur-cmd.github.io/site-franckchichauteur/index.html">Accueil</a></li>
-    <li><a href="https://franckchichauteur-cmd.github.io/site-franckchichauteur/livres.html">Mes livres</a></li>
-    <li><a href="https://franckchichauteur-cmd.github.io/site-franckchichauteur/contact.html">Contact</a></li>
-    <li><a href="https://franckchichauteur-cmd.github.io/site-franckchichauteur/avis.html">Vos avis</a></li>
-    <li><a href="https://franckchichauteur-cmd.github.io/site-franckchichauteur/ventes_en_ligne.html">Vente en ligne</a></li>
-    <li><a href="https://franckchichauteur-cmd.github.io/site-franckchichauteur/actualites.html">Mon actualité</a></li>
-  </ul>
-</nav>
-  </header>
-<p> .</p>
-<h2></h2>
-  <main>
-    <section class="actualites">
-      <h2>Bienvenue dans Mon Actualités</h2>
-      <p>Vous trouverez ici toutes les dernières nouvelles, événements et annonces liés à mes livres et projets.</p>
-    </section>
-  </main>
-<main>
-  <h2 style="text-align:center; margin-top:30px;">Mes actualités</h2>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="livres.html">Mes livres</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="avis.html">Vos avis</a></li>
+      <li><a href="ventes_en_ligne.html">Vente en ligne</a></li>
+      <li><a href="actualites.html">Mon actualité</a></li>
+    </ul>
+  </nav>
+</header>
 
+<main>
+  <section class="actualites">
+    <h2>Bienvenue dans Mon Actualités</h2>
+    <p>Vous trouverez ici toutes les dernières nouvelles, événements et annonces liés à mes livres et projets.</p>
+  </section>
+
+  <h2>Mes actualités</h2>
   <table class="table-actualites">
     <tr>
       <th>Date</th>
       <th>Événement</th>
       <th>Lieu</th>
     </tr>
-
     <tr>
       <td>13 juin 2026 de 10 à 18 heures</td>
       <td>Salon du livre et de la BD d'île de France</td>
       <td>Mennecy</td>
     </tr>
-
     <tr>
       <td>4 octobre 2025 de 10 à 18 heures</td>
-      <td>Rencontre et dédicaces </td>
+      <td>Rencontre et dédicaces</td>
       <td>Carrefour Villiers en Bière</td>
     </tr>
-   
     <tr>
       <td>28 juin 2025 de 13 à 18 heures</td>
-      <td>Rencontre et dédicaces </td>
+      <td>Rencontre et dédicaces</td>
       <td>Carrefour Villiers en Bière</td>
     </tr>
-
     <tr>
       <td>21 juin 2025</td>
-      <td>Rencontre et dédicaces </td>
+      <td>Rencontre et dédicaces</td>
       <td>Intermarché Itteville</td>
     </tr>
-   <tr>
+    <tr>
       <td>31 mai 2025</td>
-      <td>Rencontre et dédicaces </td>
+      <td>Rencontre et dédicaces</td>
       <td>Carrefour Carré Sénard</td>
-   </tr>
-      
+    </tr>
   </table>
+
+  <h2>Mes projets</h2>
+  <div class="texte-projet">
+    <p>Je viens de signer avec une maison d'éditions, mon livre "Une famille décomposée" devrait sortir dans les prochains jours.</p>
+    <p>Bonne nouvelle ! 🎉 Je suis en pleine écriture de mon nouveau thriller psychologique. Suspense, secrets et rebondissements au programme… J’ai hâte de partager cette aventure avec vous !</p>
+  </div>
 </main>
-<main>
-  <h2 style="text-align:center; margin-top:30px;">Mes projets</h2>
 
-  <table class="table-projets">
-  <p>Je viens de signer avec une maison d'éditions, mon livre "Une famille décomposée" devrait sortir dans les prochains jours. </p> 
-  <p>Bonne nouvelle ! 🎉
+<footer style="text-align:center;font-size:0.9rem;color:#555;margin-top:40px;padding:20px 0;background-color:#f8f8f8;border-top:1px solid #ddd;">
+  <h3 style="margin:0 0 8px;font-size:1.05rem;color:#333;">Contact</h3>
+  <p>📧 <a href="mailto:franckchichauteur@mail.com">franckchichauteur@mail.com</a></p>
+  <p>© 2025 Franck CHICH. Tous droits réservés.</p>
+</footer>
 
-Je suis en pleine écriture de mon nouveau thriller psychologique. Suspense, secrets et rebondissements au programme… J’ai hâte de partager cette aventure avec vous !  </p>   
-  <footer style="text-align:center;font-size:0.9rem;color:#555;margin-top:40px;padding:20px 0;background-color:#f8f8f8;border-top:1px solid #ddd;">
-    <h3 style="margin:0 0 8px;font-size:1.05rem;color:#333;">Contact</h3>
-    <p style="margin:6px 0;">📧 <a href="mailto:franckchichauteur@mail.com">franckchichauteur@mail.com</a></p>
-    <p style="margin:6px 0;font-size:0.85rem;">© 2025 Franck CHICH. Tous droits réservés.</p>
-  </footer>
 <script>
 const menuToggle = document.getElementById('menu-toggle');
 const menu = document.getElementById('menu');
-
 menuToggle.addEventListener('click', () => {
   menu.classList.toggle('active');
 });
 </script>
 </body>
 </html>
+
 
 
 
