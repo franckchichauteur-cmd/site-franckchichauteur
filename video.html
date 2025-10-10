@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Lecture vidéo</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    video {
+      width: 90%;
+      height: auto;
+      border: 3px solid #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <video id="lecteur" controls autoplay>
+    <source id="source-video" src="" type="video/mp4">
+    Votre navigateur ne supporte pas la lecture de vidéos.
+  </video>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const videoPath = params.get('src');
+    if (videoPath) {
+      document.getElementById('source-video').src = videoPath;
+      document.getElementById('lecteur').load();
+      document.getElementById('lecteur').play();
+    }
+  </script>
+</body>
+</html>
