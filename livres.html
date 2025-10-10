@@ -147,7 +147,10 @@ menuToggle.addEventListener('click', () => {
   </script>
 <script>
 function ouvrirVideoIndependante(chemin) {
+  // Ouvre une nouvelle fenêtre
   const fenetre = window.open('', '_blank', 'width=1000,height=650,resizable=yes,scrollbars=no');
+  
+  // Code HTML de la fenêtre vidéo
   fenetre.document.write(`
     <!DOCTYPE html>
     <html lang="fr">
@@ -155,65 +158,60 @@ function ouvrirVideoIndependante(chemin) {
       <meta charset="UTF-8">
       <title>Lecture vidéo</title>
       <style>
-        * {
-          box-sizing: border-box;
-        }
-        body {
+        html, body {
           margin: 0;
-          background: linear-gradient(135deg, #000000, #1a1a1a);
-          color: white;
-          font-family: 'Arial', sans-serif;
+          padding: 0;
+          background-color: #000;
+          height: 100%;
+          overflow: hidden;
           display: flex;
-          flex-direction: column;
-          align-items: center;
           justify-content: center;
-          height: 100vh;
-        }
-        h1 {
-          font-size: 1.5rem;
-          margin-bottom: 20px;
-          color: #32cd32; /* vert lumineux */
-          text-align: center;
+          align-items: center;
         }
         video {
-          width: 90%;
-          max-width: 900px;
-          border: 3px solid #32cd32;
-          border-radius: 12px;
-          box-shadow: 0 0 25px rgba(50, 205, 50, 0.4);
-        }
-        .bouton-retour {
-          margin-top: 20px;
-          background-color: #32cd32;
-          color: #000;
-          padding: 10px 20px;
-          border: none;
-          border-radius: 6px;
-          font-size: 1rem;
-          cursor: pointer;
-          transition: background 0.3s ease;
-        }
-        .bouton-retour:hover {
-          background-color: #26a326;
+          width: 100vw;
+          height: 100vh;
+          object-fit: cover;
+          background-color: #000;
         }
       </style>
     </head>
     <body>
-      <h1>🎬 Lecture de la vidéo</h1>
-      <video controls autoplay>
+      <video id="videoLecture" controls autoplay>
         <source src="${chemin}" type="video/mp4">
         Votre navigateur ne supporte pas la lecture de vidéos.
       </video>
-      <button class="bouton-retour" onclick="window.close()">Fermer la fenêtre</button>
+
+      <script>
+        const video = document.getElementById('videoLecture');
+
+        // Passe en plein écran automatique
+        video.addEventListener('canplay', () => {
+          if (video.requestFullscreen) {
+            video.requestFullscreen();
+          } else if (video.webkitRequestFullscreen) {
+            video.webkitRequestFullscreen();
+          } else if (video.msRequestFullscreen) {
+            video.msRequestFullscreen();
+          }
+        });
+
+        // Ferme la fenêtre quand la vidéo est terminée
+        video.addEventListener('ended', () => {
+          window.close();
+        });
+      <\/script>
     </body>
     </html>
   `);
+
   fenetre.document.close();
 }
 </script>
 
 </body>
 </html>
+
 
 
 
