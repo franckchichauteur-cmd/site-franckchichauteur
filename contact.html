@@ -5,44 +5,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Franck CHICH - Auteur</title>
-
-  <!-- Lien vers ton fichier CSS global -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- Styles spécifiques à la page Contact -->
   <style>
     /* Section Contact */
     #Contact {
       text-align: center;
       margin-top: 40px;
     }
-
     /* Formulaire centré */
     #Contact form {
-      display: inline-block;     /* centre le bloc */
-      text-align: left;          /* labels alignés à gauche */
+      display: inline-block;
+      text-align: left;
       margin: 0 auto;
       padding: 20px 30px;
       border: 1px solid #ccc;
       border-radius: 10px;
       background-color: #fff;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      width: 350px;
+      max-width: 90%;
     }
-
     /* Champs du formulaire */
     #Contact input,
-    #Contact textarea {
-      width: 300px;
-      max-width: 90%;
+    #Contact textarea,
+    #Contact select {
+      width: 100%;
       padding: 8px;
       margin-top: 4px;
       margin-bottom: 12px;
       border: 1px solid #ccc;
       border-radius: 5px;
       font-size: 1em;
-      display: block; /* chaque champ sur sa propre ligne */
+      display: block;
     }
-
     /* Boutons */
     #Contact input[type="submit"],
     #Contact input[type="reset"] {
@@ -55,12 +50,17 @@
       border-radius: 5px;
       cursor: pointer;
     }
-
     #Contact input[type="submit"]:hover,
     #Contact input[type="reset"]:hover {
       background-color: #555;
     }
-
+    /* Message de confirmation */
+    #confirmation {
+      display: none;
+      text-align: center;
+      margin-top: 10px;
+      color: green;
+    }
     /* Pied de page */
     footer {
       text-align: center;
@@ -73,33 +73,28 @@
     }
   </style>
 </head>
-
 <body>
-  <body>
-  
-<header>
-  <h1>Franck CHICH - Auteur</h1>
-  <div class="menu-toggle" id="menu-toggle">☰</div>
-  <nav id="menu">
-    <ul>
-    <li><a href="https://franckchichauteur-cmd.github.io/site-franckchichauteur/index.html">Accueil</a></li>
-    <li><a href="https://franckchichauteur-cmd.github.io/site-franckchichauteur/livres.html">Mes livres</a></li>
-    <li><a href="https://franckchichauteur-cmd.github.io/site-franckchichauteur/contact.html">Contact</a></li>
-    <li><a href="https://franckchichauteur-cmd.github.io/site-franckchichauteur/avis.html">Vos avis</a></li>
-    <li><a href="https://franckchichauteur-cmd.github.io/site-franckchichauteur/ventes_en_ligne.html">Vente en ligne</a></li>
-    <li><a href="https://franckchichauteur-cmd.github.io/site-franckchichauteur/actualites.html">Mon actualité</a></li>
-  </ul>
-</nav>
+  <header>
+    <h1>Franck CHICH - Auteur</h1>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <nav id="menu">
+      <ul>
+        <li><a href="https://franckchichauteur-cmd.github.io/site-franckchichauteur/index.html">Accueil</a></li>
+        <li><a href="https://franckchichauteur-cmd.github.io/site-franckchichauteur/livres.html">Mes livres</a></li>
+        <li><a href="https://franckchichauteur-cmd.github.io/site-franckchichauteur/contact.html">Contact</a></li>
+        <li><a href="https://franckchichauteur-cmd.github.io/site-franckchichauteur/avis.html">Vos avis</a></li>
+        <li><a href="https://franckchichauteur-cmd.github.io/site-franckchichauteur/ventes_en_ligne.html">Vente en ligne</a></li>
+        <li><a href="https://franckchichauteur-cmd.github.io/site-franckchichauteur/actualites.html">Mon actualité</a></li>
+      </ul>
+    </nav>
   </header>
-<h2>""</h2>
-  <p>  </p>
 
   <section id="Contact">
-    <h2>
-      Contactez-moi</h2>
+    <h2>Contactez-moi</h2>
     <p>Vous pouvez me joindre par email ou via ce formulaire :</p>
 
-    <form action="mailto:franckchichauteur@gmail.com" method="post" enctype="text/plain">
+    <!-- Formulaire Formspree -->
+    <form id="contactForm" action="https://formspree.io/f/myznpved" method="POST">
       <label for="nom">Nom :</label>
       <input type="text" id="nom" name="nom" required>
 
@@ -112,6 +107,8 @@
       <input type="submit" value="Envoyer">
       <input type="reset" value="Réinitialiser">
     </form>
+
+    <div id="confirmation">Merci ! Votre message a bien été envoyé.</div>
   </section>
 
   <footer>
@@ -119,21 +116,41 @@
     <p>📧 <a href="mailto:franckchichauteur@mail.com">franckchichauteur@mail.com</a></p>
     <p>© 2025 Franck CHICH. Tous droits réservés.</p>
   </footer>
-<script>
-const menuToggle = document.getElementById('menu-toggle');
-const menu = document.getElementById('menu');
 
-menuToggle.addEventListener('click', () => {
-  menu.classList.toggle('active');
-});
-</script>
+  <script>
+    // Menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+
+    // Formulaire Formspree avec confirmation
+    const form = document.getElementById('contactForm');
+    const confirmation = document.getElementById('confirmation');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Empêche le rechargement de la page
+      const data = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          confirmation.style.display = 'block';
+          form.reset();
+        } else {
+          alert('Oups ! Une erreur est survenue. Veuillez réessayer.');
+        }
+      }).catch(error => {
+        alert('Oups ! Une erreur est survenue. Veuillez réessayer.');
+      });
+    });
+  </script>
 </body>
 </html>
-
-
-
-
-
 
 
 
