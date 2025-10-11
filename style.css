@@ -842,6 +842,61 @@ nav#menu ul li a:hover {
     display: block;     /* Affiche le bouton sur mobile */
   }
 }
+/* ==== Réduction de l'en-tête et du menu ==== */
+
+header {
+  padding: 8px 0; /* Réduit la hauteur verticale */
+  background-color: #f8f8f8; /* garde ton fond clair */
+  border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+  font-size: 1.4em; /* Titre plus petit */
+  margin: 5px 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* s’adapte aux petits écrans */
+}
+
+nav ul li {
+  margin: 0 6px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 6px 10px; /* plus compact */
+  font-size: 0.9em;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00704A; /* vert élégant au survol */
+}
+
+/* Pour les petits écrans */
+@media (max-width: 700px) {
+  header h1 {
+    font-size: 1.1em;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 4px 0;
+  }
+}
+
 
 
 
