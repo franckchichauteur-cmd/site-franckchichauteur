@@ -15,15 +15,23 @@
   <div class="menu-toggle" id="menu-toggle">☰</div>
   <nav id="menu">
     <ul>
-    <li><a href="https://franckchichauteur-cmd.github.io/site-franckchichauteur/index.html">Accueil</a></li>
-    <li><a href="https://franckchichauteur-cmd.github.io/site-franckchichauteur/livres.html">Mes livres</a></li>
-    <li><a href="https://franckchichauteur-cmd.github.io/site-franckchichauteur/contact.html">Contact</a></li>
-    <li><a href="https://franckchichauteur-cmd.github.io/site-franckchichauteur/avis.html">Vos avis</a></li>
-    <li><a href="https://franckchichauteur-cmd.github.io/site-franckchichauteur/ventes_en_ligne.html">Vente en ligne</a></li>
-    <li><a href="https://franckchichauteur-cmd.github.io/site-franckchichauteur/actualites.html">Actualités</a></li>
-  </ul>
-</nav>
-  </header>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="livres.html">Mes livres</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="avis.html">Vos avis</a></li>
+      <li><a href="ventes_en_ligne.html">Vente en ligne</a></li>
+      <li><a href="actualites.html">Actualités</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu').querySelector('ul');
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+</script>
 <h2>""</h2>
   <p> .</p>
 </section>
@@ -60,6 +68,7 @@ menuToggle.addEventListener('click', () => {
 </script>
 </body>
 </html>
+
 
 
 
