@@ -842,49 +842,55 @@ nav#menu ul li a:hover {
     display: block;     /* Affiche le bouton sur mobile */
   }
 }
-/* ==== Réduction de l'en-tête et du menu ==== */
+/* ==== En-tête ultra-compact ==== */
 
 header {
-  padding: 8px 0; /* Réduit la hauteur verticale */
-  background-color: #f8f8f8; /* garde ton fond clair */
+  padding: 4px 0; /* très peu d’espace vertical */
+  background-color: #f8f8f8;
   border-bottom: 1px solid #ddd;
+  text-align: center;
 }
 
 header h1 {
-  font-size: 1.4em; /* Titre plus petit */
-  margin: 5px 0;
+  font-size: 1.1em; /* titre plus petit */
+  margin: 0; /* supprime les marges par défaut */
+  font-weight: 600;
+  color: #222;
 }
 
+/* Menu horizontal minimaliste */
 nav ul {
   list-style: none;
-  margin: 0;
+  margin: 4px 0 0 0; /* réduit la marge au-dessus du menu */
   padding: 0;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* s’adapte aux petits écrans */
+  flex-wrap: wrap;
 }
 
 nav ul li {
-  margin: 0 6px;
+  margin: 0 4px;
 }
 
 nav ul li a {
   text-decoration: none;
   color: #333;
-  padding: 6px 10px; /* plus compact */
-  font-size: 0.9em;
+  padding: 4px 6px; /* très compact */
+  font-size: 0.85em;
   font-weight: 500;
-  transition: color 0.3s;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 nav ul li a:hover {
-  color: #00704A; /* vert élégant au survol */
+  background-color: #00704A;
+  color: #fff;
 }
 
-/* Pour les petits écrans */
+/* Sur mobile : menu en colonne, espacement réduit */
 @media (max-width: 700px) {
   header h1 {
-    font-size: 1.1em;
+    font-size: 1em;
   }
 
   nav ul {
@@ -893,9 +899,15 @@ nav ul li a:hover {
   }
 
   nav ul li {
-    margin: 4px 0;
+    margin: 2px 0;
+  }
+
+  nav ul li a {
+    font-size: 0.9em;
+    padding: 5px 8px;
   }
 }
+
 
 
 
