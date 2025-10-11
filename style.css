@@ -997,6 +997,99 @@ body {
   padding-top: 60px;
   font-family: "Segoe UI", Roboto, sans-serif;
 }
+/* === HEADER MODERNE FIXE ET COMPACT === */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #004d2b, #0d7a44);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 18px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* === MENU PRINCIPAL === */
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 8px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95em;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Effet de survol moderne */
+nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+
+/* === MENU BURGER POUR MOBILE === */
+.menu-toggle {
+  display: none;
+  font-size: 1.6em;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+}
+
+/* Adaptation mobile */
+@media (max-width: 800px) {
+  nav ul {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    background: #0d7a44;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 10px 0;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
+
+/* Pour éviter que le menu cache le contenu */
+body {
+  padding-top: 55px;
+}
+
 
 
 
