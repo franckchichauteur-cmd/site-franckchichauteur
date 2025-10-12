@@ -129,6 +129,9 @@ header h1 {
 .livre img:hover {
   transform: scale(1.02);        /* Légère mise en valeur au survol */
 }
+.livre {
+  text-align: center;
+}
 
 /* ========================== BOUTONS ========================== */
 .bouton {
@@ -333,6 +336,7 @@ header h1 {
   .livre img { width: 100%; max-width: 100%; }
   #Contact form, #Avis form { width: 100%; padding: 10px; }
 }
+
 
 
 
