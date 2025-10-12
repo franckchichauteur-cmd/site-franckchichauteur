@@ -126,131 +126,82 @@ L’idée d’écrire "Au cœur du passé" m’est venue d’un fait tout simple
       La même onde qui fait battre le cœur pourrait aussi le briser.
       La même harmonie qui émeut pourrait devenir chaos.
       "Les fréquences du chaos" est donc à la fois un thriller et une méditation sur la dualité de l’art :
-      sa lumière, sa part d’ombre, et ce pouvoir mystérieux qu’il exerce sur nos émotions.      </p>
+      sa lumière, sa part d’ombre, et ce pouvoir mystérieux qu’il exerce sur nos émotions.      
+</p>
     </section>
 
   </main>
 
+  <!-- ======== PIED DE PAGE ======== -->
   <footer id="Contact" style="text-align:center;font-size:0.9rem;color:#555;margin-top:40px;padding:20px 0;background-color:#f8f8f8;border-top:1px solid #ddd;">
     <h3 style="margin:0 0 8px;font-size:1.05rem;color:#333;">Contact</h3>
     <p style="margin:6px 0;">📧 <a href="mailto:franckchichauteur@mail.com">franckchichauteur@mail.com</a></p>
     <p style="margin:6px 0;font-size:0.85rem;">© 2025 Franck CHICH. Tous droits réservés.</p>
-  </footer>        
-<script>
-const menuToggle = document.getElementById('menu-toggle');
-const menu = document.getElementById('menu');
+  </footer>
 
-menuToggle.addEventListener('click', () => {
-  menu.classList.toggle('active');
-});
-</script>
-</body>
-</html>
-       
+  <!-- ======== SCRIPT VIDÉO ======== -->
+  <script>
+    function ouvrirVideoIndependante(chemin) {
+      const fenetre = window.open('', '_blank', 'width=1000,height=650,resizable=yes,scrollbars=no');
+      fenetre.document.write(`
+        <!DOCTYPE html>
+        <html lang="fr">
+        <head>
+          <meta charset="UTF-8">
+          <title>Lecture vidéo</title>
+          <style>
+            html, body {
+              margin: 0;
+              padding: 0;
+              background-color: #000;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              overflow: hidden;
+            }
+            video {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+              background: #000;
+            }
+            button {
+              position: absolute;
+              top: 15px;
+              right: 20px;
+              padding: 10px 15px;
+              background: rgba(255,255,255,0.2);
+              color: white;
+              border: none;
+              border-radius: 8px;
+              font-size: 16px;
+              cursor: pointer;
+              transition: background 0.3s;
+            }
+            button:hover {
+              background: rgba(255,255,255,0.4);
+            }
+          </style>
+        </head>
+        <body>
+          <video id="videoLecture" controls autoplay>
+            <source src="${chemin}" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
+          <button id="fermer">✖ Fermer</button>
+          <script>
+            const video = document.getElementById('videoLecture');
+            const fermerBtn = document.getElementById('fermer');
+            fermerBtn.addEventListener('click', () => { window.close(); });
+            video.addEventListener('ended', () => { window.close(); });
+          <\/script>
+        </body>
+        </html>
       `);
       fenetre.document.close();
     }
   </script>
-<script>
-function ouvrirVideoIndependante(chemin) {
-  const fenetre = window.open('', '_blank', 'width=1000,height=650,resizable=yes,scrollbars=no');
-
-  fenetre.document.write(`
-    <!DOCTYPE html>
-    <html lang="fr">
-    <head>
-      <meta charset="UTF-8">
-      <title>Lecture vidéo</title>
-      <style>
-        html, body {
-          margin: 0;
-          padding: 0;
-          background-color: #000;
-          height: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          overflow: hidden;
-        }
-        video {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          background: #000;
-        }
-        button {
-          position: absolute;
-          top: 15px;
-          right: 20px;
-          padding: 10px 15px;
-          background: rgba(255,255,255,0.2);
-          color: white;
-          border: none;
-          border-radius: 8px;
-          font-size: 16px;
-          cursor: pointer;
-          transition: background 0.3s;
-        }
-        button:hover {
-          background: rgba(255,255,255,0.4);
-        }
-      </style>
-    </head>
-    <body>
-      <video id="videoLecture" controls autoplay>
-        <source src="${chemin}" type="video/mp4">
-        Votre navigateur ne supporte pas la lecture de vidéos.
-      </video>
-      <button id="fermer">✖ Fermer</button>
-
-      <script>
-        const video = document.getElementById('videoLecture');
-        const fermerBtn = document.getElementById('fermer');
-
-        // Fonction pour activer le plein écran de façon fiable
-        function activerPleinEcran() {
-          if (video.requestFullscreen) {
-            video.requestFullscreen();
-          } else if (video.webkitRequestFullscreen) {
-            video.webkitRequestFullscreen();
-          } else if (video.msRequestFullscreen) {
-            video.msRequestFullscreen();
-          }
-        }
-
-        // Lance le plein écran au premier clic sur la vidéo
-        video.addEventListener('play', () => {
-          activerPleinEcran();
-        }, { once: true });
-
-        // Ferme automatiquement à la fin de la vidéo
-        video.addEventListener('ended', () => {
-          window.close();
-        });
-
-        // Bouton manuel de fermeture
-        fermerBtn.addEventListener('click', () => {
-          window.close();
-        });
-      <\/script>
-    </body>
-    </html>
-
-}
-</script>
-<script>
-const menuToggle = document.querySelector('.menu-toggle');
-const navUl = document.querySelector('nav ul');
-if (menuToggle) {
-  menuToggle.addEventListener('click', () => {
-    navUl.classList.toggle('active');
-  });
-}  
-  `);
-
-  fenetre.document.close();
-} 
-</script>
 
 </body>
 </html>
