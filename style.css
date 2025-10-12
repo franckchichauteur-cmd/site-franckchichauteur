@@ -907,222 +907,80 @@ nav ul li a:hover {
     padding: 5px 8px;
   }
 }
-/* === HEADER MODERNE FIXE === */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: linear-gradient(90deg, #0d3b29, #15803d);
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-  z-index: 1000;
-}
-
-/* Logo / Titre */
-header h1 {
-  font-size: 1.1em;
-  margin: 0;
-  letter-spacing: 0.5px;
-  font-weight: 600;
-}
-
-/* MENU PRINCIPAL */
-nav ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  margin: 0 8px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.95em;
-  padding: 6px 10px;
-  border-radius: 4px;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-/* Effet de survol moderne */
-nav ul li a:hover {
-  background: rgba(255, 255, 255, 0.15);
-  transform: scale(1.05);
-}
-
-/* === MENU BURGER SUR MOBILE === */
-.menu-toggle {
-  display: none;
-  font-size: 1.5em;
-  cursor: pointer;
-}
-
-@media (max-width: 800px) {
-  nav ul {
-    position: absolute;
-    top: 50px;
-    left: 0;
-    right: 0;
-    background: #0d3b29;
-    flex-direction: column;
-    align-items: center;
-    display: none;
-    padding: 10px 0;
-  }
-
-  nav ul.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-}
-
-/* Pour éviter que le contenu soit caché sous le menu fixe */
-body {
-  margin: 0;
-  padding-top: 60px;
-  font-family: "Segoe UI", Roboto, sans-serif;
-}
-/* === HEADER MODERNE FIXE ET COMPACT === */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: linear-gradient(90deg, #004d2b, #0d7a44);
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 18px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  z-index: 1000;
-}
-
-header h1 {
-  font-size: 1.1em;
-  font-weight: 600;
-  margin: 0;
-  letter-spacing: 0.5px;
-}
-
-/* === MENU PRINCIPAL === */
-nav ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  margin: 0 8px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.95em;
-  padding: 6px 10px;
-  border-radius: 4px;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-/* Effet de survol moderne */
-nav ul li a:hover {
-  background: rgba(255, 255, 255, 0.15);
-  transform: scale(1.05);
-}
-
-/* --- ENTÊTE FIXE --- */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
-/* TITRE */
+/* Header fixe */
 .header-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: #0d3b29;
   text-align: center;
   padding: 8px 0;
+  z-index: 1000;
 }
+
 .header-top h1 {
   margin: 0;
   color: white;
-  font-size: 1.2em;
+  font-size: 1.4em;
   font-weight: 600;
 }
 
-/* MENU DÉFILANT */
+/* Menu horizontal scrollable */
 .menu-container {
-  background-color: #15803d;
-  overflow-x: auto; /* scroll horizontal */
+  position: fixed;
+  top: 50px; /* hauteur du header */
+  left: 0;
+  width: 100%;
+  overflow-x: auto;
   white-space: nowrap;
-  -webkit-overflow-scrolling: touch; /* smooth scroll sur iOS */
+  background-color: #15803d;
+  z-index: 999;
+  -webkit-overflow-scrolling: touch;
 }
 
-/* UL inline pour horizontal */
 .menu-container ul {
   display: inline-flex;
-  list-style: none;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
-/* Items du menu */
 .menu-container li {
   flex: 0 0 auto;
 }
 
 .menu-container a {
   display: inline-block;
+  padding: 10px 20px;
   color: white;
   text-decoration: none;
-  padding: 10px 20px;
   font-weight: 500;
-  transition: background 0.3s;
+  white-space: nowrap;
 }
 
 .menu-container a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* cacher scrollbar si besoin */
-.menu-container::-webkit-scrollbar {
-  display: none;
+  background-color: rgba(255,255,255,0.2);
 }
 
 /* ESPACE POUR LE CONTENU */
 body {
   margin: 0;
-  padding-top: 70px; /* hauteur totale du header + menu */
-  font-family: "Segoe UI", Roboto, sans-serif;
+  padding-top: 100px; /* header + menu */
+  font-family: "Georgia", serif;
 }
 
-/* RESPONSIVE : MENU PLUS LARGE SUR MOBILE */
-@media screen and (max-width: 768px) {
+/* Mobile : aucune colonne, juste scroll horizontal */
+@media (max-width: 768px) {
+  .menu-container ul {
+    flex-wrap: nowrap; /* empêche de passer à la ligne */
+  }
   .menu-container a {
     padding: 12px 24px;
     font-size: 0.95em;
   }
 }
+
 
 
 
