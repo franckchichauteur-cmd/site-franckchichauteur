@@ -907,7 +907,7 @@ nav ul li a:hover {
     padding: 5px 8px;
   }
 }
-/* Header fixe */
+/* TITRE FIXE */
 .header-top {
   position: fixed;
   top: 0;
@@ -926,17 +926,17 @@ nav ul li a:hover {
   font-weight: 600;
 }
 
-/* Menu horizontal scrollable */
+/* MENU HORIZONTAL SCROLLABLE */
 .menu-container {
   position: fixed;
-  top: 50px; /* hauteur du header */
+  top: 50px; /* ajuster selon la hauteur du header */
   left: 0;
   width: 100%;
   overflow-x: auto;
   white-space: nowrap;
   background-color: #15803d;
   z-index: 999;
-  -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch; /* scroll fluide iOS */
 }
 
 .menu-container ul {
@@ -947,7 +947,7 @@ nav ul li a:hover {
 }
 
 .menu-container li {
-  flex: 0 0 auto;
+  flex: 0 0 auto; /* empêche les liens de se rétrécir */
 }
 
 .menu-container a {
@@ -970,16 +970,17 @@ body {
   font-family: "Georgia", serif;
 }
 
-/* Mobile : aucune colonne, juste scroll horizontal */
+/* MOBILE : garder scroll horizontal, pas de colonne */
 @media (max-width: 768px) {
   .menu-container ul {
-    flex-wrap: nowrap; /* empêche de passer à la ligne */
+    flex-wrap: nowrap;
   }
   .menu-container a {
     padding: 12px 24px;
     font-size: 0.95em;
   }
 }
+
 
 
 
