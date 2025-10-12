@@ -107,9 +107,10 @@ header h1 {
   line-height: 1.2;
 }
 
-.decale-gauche {
-  margin-left: 0;
-  margin-right: 0;
+.livre p {
+  margin: 0.5cm;         /* marge de 0,5 cm tout autour du paragraphe */
+  text-align: justify;    /* texte justifié */
+  line-height: 1.4;       /* améliore la lisibilité */
 }
 
 /* ========================== LIVRES ========================== */
@@ -336,6 +337,7 @@ header h1 {
   .livre img { width: 100%; max-width: 100%; }
   #Contact form, #Avis form { width: 100%; padding: 10px; }
 }
+
 
 
 
