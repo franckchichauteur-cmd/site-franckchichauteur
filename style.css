@@ -32,26 +32,25 @@ header h1 {
   font-weight: 600;
 }
 
-/* === Menu horizontal défilant === */
+/* === Menu horizontal défilant (desktop + mobile) === */
 nav.menu-container {
   overflow-x: auto;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
   background-color: #0f5132;
-  display: block;
-  scrollbar-width: thin;
 }
 
 nav.menu-container ul {
-  display: inline-flex;
+  display: flex;          /* alignement horizontal */
+  flex-wrap: nowrap;      /* pas d’empilement vertical */
   list-style: none;
   margin: 0;
   padding: 0;
-  width: max-content;
+  width: max-content;     /* permet le scroll horizontal si trop large */
 }
 
 nav.menu-container li {
-  display: inline-block;
+  flex: 0 0 auto;         /* largeur automatique, ne se rétrécit pas */
 }
 
 nav.menu-container a {
@@ -371,4 +370,5 @@ nav.menu-container::-webkit-scrollbar-thumb {
   .livre img { width: 100%; max-width: 100%; }
   #Contact form, #Avis form { width: 100%; padding: 10px; }
 }
+
 
