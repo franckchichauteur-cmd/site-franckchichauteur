@@ -1048,81 +1048,81 @@ nav ul li a:hover {
   transform: scale(1.05);
 }
 
-/* --- ENTÊTE FIXE ET MODERNE --- */
+/* --- ENTÊTE FIXE --- */
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #0d3b29;
-  color: white;
   z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Partie haute (le titre) */
+/* TITRE */
 .header-top {
+  background-color: #0d3b29;
   text-align: center;
   padding: 8px 0;
-  background-color: #0d3b29;
 }
-
 .header-top h1 {
   margin: 0;
-  font-size: 1.1em;
-  letter-spacing: 0.5px;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
 }
 
-/* --- MENU DÉFILANT --- */
-.menu-scroll {
-  overflow-x: auto; /* permet le défilement horizontal */
-  -webkit-overflow-scrolling: touch; /* défilement fluide sur mobile */
-  white-space: nowrap;
+/* MENU DÉFILANT */
+.menu-container {
   background-color: #15803d;
+  overflow-x: auto; /* scroll horizontal */
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch; /* smooth scroll sur iOS */
 }
 
-.menu-scroll ul {
+/* UL inline pour horizontal */
+.menu-container ul {
   display: inline-flex;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.menu-scroll li {
+/* Items du menu */
+.menu-container li {
   flex: 0 0 auto;
 }
 
-.menu-scroll a {
+.menu-container a {
   display: inline-block;
   color: white;
   text-decoration: none;
-  padding: 10px 18px;
-  font-size: 0.95em;
+  padding: 10px 20px;
   font-weight: 500;
-  transition: background-color 0.3s;
+  transition: background 0.3s;
 }
 
-.menu-scroll a:hover {
+.menu-container a:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Cache la barre de défilement */
-.menu-scroll::-webkit-scrollbar {
+/* cacher scrollbar si besoin */
+.menu-container::-webkit-scrollbar {
   display: none;
 }
 
-/* Espace sous l’en-tête pour ne pas cacher le contenu */
+/* ESPACE POUR LE CONTENU */
 body {
   margin: 0;
-  padding-top: 85px; /* ajusté selon la hauteur du header */
+  padding-top: 70px; /* hauteur totale du header + menu */
   font-family: "Segoe UI", Roboto, sans-serif;
 }
 
-
-
-
-
-
+/* RESPONSIVE : MENU PLUS LARGE SUR MOBILE */
+@media screen and (max-width: 768px) {
+  .menu-container a {
+    padding: 12px 24px;
+    font-size: 0.95em;
+  }
+}
 
 
 
