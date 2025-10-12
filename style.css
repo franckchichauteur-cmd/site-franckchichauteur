@@ -33,40 +33,51 @@ header h1 {
   padding: 0 20px;
 }
 
-/* ========================== MENU HORIZONTAL DÉFILANT ========================== */
-nav.menu-container {
+/* ==========================
+   MENU HORIZONTAL DÉFILANT
+========================== */
+.menu-container {
   width: 100%;
-  overflow-x: auto;           /* scroll horizontal sur mobile */
+  overflow-x: auto;               /* Permet le défilement horizontal */
+  white-space: nowrap;
   -webkit-overflow-scrolling: touch;
-  background-color: #15803d;
+  background: #15803d;
+  scrollbar-width: none;          /* Masque la barre sur Firefox */
 }
 
-nav.menu-container ul {
-  display: flex;              /* menu horizontal */
-  flex-wrap: nowrap;          /* toujours sur une ligne */
+.menu-container::-webkit-scrollbar {
+  display: none;                  /* Masque la barre sur Chrome/Safari */
+}
+
+.menu-container nav {
+  display: inline-block;
+  width: 100%;
+}
+
+.menu-container ul {
+  display: flex;                  /* Alignement horizontal */
+  flex-wrap: nowrap;              /* Pas de retour à la ligne */
   list-style: none;
   margin: 0;
   padding: 0;
-  width: max-content;         /* permet scroll si trop large */
 }
 
-nav.menu-container li {
-  flex: 0 0 auto;             /* chaque item prend sa largeur */
+.menu-container li {
+  flex: 0 0 auto;
 }
 
-nav.menu-container a {
-  display: inline-block;
-  padding: 12px 20px;
+.menu-container a {
+  display: block;
+  padding: 12px 24px;
   color: white;
   text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
+  font-weight: 600;
   transition: background 0.3s;
+  font-size: 1rem;
 }
 
-nav.menu-container a:hover {
-  background-color: rgba(255,255,255,0.2);
-  border-radius: 4px;
+.menu-container a:hover {
+  background: rgba(255,255,255,0.2);
 }
 
 /* ========================== HERO / PORTRAIT ========================== */
@@ -341,3 +352,4 @@ nav.menu-container a:hover {
   .livre img { width: 100%; max-width: 100%; }
   #Contact form, #Avis form { width: 100%; padding: 10px; }
 }
+
