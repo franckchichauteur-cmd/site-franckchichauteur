@@ -11,9 +11,7 @@ body {
   background-color: #f9f6f2;
 }
 
-/* ==========================
-   HEADER FIXE
-========================== */
+/* ========================== HEADER FIXE ========================== */
 header {
   position: fixed;
   top: 0;
@@ -23,7 +21,7 @@ header {
   color: white;
   z-index: 1000;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* titre au-dessus du menu */
   align-items: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.15);
   padding: 8px 0;
@@ -36,39 +34,52 @@ header h1 {
   text-align: center;
 }
 
-/* ==========================
-   MENU HORIZONTAL DÉFILANT
-========================== */
+
+/* ========================== MENU HORIZONTAL DÉFILANT ========================== */
 nav.menu-container {
   width: 100%;
-  overflow-x: auto;
+  overflow-x: auto;           /* scroll horizontal si trop large */
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
   background-color: #15803d;
 }
 
 nav.menu-container ul {
-  display: inline-flex;
+  display: flex;              /* menu horizontal */
+  flex-wrap: nowrap;          /* reste sur une ligne */
   list-style: none;
   margin: 0;
   padding: 0;
+  width: max-content;         /* permet le scroll horizontal */
 }
 
 nav.menu-container li {
-  flex: 0 0 auto;
+  flex: 0 0 auto;             /* chaque item prend sa largeur */
 }
 
 nav.menu-container a {
   display: inline-block;
+  padding: 12px 20px;
   color: white;
   text-decoration: none;
   font-weight: 500;
-  padding: 10px 20px;
+  font-size: 1rem;
   transition: background 0.3s;
 }
 
 nav.menu-container a:hover {
   background-color: rgba(255,255,255,0.2);
+  border-radius: 4px;
+}
+/* ========================== RESPONSIVE MOBILE ========================== */
+@media screen and (max-width: 768px) {
+  nav.menu-container ul {
+    flex-wrap: nowrap;        /* toujours horizontal */
+  }
+  nav.menu-container a {
+    padding: 12px 16px;
+    font-size: 0.95em;
+  }
 }
 
 /* ==========================
@@ -338,29 +349,14 @@ nav.menu-container a:hover {
   color: red;
 }
 
-/* ==========================
-   RESPONSIVE
-========================== */
-@media screen and (max-width: 1024px) and (min-width: 601px) {
-  body { font-size: 16px; }
-  .livre img { max-width: 80%; }
-}
-
+/* ========================== RESPONSIVE MOBILE ========================== */
 @media screen and (max-width: 768px) {
   nav.menu-container ul {
-    flex-wrap: nowrap; /* toujours scrollable horizontal */
+    flex-wrap: nowrap;        /* toujours horizontal */
   }
   nav.menu-container a {
-    padding: 12px 24px;
+    padding: 12px 16px;
     font-size: 0.95em;
   }
 }
 
-@media screen and (max-width: 600px) {
-  body { font-size: 15px; padding: 10px; }
-  header h1 { font-size: 1em; }
-  .avis-lecteurs { padding-left: 1rem; padding-right: 1rem; }
-  .avis-lecteurs p { text-align: left; }
-  .livre img { width: 100%; max-width: 100%; }
-  #Contact form, #Avis form { width: 100%; padding: 10px; }
-}
