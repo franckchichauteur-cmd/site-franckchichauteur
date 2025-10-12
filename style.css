@@ -12,39 +12,34 @@ body {
 }
 
 /* ==========================
-   HEADER FIXE
+   HEADER FIXE + MENU DÉFILANT
 ========================== */
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(90deg, #0d3b29, #15803d);
+  background: linear-gradient(135deg, #0d3b29, #15803d);
   color: white;
   z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-  padding: 8px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 header h1 {
-  margin: 0;
-  font-size: 1.2em;
-  font-weight: 600;
   text-align: center;
+  font-size: 1.3em;
+  margin: 8px 0;
+  font-weight: 600;
 }
 
-/* ==========================
-   MENU HORIZONTAL DÉFILANT
-========================== */
+/* === Menu horizontal défilant === */
 nav.menu-container {
-  width: 100%;
   overflow-x: auto;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
-  background-color: #15803d;
+  background-color: #0f5132;
+  display: block;
+  scrollbar-width: thin;
 }
 
 nav.menu-container ul {
@@ -52,23 +47,35 @@ nav.menu-container ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  width: max-content;
 }
 
 nav.menu-container li {
-  flex: 0 0 auto;
+  display: inline-block;
 }
 
 nav.menu-container a {
   display: inline-block;
+  padding: 12px 18px;
   color: white;
   text-decoration: none;
-  font-weight: 500;
-  padding: 10px 20px;
+  font-size: 1rem;
   transition: background 0.3s;
 }
 
 nav.menu-container a:hover {
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.15);
+  border-radius: 4px;
+}
+
+/* === Barre de défilement fine === */
+nav.menu-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+nav.menu-container::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.3);
+  border-radius: 3px;
 }
 
 /* ==========================
@@ -364,3 +371,4 @@ nav.menu-container a:hover {
   .livre img { width: 100%; max-width: 100%; }
   #Contact form, #Avis form { width: 100%; padding: 10px; }
 }
+
