@@ -114,42 +114,20 @@ header h1 {
 
 /* ========================== LIVRES ========================== */
 .livre img {
-  width: 100%;                 /* Prend toute la largeur disponible */
-  max-width: 1000px;           /* Taille max confortable sur grand écran */
+  display: block;                /* Assure le centrage */
+  margin: 30px auto;             /* Centre horizontalement */
+  width: 100%;                   /* Prend toute la largeur disponible */
+  max-width: 800px;              /* Largeur max pour un rendu harmonieux */
   height: auto;
-  display: block;
-  margin: 30px auto;
   border-radius: 12px;
   border: 8px solid #f4e8d3;
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
   background-color: #fffdf8;
+  transition: transform 0.3s;    /* Animation fluide */
 }
 
-.livre h2 {
-  font-size: 2.2em;
-  margin-bottom: 25px;
-  color: #2c2c2c;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.livre img {
-  width: 550px;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 30px auto;
-  border-radius: 12px;
-  border: 10px solid #f4e8d3;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  background-color: #fffdf8;
-}
-
-.livre p {
-  font-size: 1.3em;
-  text-align: justify;
-  margin: 0 60px;
-  line-height: 1.2;
+.livre img:hover {
+  transform: scale(1.02);        /* Légère mise en valeur au survol */
 }
 
 /* ========================== BOUTONS ========================== */
@@ -355,5 +333,6 @@ header h1 {
   .livre img { width: 100%; max-width: 100%; }
   #Contact form, #Avis form { width: 100%; padding: 10px; }
 }
+
 
 
