@@ -1,345 +1,101 @@
-/* ==========================
-   GLOBAL
-========================== */
-body {
-  margin: 0;
-  padding-top: 70px; /* hauteur du header + menu */
-  font-family: "Georgia", serif;
-  font-size: 18px;
-  line-height: 1.4;
-  color: #333;
-  background-color: #f9f6f2;
-}
-
-/* ========================== HEADER FIXE ========================== */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: linear-gradient(90deg, #0d3b29, #15803d);
-  color: white;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column; /* titre au-dessus du menu */
-  align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-  padding: 8px 0;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 1.2em;
-  font-weight: 600;
-  text-align: center;
-}
-/* ========================== MENU HORIZONTAL DÉFILANT ========================== */
-nav.menu-container {
-  width: 100%;
-  overflow-x: auto;          /* scroll horizontal si trop large */
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-  background-color: #15803d;
-}
-
-nav.menu-container ul {
-  display: flex;             /* menu horizontal */
-  flex-wrap: nowrap;         /* ne passe pas à la ligne */
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  width: max-content;        /* permet le scroll horizontal */
-}
-
-nav.menu-container li {
-  flex: 0 0 auto;            /* chaque item prend sa largeur */
-}
-
-nav.menu-container a {
-  display: inline-block;
-  padding: 12px 18px;
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
-  transition: background 0.3s;
-}
-
-nav.menu-container a:hover {
-  background-color: rgba(255,255,255,0.2);
-  border-radius: 4px;
-}
-
-/* === RESPONSIVE MOBILE : garder horizontal + scroll === */
-@media screen and (max-width: 768px) {
-  nav.menu-container ul {
-    flex-wrap: nowrap;       /* toujours horizontal */
-  }
-
-  nav.menu-container a {
-    padding: 12px 16px;      /* ajuste la taille des boutons */
-    font-size: 0.95em;
-  }
-}
-
-/* ==========================
-   LIVRES
-========================== */
-.livre {
-  max-width: 900px;
-  margin: 60px auto;
-  background: #fffaf3;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  text-align: center;
-}
-
-.livre h2 {
-  font-size: 2.2em;
-  margin-bottom: 25px;
-  color: #2c2c2c;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.livre img {
-  width: 550px;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 30px auto;
-  border-radius: 12px;
-  border: 10px solid #f4e8d3;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  background-color: #fffdf8;
-}
-
-.livre p {
-  font-size: 1.3em;
-  text-align: justify;
-  margin: 0 60px;
-  line-height: 1.2;
-}
-
-/* ==========================
-   BOUTONS
-========================== */
-.bouton {
-  display: block;
-  width: 200px;
-  margin: 10px auto;
-  background-color: #333;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-.bouton:hover {
-  background-color: #555;
-}
-
-/* ==========================
-   CONTACT / FORMULAIRES
-========================== */
-#Contact, #Avis {
-  text-align: center;
-  margin-top: 40px;
-}
-
-#Contact form, #Avis form {
-  display: inline-block;
-  text-align: left;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-  width: 350px;
-  max-width: 90%;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-#Contact input, #Contact textarea,
-#Avis input, #Avis textarea, #Avis select {
-  width: 100%;
-  padding: 8px;
-  margin-top: 4px;
-  margin-bottom: 12px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1em;
-  display: block;
-}
-
-#Contact input[type="submit"], #Contact input[type="reset"],
-#Avis input[type="submit"], #Avis input[type="reset"] {
-  width: auto;
-  background-color: #333;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  margin: 5px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#Contact input[type="submit"]:hover,
-#Contact input[type="reset"]:hover,
-#Avis input[type="submit"]:hover,
-#Avis input[type="reset"]:hover {
-  background-color: #555;
-}
-
-/* ==========================
-   AVIS LECTEURS
-========================== */
-.avis-lecteurs {
-  box-sizing: border-box;
-  padding-left: 2cm;
-  padding-right: 2cm;
-  max-width: 900px;
-  margin: 40px auto;
-}
-
-.avis-lecteurs h2 {
-  text-align: center;
-  margin-bottom: 18px;
-}
-
-.avis {
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  padding: 15px 20px;
-  margin-bottom: 20px;
-  font-size: 0.95rem;
-  line-height: 1.2;
-}
-
-.avis p {
-  text-align: justify;
-  margin: 0 0 1em 0;
-}
-
-.avis .auteur {
-  text-align: right;
-  font-style: italic;
-  margin-top: 10px;
-}
-
-/* ==========================
-   TABLEAUX / ACTUALITÉS
-========================== */
-.table-actualites {
-  width: 80%;
-  max-width: 1000px;
-  margin: 60px auto;
-  border-collapse: separate;
-  border-spacing: 0 10px;
-  font-family: "Georgia", serif;
-  font-size: 1.05rem;
-  text-align: center;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-}
-
-.table-actualites th, .table-actualites td {
-  border: 1px solid #ccc;
-  padding: 16px 24px;
-  background-color: #fff;
-}
-
-.table-actualites th {
-  background-color: #2e7d32;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.table-actualites tr:nth-child(even) td {
-  background-color: #f5f5f5;
-}
-
-.table-actualites tr:hover td {
-  background-color: #e8f5e9;
-  transition: background-color 0.3s ease;
-}
-
-/* ==========================
-   POPUP VIDEO
-========================== */
-.popup {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.8);
-  justify-content: center;
-  align-items: center;
-}
-
-.popup-content {
-  position: relative;
-  background-color: #000;
-  padding: 10px;
-  border-radius: 10px;
-  max-width: 90%;
-  max-height: 90%;
-  box-shadow: 0 0 15px rgba(255,255,255,0.2);
-}
-
-.popup video {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.fermer {
-  position: absolute;
-  top: 8px;
-  right: 15px;
-  font-size: 28px;
-  color: white;
-  cursor: pointer;
-  transition: color 0.3s;
-}
-
-.fermer:hover {
-  color: red;
-}
-
-/* ==========================
-   RESPONSIVE
-========================== */
-@media screen and (max-width: 1024px) and (min-width: 601px) {
-  body { font-size: 16px; }
-  .livre img { max-width: 80%; }
-}
-
-@media screen and (max-width: 768px) {
-  nav.menu-container ul {
-    flex-wrap: nowrap; /* toujours scrollable horizontal */
-  }
-  nav.menu-container a {
-    padding: 12px 24px;
-    font-size: 0.95em;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  body { font-size: 15px; padding: 10px; }
-  header h1 { font-size: 1em; }
-  .avis-lecteurs { padding-left: 1rem; padding-right: 1rem; }
-  .avis-lecteurs p { text-align: left; }
-  .livre img { width: 100%; max-width: 100%; }
-  #Contact form, #Avis form { width: 100%; padding: 10px; }
-}
-
-
-
+/* ==========================    GLOBAL ========================== */ 
+body {   margin: 0;   padding-top: 70px; /* hauteur du header + menu */ 
+  font-family: "Georgia", serif;   font-size: 18px;   line-height: 1.4; 
+  color: #333;   background-color: #f9f6f2; }  /* 
+==========================    HEADER FIXE ========================== */ 
+header {   position: fixed;   top: 0;   left: 0;   width: 100%;   
+background: linear-gradient(90deg, #0d3b29, #15803d);   color: white;   
+z-index: 1000;   display: flex;   flex-direction: column;   align-items:
+ center;   box-shadow: 0 2px 5px rgba(0,0,0,0.15);   padding: 8px 0; }  
+header h1 {   margin: 0;   font-size: 1.2em;   font-weight: 600;   
+text-align: center; }  /* ==========================    MENU HORIZONTAL 
+DÉFILANT ========================== */ nav.menu-container {   width: 
+100%;   overflow-x: auto;   white-space: nowrap;   
+-webkit-overflow-scrolling: touch;   background-color: #15803d; }  
+nav.menu-container ul {   display: inline-flex;   list-style: none;   
+margin: 0;   padding: 0; }  nav.menu-container li {   flex: 0 0 auto; } 
+ nav.menu-container a {   display: inline-block;   color: white;   
+text-decoration: none;   font-weight: 500;   padding: 10px 20px;   
+transition: background 0.3s; }  nav.menu-container a:hover {   
+background-color: rgba(255,255,255,0.2); }  /* 
+==========================    HERO / PORTRAIT ==========================
+ */ .hero {   text-align: center;   margin-top: 30px; }  .hero .portrait
+ {   width: 200px;   max-width: 90%;   border-radius: 50%;   display: 
+block;   margin: 20px auto;   box-shadow: 0 2px 10px rgba(0,0,0,0.2); } 
+ /* ==========================    SECTION BIO / LIVRES 
+========================== */ .bio, .livres {   padding: 40px 20px;   
+max-width: 800px;   margin: auto; }  .justifie {   text-align: justify; 
+  line-height: 1.2; }  .decale-gauche {   margin-left: 2cm; }  /* 
+==========================    LIVRES ========================== */ 
+.livre {   max-width: 900px;   margin: 60px auto;   background: #fffaf3;
+   padding: 40px;   border-radius: 15px;   box-shadow: 0 4px 10px 
+rgba(0,0,0,0.15);   text-align: center; }  .livre h2 {   font-size: 
+2.2em;   margin-bottom: 25px;   color: #2c2c2c;   text-transform: 
+uppercase;   letter-spacing: 1px; }  .livre img {   width: 550px;   
+max-width: 100%;   height: auto;   display: block;   margin: 30px auto; 
+  border-radius: 12px;   border: 10px solid #f4e8d3;   box-shadow: 0 8px
+ 20px rgba(0,0,0,0.25);   background-color: #fffdf8; }  .livre p {   
+font-size: 1.3em;   text-align: justify;   margin: 0 60px;   
+line-height: 1.2; }  /* ==========================    BOUTONS 
+========================== */ .bouton {   display: block;   width: 
+200px;   margin: 10px auto;   background-color: #333;   color: white;   
+padding: 12px 24px;   border-radius: 6px;   text-decoration: none;   
+font-weight: bold;   transition: background 0.3s; }  .bouton:hover {   
+background-color: #555; }  /* ==========================    CONTACT / 
+FORMULAIRES ========================== */ #Contact, #Avis {   
+text-align: center;   margin-top: 40px; }  #Contact form, #Avis form {  
+ display: inline-block;   text-align: left;   margin: 0 auto;   padding:
+ 20px;   border: 1px solid #ccc;   border-radius: 10px;   
+background-color: #f9f9f9;   width: 350px;   max-width: 90%;   
+box-shadow: 0 2px 6px rgba(0,0,0,0.1); }  #Contact input, #Contact 
+textarea, #Avis input, #Avis textarea, #Avis select {   width: 100%;   
+padding: 8px;   margin-top: 4px;   margin-bottom: 12px;   border: 1px 
+solid #ccc;   border-radius: 5px;   font-size: 1em;   display: block; } 
+ #Contact input[type="submit"], #Contact input[type="reset"], #Avis 
+input[type="submit"], #Avis input[type="reset"] {   width: auto;   
+background-color: #333;   color: white;   border: none;   padding: 8px 
+16px;   margin: 5px;   border-radius: 5px;   cursor: pointer; }  
+#Contact input[type="submit"]:hover, #Contact input[type="reset"]:hover,
+ #Avis input[type="submit"]:hover, #Avis input[type="reset"]:hover {   
+background-color: #555; }  /* ==========================    AVIS 
+LECTEURS ========================== */ .avis-lecteurs {   box-sizing: 
+border-box;   padding-left: 2cm;   padding-right: 2cm;   max-width: 
+900px;   margin: 40px auto; }  .avis-lecteurs h2 {   text-align: center;
+   margin-bottom: 18px; }  .avis {   background-color: #f9f9f9;   
+border-radius: 10px;   box-shadow: 0 4px 8px rgba(0,0,0,0.1);   padding:
+ 15px 20px;   margin-bottom: 20px;   font-size: 0.95rem;   line-height: 
+1.2; }  .avis p {   text-align: justify;   margin: 0 0 1em 0; }  .avis 
+.auteur {   text-align: right;   font-style: italic;   margin-top: 10px;
+ }  /* ==========================    TABLEAUX / ACTUALITÉS 
+========================== */ .table-actualites {   width: 80%;   
+max-width: 1000px;   margin: 60px auto;   border-collapse: separate;   
+border-spacing: 0 10px;   font-family: "Georgia", serif;   font-size: 
+1.05rem;   text-align: center;   box-shadow: 0 0 15px rgba(0,0,0,0.1); }
+  .table-actualites th, .table-actualites td {   border: 1px solid #ccc;
+   padding: 16px 24px;   background-color: #fff; }  .table-actualites th
+ {   background-color: #2e7d32;   color: white;   text-transform: 
+uppercase;   letter-spacing: 1px; }  .table-actualites 
+tr:nth-child(even) td {   background-color: #f5f5f5; }  
+.table-actualites tr:hover td {   background-color: #e8f5e9;   
+transition: background-color 0.3s ease; }  /* ==========================
+    POPUP VIDEO ========================== */ .popup {   display: none; 
+  position: fixed;   z-index: 1000;   left: 0;   top: 0;   width: 100%; 
+  height: 100%;   background-color: rgba(0,0,0,0.8);   justify-content: 
+center;   align-items: center; }  .popup-content {   position: relative;
+   background-color: #000;   padding: 10px;   border-radius: 10px;   
+max-width: 90%;   max-height: 90%;   box-shadow: 0 0 15px 
+rgba(255,255,255,0.2); }  .popup video {   width: 100%;   height: auto; 
+  border-radius: 10px; }  .fermer {   position: absolute;   top: 8px;   
+right: 15px;   font-size: 28px;   color: white;   cursor: pointer;   
+transition: color 0.3s; }  .fermer:hover {   color: red; }  /* 
+==========================    RESPONSIVE ========================== */ 
+@media screen and (max-width: 1024px) and (min-width: 601px) {   body { 
+font-size: 16px; }   .livre img { max-width: 80%; } }  @media screen and
+ (max-width: 768px) {   nav.menu-container ul {     flex-wrap: nowrap; 
+/* toujours scrollable horizontal */   }   nav.menu-container a {     
+padding: 12px 24px;     font-size: 0.95em;   } }  @media screen and 
+(max-width: 600px) {   body { font-size: 15px; padding: 10px; }   header
+ h1 { font-size: 1em; }   .avis-lecteurs { padding-left: 1rem; 
+padding-right: 1rem; }   .avis-lecteurs p { text-align: left; }   .livre
+ img { width: 100%; max-width: 100%; }   #Contact form, #Avis form { 
+width: 100%; padding: 10px; } }
