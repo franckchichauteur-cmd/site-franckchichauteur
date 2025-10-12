@@ -108,18 +108,21 @@ header h1 {
 }
 
 .decale-gauche {
-  margin-left: 2cm;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 /* ========================== LIVRES ========================== */
-.livre {
-  max-width: 900px;
-  margin: 60px auto;
-  background: #fffaf3;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  text-align: center;
+.livre img {
+  width: 100%;                 /* Prend toute la largeur disponible */
+  max-width: 1000px;           /* Taille max confortable sur grand écran */
+  height: auto;
+  display: block;
+  margin: 30px auto;
+  border-radius: 12px;
+  border: 8px solid #f4e8d3;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  background-color: #fffdf8;
 }
 
 .livre h2 {
@@ -352,4 +355,5 @@ header h1 {
   .livre img { width: 100%; max-width: 100%; }
   #Contact form, #Avis form { width: 100%; padding: 10px; }
 }
+
 
