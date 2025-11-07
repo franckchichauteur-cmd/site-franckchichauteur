@@ -338,6 +338,139 @@ header h1 {
   #Contact form, #Avis form { width: 100%; padding: 10px; }
 }
 <!-- ==== STYLE CSS ==== -->
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+section#Avis {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  max-width: 600px;
+  width: 100%;
+}
+
+section#Avis h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #333333;
+}
+
+section#Avis p {
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: #555555;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #555555;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  padding: 12px 14px;
+  font-size: 14px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+  border-color: #4CAF50;
+}
+
+/* Choix des livres */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #555555;
+}
+
+.checkbox-item input[type="checkbox"] {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+}
+
+/* Boutons */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.form-buttons input[type="submit"],
+.form-buttons input[type="reset"] {
+  width: 48%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-buttons input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.form-buttons input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.form-buttons input[type="reset"] {
+  background-color: #cccccc;
+  color: #333333;
+}
+
+.form-buttons input[type="reset"]:hover {
+  background-color: #b3b3b3;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+  .form-buttons {
+    flex-direction: column;
+  }
+  .form-buttons input[type="submit"],
+  .form-buttons input[type="reset"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
 
 
 
