@@ -143,7 +143,7 @@
     <p><strong>Si vous souhaitez un livre dédicacé, merci d'utiliser le formulaire suivant :</strong></p>
 
     <!-- Formulaire Formspree -->
-    <form action="https://formspree.io/f/myznpved" method="POST" class="formulaire-dedicace">
+    <form action="https://formspree.io/f/myznpved" method="POST">
       <!-- Informations personnelles -->
       <label for="nom">Nom :</label>
       <input type="text" id="nom" name="nom" required>
@@ -158,22 +158,10 @@
       <!-- Choix des livres -->
       <p><strong>Livre(s) concerné(s) :</strong></p>
       <div class="checkbox-group">
-        <div class="checkbox-item">
-          <input type="checkbox" id="livre1" name="livre[]" value="L'affaire Morin">
-          <label for="livre1">L'affaire Morin</label>
-        </div>
-        <div class="checkbox-item">
-          <input type="checkbox" id="livre2" name="livre[]" value="Ce matin là...">
-          <label for="livre2">Ce matin là...</label>
-        </div>
-        <div class="checkbox-item">
-          <input type="checkbox" id="livre3" name="livre[]" value="Les fréquences du chaos">
-          <label for="livre3">Les fréquences du chaos</label>
-        </div>
-        <div class="checkbox-item">
-          <input type="checkbox" id="livre4" name="livre[]" value="Au coeur du passé">
-          <label for="livre4">Au cœur du passé</label>
-        </div>
+        <label><input type="checkbox" name="livre[]" value="L'affaire Morin"> L'affaire Morin</label>
+        <label><input type="checkbox" name="livre[]" value="Ce matin là..."> Ce matin là...</label>
+        <label><input type="checkbox" name="livre[]" value="Les fréquences du chaos"> Les fréquences du chaos</label>
+        <label><input type="checkbox" name="livre[]" value="Au coeur du passé"> Au cœur du passé</label>
       </div>
 
       <!-- Avis ou message -->
@@ -211,6 +199,7 @@ if (menuToggle) {
 
 </body>
 </html>
+
 
 
 
