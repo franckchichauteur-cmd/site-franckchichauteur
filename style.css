@@ -337,6 +337,7 @@ header h1 {
   .livre img { width: 100%; max-width: 100%; }
   #Contact form, #Avis form { width: 100%; padding: 10px; }
 }
+<!-- ==== STYLE CSS ==== -->
 <style>
   #Avis {
     max-width: 600px;
@@ -346,6 +347,7 @@ header h1 {
     border-radius: 1rem;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     font-family: system-ui, sans-serif;
+    text-align: left; /* <-- assure que tout le contenu est aligné à gauche */
   }
 
   #Avis h2 {
@@ -371,18 +373,20 @@ header h1 {
     box-sizing: border-box;
   }
 
-  /* Groupement vertical des cases */
+  /* Cases à cocher alignées à gauche */
   .checkbox-group {
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
     margin: 0.5rem 0 1rem 0;
+    align-items: flex-start; /* <-- force l’alignement à gauche */
   }
 
   .checkbox-item {
     display: flex;
     align-items: center;
     gap: 0.6rem;
+    width: 100%;
   }
 
   .checkbox-item input[type="checkbox"] {
@@ -390,12 +394,13 @@ header h1 {
     height: 18px;
     margin: 0;
     accent-color: #4CAF50; /* couleur verte */
+    flex-shrink: 0;
   }
 
   .checkbox-item label {
     font-weight: normal;
     line-height: 1.4;
-    word-break: break-word; /* permet le retour à la ligne sur petits écrans */
+    word-break: break-word;
   }
 
   .form-buttons {
@@ -430,6 +435,7 @@ header h1 {
     background-color: #bbb;
   }
 </style>
+
 
 
 
