@@ -371,26 +371,31 @@ header h1 {
     box-sizing: border-box;
   }
 
-  /* Cases à cocher verticales */
+  /* Groupement vertical des cases */
   .checkbox-group {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    gap: 0.6rem;
     margin: 0.5rem 0 1rem 0;
   }
 
-  .checkbox-group label {
+  .checkbox-item {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-weight: normal;
-    margin: 0.3rem 0;
+    gap: 0.6rem;
   }
 
-  .checkbox-group input[type="checkbox"] {
+  .checkbox-item input[type="checkbox"] {
     width: 18px;
     height: 18px;
-    accent-color: #4CAF50; /* couleur verte moderne */
+    margin: 0;
+    accent-color: #4CAF50; /* couleur verte */
+  }
+
+  .checkbox-item label {
+    font-weight: normal;
+    line-height: 1.4;
+    word-break: break-word; /* permet le retour à la ligne sur petits écrans */
   }
 
   .form-buttons {
@@ -425,6 +430,7 @@ header h1 {
     background-color: #bbb;
   }
 </style>
+
 
 
 
