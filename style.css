@@ -347,15 +347,12 @@ header h1 {
     border-radius: 1rem;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     font-family: system-ui, sans-serif;
+    text-align: left;
   }
 
   #Avis h2 {
     text-align: center;
     color: #333;
-  }
-
-  form {
-    text-align: left; /* tout le contenu aligné à gauche */
   }
 
   form label {
@@ -376,26 +373,33 @@ header h1 {
     box-sizing: border-box;
   }
 
-  /* ✅ Cases bien alignées à gauche */
+  /* ✅ Cases à cocher avec texte à droite, parfaitement alignées à gauche */
   .checkbox-group {
-    display: block;
     margin: 0.5rem 0 1rem 0;
     padding: 0;
   }
 
-  .checkbox-group label {
-    display: block;              /* chaque case sur une ligne */
-    text-align: left;            /* texte aligné à gauche */
+  .checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0.4rem 0;
     font-weight: normal;
-    margin: 0.3rem 0;
     cursor: pointer;
   }
 
-  .checkbox-group input[type="checkbox"] {
-    vertical-align: middle;      /* case alignée avec le texte */
-    margin-right: 0.5rem;
-    accent-color: #4CAF50;       /* couleur verte */
-    transform: translateX(0);    /* aucune translation */
+  .checkbox-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #4CAF50;
+    flex-shrink: 0;
+    margin-left: 0;
+  }
+
+  .checkbox-item span {
+    flex-grow: 1;
+    text-align: left;
+    word-break: break-word;
   }
 
   .form-buttons {
@@ -429,17 +433,8 @@ header h1 {
   input[type="reset"]:hover {
     background-color: #bbb;
   }
-.checkbox-group label {
-  text-align: left !important;
-}
-.checkbox-group input[type="checkbox"] {
-  margin-left: 0 !important;
-}
-
-
-
-
 </style>
+
 
 
 
