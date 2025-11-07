@@ -133,9 +133,8 @@
     L’affaire Morin
   </a>
 <main>
-  <section id="Avis">
-    <h2>Laissez votre avis</h2>
-    <p><strong>Si vous souhaitez un livre dédicacé, merci d'utiliser le formulaire suivant :</strong></p>
+  <section id="Dédicaces">
+       <p><strong>Si vous souhaitez un livre dédicacé, merci d'utiliser le formulaire suivant :</strong></p>
     <form action="https://formspree.io/f/myznpved" method="POST">
       <!-- Informations personnelles -->
       <label for="nom">Nom :</label>
@@ -150,22 +149,27 @@
       <!-- Choix des livres -->
       <p><strong>Livre(s) concerné(s) :</strong></p>
       <div class="checkbox-group">
+        <p>-</p>
         <label class="checkbox-item">
           <input type="checkbox" name="livre[]" value="L'affaire Morin">
           <span>L'affaire Morin</span>
         </label>
+        <p>-</p>
         <label class="checkbox-item">
           <input type="checkbox" name="livre[]" value="Ce matin là...">
           <span>Ce matin là...</span>
         </label>
+        <p>-</p>
         <label class="checkbox-item">
           <input type="checkbox" name="livre[]" value="Les fréquences du chaos">
           <span>Les fréquences du chaos</span>
         </label>
+        <p>-</p>
         <label class="checkbox-item">
           <input type="checkbox" name="livre[]" value="Au coeur du passé">
           <span>Au cœur du passé</span>
         </label>
+      <p>-</p>
       </div>
 
       <!-- Avis ou message -->
@@ -204,6 +208,7 @@ if (menuToggle) {
 
 </body>
 </html>
+
 
 
 
