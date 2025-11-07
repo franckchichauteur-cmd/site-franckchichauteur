@@ -132,6 +132,46 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M8 8c0-1.1.9-2 2-2h36c1.1 0 2 .9 2 2v48c0 1.1-.9 2-2 2H10c-1.1 0-2-.9-2-2V8zM10 8v48h36V8H10zm2 2h32v44H12V10z"/><path d="M14 14h28v4H14zm0 8h28v4H14zm0 8h20v4H14zm0 8h20v4H14z"/></svg>
     L’affaire Morin
   </a>
+<main>
+  <section id="Avis">
+    <h2>Laissez votre avis</h2>
+    <p>Partagez votre ressenti sur mes livres :</p>
+
+    <p><strong>Si vous souhaitez un livre dédicacé, merci d'utiliser le formulaire suivant :</strong></p>
+
+    <!-- Formulaire Formspree -->
+    <form action="https://formspree.io/f/myznpved" method="POST">
+      <!-- Informations personnelles -->
+      <label for="nom">Nom :</label>
+      <input type="text" id="nom" name="nom" required>
+
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email" required>
+
+      <!-- Adresse d'expédition -->
+      <label for="adresse">Adresse d’expédition :</label>
+      <textarea id="adresse" name="adresse" rows="3" placeholder="Numéro, rue, code postal, ville, pays" required></textarea>
+
+      <!-- Choix des livres -->
+      <label for="livre">Livre(s) concerné(s) :</label>
+      <select id="livre" name="livre[]" multiple size="4" required>
+        <option value="L'affaire Morin">L'affaire Morin</option>
+        <option value="Ce matin là...">Ce matin là...</option>
+        <option value="Les fréquences du chaos">Les fréquences du chaos</option>
+        <option value="Au coeur du passé">Au coeur du passé</option>
+      </select>
+      <small>(Maintenez <kbd>Ctrl</kbd> ou <kbd>Cmd</kbd> pour sélectionner plusieurs livres)</small>
+
+      <!-- Avis ou message -->
+      <label for="avis">Votre message ou demande :</label>
+      <textarea id="avis" name="avis" rows="5" placeholder="Écrivez votre avis, ou précisez à quel nom vous souhaitez la dédicace..." required></textarea>
+
+      <!-- Boutons -->
+      <input type="submit" value="Envoyer">
+      <input type="reset" value="Effacer">
+    </form>
+  </section>
+</main>
 
   <footer>
     <h3>Contact</h3>
@@ -154,6 +194,7 @@ if (menuToggle) {
 
 </body>
 </html>
+
 
 
 
