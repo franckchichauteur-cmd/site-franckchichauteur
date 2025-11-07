@@ -339,6 +339,7 @@ header h1 {
 }
 <!-- ==== STYLE CSS ==== -->
 <style>
+  /* ----- Structure générale ----- */
   #Avis {
     max-width: 600px;
     margin: 2rem auto;
@@ -347,12 +348,22 @@ header h1 {
     border-radius: 1rem;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     font-family: system-ui, sans-serif;
-    text-align: left;
+    text-align: left !important; /* 🔒 verrouille l’alignement */
+  }
+
+  #Avis * {
+    text-align: left !important; /* 🔒 force tout le contenu à gauche */
   }
 
   #Avis h2 {
-    text-align: center;
+    text-align: center !important; /* seul le titre reste centré */
     color: #333;
+  }
+
+  form {
+    display: block !important; /* 🔒 empêche flex ou grid globaux */
+    margin: 0;
+    padding: 0;
   }
 
   form label {
@@ -373,7 +384,7 @@ header h1 {
     box-sizing: border-box;
   }
 
-  /* ✅ Cases à cocher avec texte à droite, parfaitement alignées à gauche */
+  /* ✅ Cases à cocher parfaitement alignées à gauche */
   .checkbox-group {
     margin: 0.5rem 0 1rem 0;
     padding: 0;
@@ -382,6 +393,7 @@ header h1 {
   .checkbox-item {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     gap: 0.6rem;
     margin: 0.4rem 0;
     font-weight: normal;
@@ -393,15 +405,15 @@ header h1 {
     height: 18px;
     accent-color: #4CAF50;
     flex-shrink: 0;
-    margin-left: 0;
+    margin: 0;
   }
 
   .checkbox-item span {
-    flex-grow: 1;
     text-align: left;
     word-break: break-word;
   }
 
+  /* Boutons */
   .form-buttons {
     display: flex;
     justify-content: space-between;
@@ -434,6 +446,7 @@ header h1 {
     background-color: #bbb;
   }
 </style>
+
 
 
 
