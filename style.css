@@ -339,23 +339,26 @@ header h1 {
 }
 <!-- ==== STYLE CSS ==== -->
 <style>
-  /* Formulaire simple, tout aligné à gauche */
+  /* Container */
   #Avis {
     max-width: 600px;
     margin: 2rem auto;
     padding: 2rem;
-    background: #fafafa;
+    background-color: #fafafa;
     border-radius: 10px;
     font-family: sans-serif;
+    text-align: left;
   }
 
   h2 {
     text-align: center;
   }
 
+  /* Labels et champs */
   label {
     display: block;
     margin-top: 1rem;
+    cursor: pointer;
   }
 
   input[type="text"],
@@ -369,19 +372,18 @@ header h1 {
     box-sizing: border-box;
   }
 
-  /* Cases à cocher collées à gauche, texte à droite */
+  /* Checkbox list */
   .checkbox-group label {
     display: block;          /* une ligne par checkbox */
-    margin: 0.3rem 0;
-    cursor: pointer;
-    text-align: left;
+    margin: 0.4rem 0;
   }
 
   .checkbox-group input[type="checkbox"] {
-    margin-right: 0.5rem;    /* espace entre la case et le texte */
-    vertical-align: middle;
+    vertical-align: middle;  /* ✅ centre verticalement la case avec le texte */
+    margin-right: 0.5rem;    /* espace entre case et texte */
   }
 
+  /* Boutons */
   .form-buttons {
     margin-top: 1.5rem;
     display: flex;
@@ -414,6 +416,7 @@ header h1 {
     background-color: #bbb;
   }
 </style>
+
 
 
 
