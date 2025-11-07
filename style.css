@@ -429,7 +429,18 @@ header h1 {
   input[type="reset"]:hover {
     background-color: #bbb;
   }
+.checkbox-group label {
+  text-align: left !important;
+}
+.checkbox-group input[type="checkbox"] {
+  margin-left: 0 !important;
+}
+
+
+
+
 </style>
+
 
 
 
