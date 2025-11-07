@@ -339,7 +339,7 @@ header h1 {
 }
 <!-- ==== STYLE CSS ==== -->
 <style>
-  /* Container */
+  /* Container du formulaire */
   #Avis {
     max-width: 600px;
     margin: 2rem auto;
@@ -372,15 +372,24 @@ header h1 {
     box-sizing: border-box;
   }
 
-  /* Checkbox list */
-  .checkbox-group label {
-    display: block;          /* une ligne par checkbox */
-    margin: 0.4rem 0;
+  /* ✅ Checkbox avec texte verticalement centré */
+  .checkbox-group {
+    margin: 0.5rem 0 1rem 0;
+    padding: 0;
   }
 
-  .checkbox-group input[type="checkbox"] {
-    vertical-align: middle;  /* ✅ centre verticalement la case avec le texte */
-    margin-right: 0.5rem;    /* espace entre case et texte */
+  .checkbox-item {
+    display: flex;          /* crée une ligne horizontale */
+    align-items: center;    /* centre verticalement checkbox et texte */
+    gap: 0.5rem;            /* espace entre case et texte */
+    margin: 0.3rem 0;
+    cursor: pointer;
+  }
+
+  .checkbox-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
   }
 
   /* Boutons */
@@ -416,6 +425,7 @@ header h1 {
     background-color: #bbb;
   }
 </style>
+
 
 
 
