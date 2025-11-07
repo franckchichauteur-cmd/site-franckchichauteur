@@ -339,92 +339,60 @@ header h1 {
 }
 <!-- ==== STYLE CSS ==== -->
 <style>
-  /* ----- Structure générale ----- */
+  /* Formulaire simple, tout aligné à gauche */
   #Avis {
     max-width: 600px;
     margin: 2rem auto;
     padding: 2rem;
-    background-color: #fafafa;
-    border-radius: 1rem;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    font-family: system-ui, sans-serif;
-    text-align: left !important; /* 🔒 verrouille l’alignement */
+    background: #fafafa;
+    border-radius: 10px;
+    font-family: sans-serif;
   }
 
-  #Avis * {
-    text-align: left !important; /* 🔒 force tout le contenu à gauche */
+  h2 {
+    text-align: center;
   }
 
-  #Avis h2 {
-    text-align: center !important; /* seul le titre reste centré */
-    color: #333;
-  }
-
-  form {
-    display: block !important; /* 🔒 empêche flex ou grid globaux */
-    margin: 0;
-    padding: 0;
-  }
-
-  form label {
+  label {
     display: block;
     margin-top: 1rem;
-    font-weight: 600;
   }
 
   input[type="text"],
   input[type="email"],
   textarea {
     width: 100%;
-    padding: 0.6rem;
+    padding: 0.5rem;
     margin-top: 0.3rem;
     border: 1px solid #ccc;
-    border-radius: 0.5rem;
-    font-size: 1rem;
+    border-radius: 5px;
     box-sizing: border-box;
   }
 
-  /* ✅ Cases à cocher parfaitement alignées à gauche */
-  .checkbox-group {
-    margin: 0.5rem 0 1rem 0;
-    padding: 0;
-  }
-
-  .checkbox-item {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.6rem;
-    margin: 0.4rem 0;
-    font-weight: normal;
+  /* Cases à cocher collées à gauche, texte à droite */
+  .checkbox-group label {
+    display: block;          /* une ligne par checkbox */
+    margin: 0.3rem 0;
     cursor: pointer;
-  }
-
-  .checkbox-item input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    accent-color: #4CAF50;
-    flex-shrink: 0;
-    margin: 0;
-  }
-
-  .checkbox-item span {
     text-align: left;
-    word-break: break-word;
   }
 
-  /* Boutons */
+  .checkbox-group input[type="checkbox"] {
+    margin-right: 0.5rem;    /* espace entre la case et le texte */
+    vertical-align: middle;
+  }
+
   .form-buttons {
+    margin-top: 1.5rem;
     display: flex;
     justify-content: space-between;
-    margin-top: 1.5rem;
   }
 
   input[type="submit"],
   input[type="reset"] {
     padding: 0.6rem 1.5rem;
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 5px;
     cursor: pointer;
     font-weight: 600;
   }
@@ -446,6 +414,7 @@ header h1 {
     background-color: #bbb;
   }
 </style>
+
 
 
 
