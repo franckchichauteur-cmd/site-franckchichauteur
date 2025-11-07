@@ -134,11 +134,6 @@
   </a>
 <main>
   <section id="Avis">
-    <p><strong>Si vous souhaitez un livre dédicacé, merci d'utiliser le formulaire suivant :</strong></p>
-
-    <!-- Formulaire Formspree -->
-<main>
-  <section id="Avis">
     <h2>Laissez votre avis</h2>
     <p><strong>Si vous souhaitez un livre dédicacé, merci d'utiliser le formulaire suivant :</strong></p>
 
@@ -158,10 +153,22 @@
       <!-- Choix des livres -->
       <p><strong>Livre(s) concerné(s) :</strong></p>
       <div class="checkbox-group">
-        <label><input type="checkbox" name="livre[]" value="L'affaire Morin"> L'affaire Morin</label>
-        <label><input type="checkbox" name="livre[]" value="Ce matin là..."> Ce matin là...</label>
-        <label><input type="checkbox" name="livre[]" value="Les fréquences du chaos"> Les fréquences du chaos</label>
-        <label><input type="checkbox" name="livre[]" value="Au coeur du passé"> Au cœur du passé</label>
+        <label class="checkbox-item">
+          <input type="checkbox" name="livre[]" value="L'affaire Morin">
+          <span>L'affaire Morin</span>
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" name="livre[]" value="Ce matin là...">
+          <span>Ce matin là...</span>
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" name="livre[]" value="Les fréquences du chaos">
+          <span>Les fréquences du chaos</span>
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" name="livre[]" value="Au coeur du passé">
+          <span>Au cœur du passé</span>
+        </label>
       </div>
 
       <!-- Avis ou message -->
@@ -199,6 +206,7 @@ if (menuToggle) {
 
 </body>
 </html>
+
 
 
 
