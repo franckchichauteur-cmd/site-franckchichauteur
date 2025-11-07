@@ -147,20 +147,34 @@
       <input type="email" id="email" name="email" required>
 
       <label for="adresse">Adresse d’expédition :</label>
-      <textarea id="adresse" name="adresse" rows="3" required placeholder="Numéro, rue, code postal, ville, pays"></textarea>
+      <textarea id="adresse" name="adresse" rows="3" placeholder="Numéro, rue, code postal, ville, pays" required></textarea>
 
       <!-- Choix des livres -->
       <p><strong>Livre(s) concerné(s) :</strong></p>
       <div class="checkbox-group">
-        <label><input type="checkbox" name="livre[]" value="L'affaire Morin"> L'affaire Morin</label>
-        <label><input type="checkbox" name="livre[]" value="Ce matin là..."> Ce matin là...</label>
-        <label><input type="checkbox" name="livre[]" value="Les fréquences du chaos"> Les fréquences du chaos</label>
-        <label><input type="checkbox" name="livre[]" value="Au coeur du passé"> Au cœur du passé</label>
+        <label>
+          <input type="checkbox" name="livre[]" value="L'affaire Morin">
+          L'affaire Morin
+        </label>
+        <label>
+          <input type="checkbox" name="livre[]" value="Ce matin là...">
+          Ce matin là...
+        </label>
+        <label>
+          <input type="checkbox" name="livre[]" value="Les fréquences du chaos">
+          Les fréquences du chaos
+        </label>
+        <label>
+          <input type="checkbox" name="livre[]" value="Au coeur du passé">
+          Au cœur du passé
+        </label>
       </div>
 
+      <!-- Avis ou message -->
       <label for="avis">Nom pour la dédicace et/ou votre message :</label>
-      <textarea id="avis" name="avis" rows="5" required placeholder="Merci de préciser à quel nom vous souhaitez la dédicace..."></textarea>
+      <textarea id="avis" name="avis" rows="5" placeholder="Merci de préciser à quel nom vous souhaitez la dédicace..." required></textarea>
 
+      <!-- Boutons -->
       <div class="form-buttons">
         <input type="submit" value="Envoyer">
         <input type="reset" value="Effacer">
@@ -194,6 +208,7 @@ if (menuToggle) {
 
 </body>
 </html>
+
 
 
 
