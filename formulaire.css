@@ -93,6 +93,19 @@ form p {
   gap: 8px;
   margin-bottom: 6px;
 }
+/* Animation de clignotement douce */
+@keyframes clignote {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+/* Classe à appliquer au texte */
+.blink {
+  animation: clignote 1.5s infinite;
+  color: #00704A; /* vert élégant, tu peux changer */
+  font-weight: bold;
+}
+
 
 
 
