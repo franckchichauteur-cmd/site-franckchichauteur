@@ -1,145 +1,58 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta name="google-site-verification" content="_RXeF4hx7rX1R-nc8I97dVfmzIfWoFesWxzsebEPRek" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="_RXeF4hx7rX1R-nc8I97dVfmzIfWoFesWxzsebEPRek" />
   <title>Ventes en ligne | Franck CHICH - Auteur</title>
   <link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="formulaire.css">
   <style>
-    body {
-      font-family: Georgia, serif;
-      background-color: #f9f6f2;
-      color: #222;
-      text-align: center;
-      padding: 50px 20px;
-    }
-
-    h2 {
-      color: green;
-      margin-bottom: 30px;
-    }
-
-    h3 {
-      margin-top: 30px;
-      color: #333;
-    }
-
-    /* --- Styles des boutons modernisés --- */
-    .bouton {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #00704A;
-      color: white;
-      padding: 12px 28px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 12px;
-      font-size: 1.05em;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-      transition: background 0.3s, transform 0.2s;
-    }
-
-    .bouton:hover {
-      background-color: #00945E;
-      transform: scale(1.05);
-    }
-
-    .bouton svg {
-      margin-right: 8px;
-      width: 20px;
-      height: 20px;
-      fill: white;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #555;
-      margin-top: 40px;
-      padding: 20px 0;
-      background-color: #f8f8f8;
-      border-top: 1px solid #ddd;
-    }
-
-    footer a {
-      color: #00704A;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
+    body { font-family: Georgia, serif; background-color: #f9f6f2; color: #222; text-align: center; padding: 50px 20px; }
+    h2 { color: green; margin-bottom: 30px; }
+    h3 { margin-top: 30px; color: #333; }
+    .bouton { display: inline-flex; align-items: center; justify-content: center; background-color: #00704A; color: white; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; margin: 12px; font-size: 1.05em; box-shadow: 0 3px 6px rgba(0,0,0,0.15); transition: background 0.3s, transform 0.2s; }
+    .bouton:hover { background-color: #00945E; transform: scale(1.05); }
+    .bouton svg { margin-right: 8px; width: 20px; height: 20px; fill: white; }
+    footer { text-align: center; font-size: 0.9rem; color: #555; margin-top: 40px; padding: 20px 0; background-color: #f8f8f8; border-top: 1px solid #ddd; }
+    footer a { color: #00704A; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
   </style>
 </head>
+<body>
 
-<body>
-  
-</head>
-<body>
 <header>
-  <!-- TITRE FIXE -->
   <div class="header-top">
     <h1>Franck CHICH - Auteur</h1>
   </div>
-
-  <!-- MENU DÉFILANT -->
   <div class="menu-container">
     <nav>
       <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="livres.html">Mes livres</a></li>
-      <li><a href="avis.html">Vos avis</a></li>
-      <li><a href="ventes_en_ligne.html">Vente en ligne</a></li>
-      <li><a href="actualites.html">Actualités</a></li>
-      <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="livres.html">Mes livres</a></li>
+        <li><a href="avis.html">Vos avis</a></li>
+        <li><a href="ventes_en_ligne.html">Vente en ligne</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-  </nav>
+    </nav>
+  </div>
 </header>
 
-<script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const menu = document.getElementById('menu').querySelector('ul');
-  menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('active');
-  });
-</script>
-<a>.
-</a>
+<main>
   <h2>Trouvez mes livres en ligne</h2>
 
   <h3>Éditions du NET</h3>
-  <a href="https://www.leseditionsdunet.com/recherche?keys=chich" target="_blank" class="bouton">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M8 8c0-1.1.9-2 2-2h36c1.1 0 2 .9 2 2v48c0 1.1-.9 2-2 2H10c-1.1 0-2-.9-2-2V8zM10 8v48h36V8H10zm2 2h32v44H12V10z"/><path d="M14 14h28v4H14zm0 8h28v4H14zm0 8h20v4H14zm0 8h20v4H14z"/></svg>
-    Au cœur du passé
-  </a>
-
-  <a href="https://www.leseditionsdunet.com/recherche?keys=chich" target="_blank" class="bouton">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M8 8c0-1.1.9-2 2-2h36c1.1 0 2 .9 2 2v48c0 1.1-.9 2-2 2H10c-1.1 0-2-.9-2-2V8zM10 8v48h36V8H10zm2 2h32v44H12V10z"/><path d="M14 14h28v4H14zm0 8h28v4H14zm0 8h20v4H14zm0 8h20v4H14z"/></svg>
-    Les fréquences du chaos
-  </a>
-
-  <a href="https://www.leseditionsdunet.com/recherche?keys=chich" target="_blank" class="bouton">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M8 8c0-1.1.9-2 2-2h36c1.1 0 2 .9 2 2v48c0 1.1-.9 2-2 2H10c-1.1 0-2-.9-2-2V8zM10 8v48h36V8H10zm2 2h32v44H12V10z"/><path d="M14 14h28v4H14zm0 8h28v4H14zm0 8h20v4H14zm0 8h20v4H14z"/></svg>
-    Ce matin-là...
-  </a>
+  <a href="https://www.leseditionsdunet.com/recherche?keys=chich" target="_blank" class="bouton">Au cœur du passé</a>
+  <a href="https://www.leseditionsdunet.com/recherche?keys=chich" target="_blank" class="bouton">Les fréquences du chaos</a>
+  <a href="https://www.leseditionsdunet.com/recherche?keys=chich" target="_blank" class="bouton">Ce matin-là...</a>
 
   <h3>Éditions Spinelle</h3>
-  <a href="https://www.editions-spinelle.com/index.php/litterature/litterature-generale/romans?search=CHICH&sortby=" target="_blank" class="bouton">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M8 8c0-1.1.9-2 2-2h36c1.1 0 2 .9 2 2v48c0 1.1-.9 2-2 2H10c-1.1 0-2-.9-2-2V8zM10 8v48h36V8H10zm2 2h32v44H12V10z"/><path d="M14 14h28v4H14zm0 8h28v4H14zm0 8h20v4H14zm0 8h20v4H14z"/></svg>
-    L’affaire Morin
-  </a>
-<main>
+  <a href="https://www.editions-spinelle.com/index.php/litterature/litterature-generale/romans?search=CHICH&sortby=" target="_blank" class="bouton">L’affaire Morin</a>
+
   <section id="Dédicaces">
-    
-<link rel="stylesheet" href="formulaire.css">
-   
     <p><strong>Si vous souhaitez un livre dédicacé, merci d'utiliser le formulaire suivant :</strong></p>
     <form action="https://formspree.io/f/myznpved" method="POST">
-      <!-- Informations personnelles -->
       <label for="nom">Nom :</label>
       <input type="text" id="nom" name="nom" required>
 
@@ -149,37 +62,17 @@
       <label for="adresse">Adresse d’expédition :</label>
       <textarea id="adresse" name="adresse" rows="3" placeholder="Numéro, rue, code postal, ville, pays" required></textarea>
 
-      <!-- Choix des livres -->
       <p><strong>Livre(s) concerné(s) :</strong></p>
       <div class="checkbox-group">
-       
-        <label class="checkbox-item">
-          <input type="checkbox" name="livre[]" value="L'affaire Morin">
-          <span>L'affaire Morin</span>
-        </label>
-      
-        <label class="checkbox-item">
-          <input type="checkbox" name="livre[]" value="Ce matin là...">
-          <span>Ce matin là...</span>
-        </label>
-        
-        <label class="checkbox-item">
-          <input type="checkbox" name="livre[]" value="Les fréquences du chaos">
-          <span>Les fréquences du chaos</span>
-        </label>
-        
-        <label class="checkbox-item">
-          <input type="checkbox" name="livre[]" value="Au coeur du passé">
-          <span>Au cœur du passé</span>
-        </label>
-      
+        <label class="checkbox-item"><input type="checkbox" name="livre[]" value="L'affaire Morin"> <span>L'affaire Morin</span></label>
+        <label class="checkbox-item"><input type="checkbox" name="livre[]" value="Ce matin là..."> <span>Ce matin là...</span></label>
+        <label class="checkbox-item"><input type="checkbox" name="livre[]" value="Les fréquences du chaos"> <span>Les fréquences du chaos</span></label>
+        <label class="checkbox-item"><input type="checkbox" name="livre[]" value="Au cœur du passé"> <span>Au cœur du passé</span></label>
       </div>
 
-      <!-- Avis ou message -->
-      <label for="Dédicace">Nom pour la dédicace et/ou votre message :</label>
+      <label for="avis">Nom pour la dédicace et/ou votre message :</label>
       <textarea id="avis" name="avis" rows="5" placeholder="Merci de préciser à quel nom vous souhaitez la dédicace..." required></textarea>
 
-      <!-- Boutons -->
       <div class="form-buttons">
         <input type="submit" value="Envoyer">
         <input type="reset" value="Effacer">
@@ -188,15 +81,12 @@
   </section>
 </main>
 
+<footer>
+  <h3>Contact</h3>
+  <p>📧 <a href="mailto:franckchichauteur@mail.com">franckchichauteur@mail.com</a></p>
+  <p>© 2025 Franck CHICH. Tous droits réservés.</p>
+</footer>
 
-
-  <footer>
-    <h3>Contact</h3>
-    <p>📧 <a href="mailto:franckchichauteur@mail.com">franckchichauteur@mail.com</a></p>
-    <p>© 2025 Franck CHICH. Tous droits réservés.</p>
-  </footer>
-
-  
 <script>
 const menuToggle = document.querySelector('.menu-toggle');
 const navUl = document.querySelector('nav ul');
@@ -207,10 +97,9 @@ if (menuToggle) {
 }
 </script>
 
-
-
 </body>
 </html>
+
 
 
 
