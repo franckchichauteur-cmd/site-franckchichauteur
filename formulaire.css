@@ -46,6 +46,26 @@
     margin-bottom: 10px;
   }
 }
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  display: block;
+  width: 100%;
+  max-width: 500px; /* largeur raisonnable */
+  margin: 8px auto 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1em;
+}
+
 
 
 
