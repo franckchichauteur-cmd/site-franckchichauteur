@@ -1,0 +1,64 @@
+<!-- ==== STYLE CSS ==== -->
+/* Boutons */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.form-buttons input[type="submit"],
+.form-buttons input[type="reset"] {
+  width: 48%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-buttons input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.form-buttons input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.form-buttons input[type="reset"] {
+  background-color: #cccccc;
+  color: #333333;
+}
+
+.form-buttons input[type="reset"]:hover {
+  background-color: #b3b3b3;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+  .form-buttons {
+    flex-direction: column;
+  }
+  .form-buttons input[type="submit"],
+  .form-buttons input[type="reset"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
