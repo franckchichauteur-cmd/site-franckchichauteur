@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes livres | Franck CHICH - Auteur</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
 <header>
   <!-- TITRE FIXE -->
   <div class="header-top">
@@ -10,6 +19,7 @@
   <div class="menu-container">
     <nav>
       <ul>
+     
       <li><a href="index.html">Accueil</a></li>
       <li><a href="livres.html">Mes livres</a></li>
       <li><a href="avis.html">Vos avis</a></li>
@@ -20,6 +30,14 @@
       </ul>
   </nav>
 </header>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu').querySelector('ul');
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+</script>
     <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -76,4 +94,5 @@ Et j’ai hâte de voir comment vous allez les accueillir. </p>
 </body>
 
 </html>
+
 
