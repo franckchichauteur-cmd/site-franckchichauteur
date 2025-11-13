@@ -209,7 +209,8 @@
 <script>
   const checkboxes = document.querySelectorAll('input[type="checkbox"][data-prix]');
   const prixTotal = document.getElementById('prix-total');
-  const prixTotalInput = document.getElementById('prix-total-input'); // champ caché pour Formspree
+  const prixTotalInput = document.getElementById('prix-total-input');
+  const form = document.querySelector('form');
 
   function calculerTotal() {
     let total = 0;
@@ -217,11 +218,16 @@
       if (chk.checked) total += parseFloat(chk.getAttribute('data-prix'));
     });
     prixTotal.textContent = `Total : ${total} €`;
-    prixTotalInput.value = total; // met à jour la valeur envoyée à Formspree
+    prixTotalInput.value = total + " €"; // enregistre la valeur envoyée à Formspree
   }
 
+  // Recalcule le total quand on coche ou décoche
   checkboxes.forEach(chk => chk.addEventListener('change', calculerTotal));
 
+  // ⚡ Recalcule juste avant l’envoi du formulaire
+  form.addEventListener('submit', calculerTotal);
+
+  // Gestion du menu mobile
   const menuToggle = document.querySelector('.menu-toggle');
   const navUl = document.querySelector('nav ul');
   if (menuToggle) {
@@ -230,6 +236,7 @@
     });
   }
 </script>
+
 
 
 
