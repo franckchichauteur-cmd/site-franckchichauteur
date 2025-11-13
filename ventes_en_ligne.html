@@ -9,19 +9,81 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="formulaire.css">
   <style>
-    body { font-family: Georgia, serif; background-color: #f9f6f2; color: #222; text-align: center; padding: 50px 20px; }
-    h2 { color: green; margin-bottom: 30px; }
-    h3 { margin-top: 30px; color: #333; }
-    .bouton { display: inline-flex; align-items: center; justify-content: center; background-color: #00704A; color: white; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; margin: 12px; font-size: 1.05em; box-shadow: 0 3px 6px rgba(0,0,0,0.15); transition: background 0.3s, transform 0.2s; }
-    .bouton:hover { background-color: #00945E; transform: scale(1.05); }
-    .bouton svg { margin-right: 8px; width: 20px; height: 20px; fill: white; }
-    footer { text-align: center; font-size: 0.9rem; color: #555; margin-top: 40px; padding: 20px 0; background-color: #f8f8f8; border-top: 1px solid #ddd; }
-    footer a { color: #00704A; text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
+    body {
+      font-family: Georgia, serif;
+      background-color: #f9f6f2;
+      color: #222;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    h2 {
+      color: green;
+      margin-bottom: 30px;
+    }
+    h3 {
+      margin-top: 30px;
+      color: #333;
+    }
+    .bouton {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #00704A;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 12px;
+      font-size: 1.05em;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+      transition: background 0.3s, transform 0.2s;
+    }
+    .bouton:hover {
+      background-color: #00945E;
+      transform: scale(1.05);
+    }
+    .bouton svg {
+      margin-right: 8px;
+      width: 20px;
+      height: 20px;
+      fill: white;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 40px;
+      padding: 20px 0;
+      background-color: #f8f8f8;
+      border-top: 1px solid #ddd;
+    }
+    footer a {
+      color: #00704A;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    .checkbox-group {
+      text-align: left;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .checkbox-item {
+      display: block;
+      margin: 6px 0;
+      font-size: 1em;
+    }
+    #prix-total {
+      font-weight: bold;
+      margin-top: 15px;
+      color: #00704A;
+    }
   </style>
 </head>
-<body>
 
+<body>
 <header>
   <div class="header-top">
     <h1>Franck CHICH - Auteur</h1>
@@ -54,9 +116,9 @@
   <a href="https://www.editions-spinelle.com/index.php/litterature/litterature-generale/romans?search=CHICH&sortby=" target="_blank" class="bouton">L’affaire Morin</a>
 
   <section id="Dédicaces">
-    
-<p class="blink"><strong>Si vous souhaitez commander un livre dédicacé, merci d'utiliser le formulaire suivant :</strong></p>
-    
+    <p class="blink"><strong>Si vous souhaitez commander un livre dédicacé, merci d'utiliser le formulaire suivant :</strong></p>
+
+    <!-- 🧾 Nouveau formulaire avec affichage des prix -->
     <form action="https://formspree.io/f/myznpved" method="POST">
       <label for="nom">Nom :</label>
       <input type="text" id="nom" name="Nom" required>
@@ -69,11 +131,25 @@
 
       <p><strong>Livre(s) concerné(s) :</strong></p>
       <div class="checkbox-group">
-        <label class="checkbox-item"><input type="checkbox" name="Livre à dédicacer" value="L'affaire Morin"> <span>L'affaire Morin</span></label>
-        <label class="checkbox-item"><input type="checkbox" name="Livre à dédicacer" value="Ce matin là..."> <span>Ce matin là...</span></label>
-        <label class="checkbox-item"><input type="checkbox" name="Livre à dédicacer" value="Les fréquences du chaos"> <span>Les fréquences du chaos</span></label>
-        <label class="checkbox-item"><input type="checkbox" name="Livre à dédicacer" value="Au cœur du passé"> <span>Au cœur du passé</span></label>
+        <label class="checkbox-item">
+          <input type="checkbox" name="Livre à dédicacer" value="L'affaire Morin" data-prix="18">
+          <span>L'affaire Morin – <strong>18 €</strong></span>
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" name="Livre à dédicacer" value="Ce matin là..." data-prix="18">
+          <span>Ce matin là... – <strong>18 €</strong></span>
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" name="Livre à dédicacer" value="Les fréquences du chaos" data-prix="15">
+          <span>Les fréquences du chaos – <strong>15 €</strong></span>
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" name="Livre à dédicacer" value="Au cœur du passé" data-prix="20">
+          <span>Au cœur du passé – <strong>20 €</strong></span>
+        </label>
       </div>
+
+      <p id="prix-total">Total : 0 €</p>
 
       <label for="avis">Nom pour la dédicace et/ou votre message :</label>
       <textarea id="avis" name="Dédicace pour :" rows="5" placeholder="Merci de préciser à quel nom vous souhaitez la dédicace..." required></textarea>
@@ -88,11 +164,9 @@
 
 <footer id="Contact" style="text-align:center;font-size:0.9rem;color:#555;margin-top:40px;padding:20px 0;background-color:#f8f8f8;border-top:1px solid #ddd;">
   <h3 style="margin:0 0 8px;font-size:1.05rem;color:#333;">Contact</h3>
-  <p style="margin:6px 0;">📧 
+  <p style="margin:6px 0;">📧
     <a href="mailto:franckchichauteur@mail.com">franckchichauteur@mail.com</a>
   </p>
-
-  <!-- 🔗 Liens vers les réseaux sociaux -->
   <div class="social-links" style="margin:10px 0;">
     <a href="https://www.facebook.com/share/1BqMHTEdT4/" target="_blank" style="margin:0 10px;color:#3b5998;font-size:1.5rem;text-decoration:none;">
       <i class="fab fa-facebook"></i>
@@ -101,25 +175,35 @@
       <i class="fab fa-instagram"></i>
     </a>
   </div>
-
   <p style="margin:6px 0;font-size:0.85rem;">© 2025 Franck CHICH. Tous droits réservés.</p>
 </footer>
 
 <script>
-const menuToggle = document.querySelector('.menu-toggle');
-const navUl = document.querySelector('nav ul');
-if (menuToggle) {
-  menuToggle.addEventListener('click', () => {
-    navUl.classList.toggle('active');
-  });
-}
+  // Script pour afficher le prix total
+  const checkboxes = document.querySelectorAll('input[type="checkbox"][data-prix]');
+  const prixTotal = document.getElementById('prix-total');
+
+  function calculerTotal() {
+    let total = 0;
+    checkboxes.forEach(chk => {
+      if (chk.checked) total += parseFloat(chk.getAttribute('data-prix'));
+    });
+    prixTotal.textContent = `Total : ${total} €`;
+  }
+
+  checkboxes.forEach(chk => chk.addEventListener('change', calculerTotal));
+
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navUl = document.querySelector('nav ul');
+  if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+      navUl.classList.toggle('active');
+    });
+  }
 </script>
 
 </body>
 </html>
-
-
-
 
 
 
