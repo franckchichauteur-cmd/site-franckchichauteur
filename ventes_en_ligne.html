@@ -149,7 +149,8 @@
         </label>
       </div>
 
-      <p id="prix-total">Total : 0 €</p>
+     <p id="prix-total">Total : 0 €</p>
+<input type="hidden" name="Prix total" id="prix-total-input" value="0">
 
       <label for="avis">Nom pour la dédicace et/ou votre message :</label>
       <textarea id="avis" name="Dédicace pour :" rows="5" placeholder="Merci de préciser à quel nom vous souhaitez la dédicace..." required></textarea>
@@ -204,6 +205,31 @@
 
 </body>
 </html>
+
+<script>
+  const checkboxes = document.querySelectorAll('input[type="checkbox"][data-prix]');
+  const prixTotal = document.getElementById('prix-total');
+  const prixTotalInput = document.getElementById('prix-total-input'); // champ caché pour Formspree
+
+  function calculerTotal() {
+    let total = 0;
+    checkboxes.forEach(chk => {
+      if (chk.checked) total += parseFloat(chk.getAttribute('data-prix'));
+    });
+    prixTotal.textContent = `Total : ${total} €`;
+    prixTotalInput.value = total; // met à jour la valeur envoyée à Formspree
+  }
+
+  checkboxes.forEach(chk => chk.addEventListener('change', calculerTotal));
+
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navUl = document.querySelector('nav ul');
+  if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+      navUl.classList.toggle('active');
+    });
+  }
+</script>
 
 
 
