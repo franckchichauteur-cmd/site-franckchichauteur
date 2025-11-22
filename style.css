@@ -341,13 +341,7 @@ header h1 {
   transition: opacity 0.3s;
 }
 <style>
-    .livre {
-        width: 200px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border-radius: 4px;
-    }
-
-    .livre:hover {
+       .livre:hover {
         transform: scale(1.08);
         box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
@@ -359,6 +353,7 @@ header h1 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 4px;
 }
+
 
 
 
