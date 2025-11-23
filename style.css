@@ -351,6 +351,15 @@ header h1 {
         transform: scale(1.08);
         box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
+.bloc-livre {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: justify;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
 
 
 
