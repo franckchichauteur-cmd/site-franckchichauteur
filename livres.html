@@ -1,202 +1,207 @@
+  
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes livres | Franck CHICH - Auteur</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes livres | Franck CHICH - Auteur</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
+  
 <header>
-    <div class="header-top">
-        <h1>Franck CHICH - Auteur</h1>
-    </div>
+  <!-- TITRE FIXE -->
+  <div class="header-top">
+    <h1>Franck CHICH - Auteur</h1>
+  </div>
 
-    <div class="menu-container">
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="livres.html">Mes livres</a></li>
-                <li><a href="avis.html">Vos avis</a></li>
-                <li><a href="ventes_en_ligne.html">Vente en ligne</a></li>
-                <li><a href="actualites.html">Actualités</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="Newsletter.html">Newsletter</a></li>
-            </ul>
-        </nav>
-    </div>
+  <!-- MENU DÉFILANT -->
+  <div class="menu-container">
+    <nav>
+      <ul>
+     
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="livres.html">Mes livres</a></li>
+      <li><a href="avis.html">Vos avis</a></li>
+      <li><a href="ventes_en_ligne.html">Vente en ligne</a></li>
+      <li><a href="actualites.html">Actualités</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      </ul>
+  </nav>
 </header>
 
-<main>
-
-<!-- ===== Bloc de texte réutilisable ===== -->
-<!-- (à coller dans votre style.css, je vous le donne plus bas) -->
-
-<section class="livre">
-
-    <h2>(cliquez sur les titres pour voir la vidéo)</h2>
-
-    <!-- LIVRE 1 -->
-    <h2 class="titre-livre"
-        title="Cliquez ici pour regarder la vidéo"
-        onclick="ouvrirVideoIndependante('videos/l-affaire-morin.mp4')">
-        L'affaire Morin
-    </h2>
-
-    <img src="Images/AM.jpg" alt="L'affaire Morin" class="petite-photo">
-
-    <p class="bloc-texte">
-        <strong>Comment est né mon livre : "L’Affaire Morin"</strong><br><br>
-        L’idée d’écrire "L’Affaire Morin" m’est venue...
-    </p>
-
-</section>
-
-<!-- LIVRE 2 -->
-<section class="livre">
-
-    <h2 class="titre-livre"
-        title="Cliquez ici pour regarder la vidéo"
-        onclick="ouvrirVideoIndependante('videos/ce-matin-la.mp4')">
-        Ce matin-là...
-    </h2>
-
-    <img src="Images/CML.jpg" alt="Ce matin-là" class="petite-photo">
-
-    <p class="bloc-texte">
-        <strong>Comment est né mon livre : "Ce matin-là..."</strong><br><br>
-        L’idée d’écrire "Ce matin-là..." est née...
-    </p>
-
-</section>
-
-<!-- LIVRE 3 -->
-<section class="livre">
-
-    <h2 class="titre-livre"
-        title="Cliquez ici pour regarder la vidéo"
-        onclick="ouvrirVideoIndependante('videos/au-coeur-du-passe.mp4')">
-        Au cœur du passé
-    </h2>
-
-    <img src="Images/ACP.jpg" alt="Au cœur du passé" class="petite-photo">
-
-    <p class="bloc-texte">
-        <strong>Comment est né mon livre : "Au cœur du passé"</strong><br><br>
-        L’idée d’écrire "Au cœur du passé" m’est venue...
-    </p>
-
-</section>
-
-<!-- LIVRE 4 -->
-<section class="livre">
-
-    <h2 class="titre-livre"
-        title="Cliquez ici pour regarder la vidéo"
-        onclick="ouvrirVideoIndependante('videos/les-frequences-du-chaos.mp4')">
-        Les fréquences du chaos
-    </h2>
-
-    <img src="Images/LFC.jpg" alt="Les fréquences du chaos" class="petite-photo">
-
-    <p class="bloc-texte">
-        <strong>Comment est né mon livre : "Les fréquences du chaos"</strong><br><br>
-        L’idée d’écrire "Les fréquences du chaos" m’est venue...
-    </p>
-
-</section>
-
-</main>
-
-<footer id="Contact" style="text-align:center;font-size:0.9rem;color:#555;margin-top:40px;padding:20px 0;background-color:#f8f8f8;border-top:1px solid #ddd;">
-    <h3 style="margin:0 0 8px;font-size:1.05rem;color:#333;">Contact</h3>
-    <p style="margin:6px 0;">📧
-        <a href="mailto:franckchichauteur@mail.com">franckchichauteur@mail.com</a>
-    </p>
-
-    <div class="social-links" style="margin:10px 0;">
-        <a href="https://www.facebook.com/share/1BqMHTEdT4/" target="_blank" style="margin:0 10px;color:#3b5998;font-size:1.5rem;text-decoration:none;">
-            <i class="fab fa-facebook"></i>
-        </a>
-        <a href="https://instagram.com/franckchich" target="_blank" style="margin:0 10px;color:#C13584;font-size:1.5rem;text-decoration:none;">
-            <i class="fab fa-instagram"></i>
-        </a>
-    </div>
-
-    <p style="margin:6px 0;font-size:0.85rem;">© 2025 Franck CHICH. Tous droits réservés.</p>
-</footer>
-
-
-<!-- ===== SCRIPT VIDÉO ===== -->
 <script>
-function ouvrirVideoIndependante(chemin) {
-    const fenetre = window.open('', '_blank', 'width=1000,height=650,resizable=yes,scrollbars=no');
-    fenetre.document.write(`
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu').querySelector('ul');
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+</script>
+  <main>
+    <!-- Livre 1 -->
+    <section class="livre">
+    <h2> (cliquez sur les titres pour voir la vidéo) </h2>
+<h2 class="titre-livre" title="Cliquez ici pour regarder la vidéo" 
+    onclick="ouvrirVideoIndependante('videos/l-affaire-morin.mp4')">
+  L'affaire Morin
+</h2>
+      <img src="Images/AM.jpg" alt="L'affaire Morin" class="petite-photo">
+      <p class="justifie decale-gauche">
+        <strong>Comment est né mon livre : "L’Affaire Morin"</strong><br><br>
+L’idée d’écrire "L’Affaire Morin" m’est venue d’une envie de raconter une histoire sombre dans un cadre familier : un petit village tranquille de l’Essonne, Videlles.
+        Pourquoi Videlles ? Tout simplement parce que j’y habite. J’aime l’atmosphère de ce village, à la fois paisible et chargé de mystères pour qui sait regarder derrière les apparences.
+        Les personnages de ce roman sont pour la plupart inspirés de personnes que j’ai croisées ou que je connais depuis toujours.
+        Je n’ai pas eu besoin de chercher bien loin pour créer les deux protagonistes principaux, Fathia et Franck, journalistes d’investigation : ce sont tout simplement ma femme et moi.
+        L’idée d’inclure la gendarmerie de Guigneville vient d’une expérience personnelle. J’ai été victime d’un cambriolage, et les gendarmes sont venus relever des empreintes et des traces d’ADN chez moi.
+        Un mois plus tard, ils m’ont rappelé pour un prélèvement : ils avaient trouvé un ADN masculin et voulaient s’assurer qu’il ne m’appartenait pas.
+        Quand je leur ai demandé ce qu’ils allaient faire de cet échantillon, s’ils allaient le comparer à d’autres, ils m’ont répondu qu’il serait simplement détruit.
+        J’ai trouvé leur démarche complètement absurde. J'étais tout de même rassuré, je n'avais pas cambriolé mon domicile.
+        C’est de cette situation un peu surréaliste qu’est née l’idée de L’Affaire Morin.
+        J’ai eu envie d’explorer, à travers la fiction, les failles, les hasards et les zones d’ombre que l’on peut rencontrer même dans les lieux les plus tranquilles.
+      </p>
+    </section>
+
+    <!-- Livre 2 -->
+    <section class="livre">
+      
+<h2 class="titre-livre" title="Cliquez ici pour regarder la vidéo" 
+    onclick="ouvrirVideoIndependante('videos/ce-matin-la.mp4')">
+     Ce matin-là...
+      </h2>
+      <img src="Images/CML.jpg" alt="Ce matin-là" class="petite-photo">
+      <p class="justifie decale-gauche">
+        <strong>Comment est né mon livre : "Ce matin-là..."</strong><br><br>
+L’idée d’écrire "Ce matin-là..." est née d’une réflexion sur la résilience et la capacité de chacun à se relever, même lorsque tout semble perdu.
+        Le roman raconte l’histoire d’un homme brisé par un divorce douloureux, vidé de toute envie de vivre, qui se retrouve malgré lui impliqué dans une affaire qui le dépasse.
+        Et pourtant, au cœur de ce chaos, il retrouve peu à peu l’espoir d’une vie nouvelle, une renaissance inattendue qui prend la forme d’une fuite, mais aussi d’une libération.
+        À travers ce récit, j’ai voulu montrer que, malgré les épreuves et les embûches de la vie, il existe toujours une lueur d’espoir.
+        Qu’il est possible, même au bord du gouffre, de reprendre son souffle et de trouver un sens à sa route.
+        Pourquoi Tahiti ? Parce que ma fille y vit, et que j’ai eu la chance de m’y rendre.
+        J’y ai découvert un cadre d’une beauté bouleversante, une terre d’émotions et de contrastes,
+        où la nature, la lumière et la générosité des gens inspirent la paix intérieure.
+        Je suis littéralement tombé amoureux de la Polynésie, et elle s’est naturellement imposée comme le décor de cette histoire de reconstruction et d’espoir.
+      </p>
+    </section>
+
+    <!-- Livre 3 -->
+    <section class="livre">
+      
+<h2 class="titre-livre" title="Cliquez ici pour regarder la vidéo" 
+    onclick="ouvrirVideoIndependante('videos/au-coeur-du-passe.mp4')">
+        Au cœur du passé
+      </h2>
+      <img src="Images/ACP.jpg" alt="Au cœur du passé" class="petite-photo">
+      <p class="justifie decale-gauche">
+        <strong>Comment est né mon livre : "Au cœur du passé"</strong><br><br>
+L’idée d’écrire "Au cœur du passé" m’est venue d’un fait tout simple : mon frère et ma belle-sœur venaient d’acheter une vieille maison en Corrèze,
+        dans le paisible village de Saint-Bazile-de-Messac. En les voyant la restaurer, j’ai commencé à imaginer ce que ces murs pouvaient bien renfermer :
+        des traces de vie, des histoires oubliées, peut-être même des fragments d’amour ayant traversé les années.
+        De cette idée est née l’histoire d’un couple de Parisiens qui décide de tout quitter pour s’installer dans ce village.
+        En rénovant leur maison, ils découvrent par hasard une correspondance bouleversante entre deux résistants amoureux.
+        Ces lettres, empreintes de passion et de courage, réveillent non seulement la mémoire du passé, mais aussi quelque chose de profond entre eux :
+        l’amour, qu’ils croyaient enfoui, ressurgit à travers ces mots d’autrefois.
+        Les amis du couple ne sont autres que mon frère, ma belle-sœur… et leurs chiens, bien sûr.
+        Ce clin d’œil personnel donne au récit une touche authentique et affectueuse.
+        "Au cœur du passé" est avant tout une histoire de transmission et de renaissance,
+        celle d’un amour qui traverse le temps, reliant les cœurs d’hier à ceux d’aujourd’hui.      </p>
+    </section>
+
+    <!-- Livre 4 -->
+    <section class="livre">
+      
+<h2 class="titre-livre" title="Cliquez ici pour regarder la vidéo" 
+    onclick="ouvrirVideoIndependante('videos/les-frequences-du-chaos.mp4')">
+        Les fréquences du chaos
+      </h2>
+      <img src="Images/LFC.jpg" alt="Les fréquences du chaos" class="petite-photo">
+      <p class="justifie decale-gauche">
+        <strong>Comment est né mon livre : "Les fréquences du chaos"</strong><br><br>
+        L’idée d’écrire "Les fréquences du chaos" m’est venue en écoutant mon fils, Riwan, me parler avec passion de son métier d’ingénieur du son.
+      Il me racontait souvent ses projets, ses recherches, ses expérimentations musicales…
+      Et un jour, une question m’a traversé l’esprit : et si la musique, cette force capable d’émouvoir, de rassembler et d’élever les âmes, pouvait aussi détruire ?
+      De cette réflexion est née l’histoire d’une secte qui recrute Riwan, sans qu’il soit informé de la finalité du projet,
+      pour exploiter son talent et créer une musique aux effets dévastateurs.
+      Une œuvre sonore si puissante qu’elle provoque une frénésie meurtrière chez ceux qui l’écoutent.
+      À travers ce roman, j’ai voulu explorer le contraste fascinant entre la beauté pure de la musique et sa fictive dérive vers la folie.
+      La même onde qui fait battre le cœur pourrait aussi le briser.
+      La même harmonie qui émeut pourrait devenir chaos.
+      "Les fréquences du chaos" est donc à la fois un thriller et une méditation sur la dualité de l’art :
+      sa lumière, sa part d’ombre, et ce pouvoir mystérieux qu’il exerce sur nos émotions.      
+</p>
+    </section>
+
+  </main>
+
+  <!-- ======== PIED DE PAGE ======== -->
+  <footer id="Contact" style="text-align:center;font-size:0.9rem;color:#555;margin-top:40px;padding:20px 0;background-color:#f8f8f8;border-top:1px solid #ddd;">
+    <h3 style="margin:0 0 8px;font-size:1.05rem;color:#333;">Contact</h3>
+    <p style="margin:6px 0;">📧 <a href="mailto:franckchichauteur@mail.com">franckchichauteur@mail.com</a></p>
+    <p style="margin:6px 0;font-size:0.85rem;">© 2025 Franck CHICH. Tous droits réservés.</p>
+  </footer>
+
+  <!-- ======== SCRIPT VIDÉO ======== -->
+  <script>
+    function ouvrirVideoIndependante(chemin) {
+      const fenetre = window.open('', '_blank', 'width=1000,height=650,resizable=yes,scrollbars=no');
+      fenetre.document.write(`
         <!DOCTYPE html>
         <html lang="fr">
         <head>
-            <meta charset="UTF-8">
-            <title>Lecture vidéo</title>
-            <style>
-                html, body {
-                    margin: 0;
-                    padding: 0;
-                    background-color: #000;
-                    height: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    overflow: hidden;
-                }
-                video {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: contain;
-                    background: #000;
-                }
-                button {
-                    position: absolute;
-                    top: 15px;
-                    right: 20px;
-                    padding: 10px 15px;
-                    background: rgba(255,255,255,0.2);
-                    color: white;
-                    border: none;
-                    border-radius: 8px;
-                    font-size: 16px;
-                    cursor: pointer;
-                    transition: background 0.3s;
-                }
-                button:hover {
-                    background: rgba(255,255,255,0.4);
-                }
-            </style>
+          <meta charset="UTF-8">
+          <title>Lecture vidéo</title>
+          <style>
+            html, body {
+              margin: 0;
+              padding: 0;
+              background-color: #000;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              overflow: hidden;
+            }
+            video {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+              background: #000;
+            }
+            button {
+              position: absolute;
+              top: 15px;
+              right: 20px;
+              padding: 10px 15px;
+              background: rgba(255,255,255,0.2);
+              color: white;
+              border: none;
+              border-radius: 8px;
+              font-size: 16px;
+              cursor: pointer;
+              transition: background 0.3s;
+            }
+            button:hover {
+              background: rgba(255,255,255,0.4);
+            }
+          </style>
         </head>
-
         <body>
-            <video id="videoLecture" controls autoplay>
-                <source src="${chemin}" type="video/mp4">
-                Votre navigateur ne supporte pas la lecture de vidéos.
-            </video>
-            <button id="fermer">✖ Fermer</button>
-
-            <script>
-                const video = document.getElementById('videoLecture');
-                const fermerBtn = document.getElementById('fermer');
-
-                fermerBtn.addEventListener('click', () => { window.close(); });
-                video.addEventListener('ended', () => { window.close(); });
-            <\/script>
+          <video id="videoLecture" controls autoplay>
+            <source src="${chemin}" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
+          <button id="fermer">✖ Fermer</button>
+          <script>
+            const video = document.getElementById('videoLecture');
+            const fermerBtn = document.getElementById('fermer');
+            fermerBtn.addEventListener('click', () => { window.close(); });
+            video.addEventListener('ended', () => { window.close(); });
+          <\/script>
         </body>
         </html>
-    `);
-    fenetre.document.close();
-}
-</script>
+      `);
+      fenetre.document.close();
+    }
+  </script>
 
 </body>
 </html>
