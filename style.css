@@ -351,16 +351,8 @@ header h1 {
         transform: scale(1.08);
         box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
-</style>
-.bloc-texte {
-    width: 90%;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0.8rem 1rem;
-    text-align: justify;
-    line-height: 1.6;
-    box-sizing: border-box;
-}
+
+
 
 
 
