@@ -352,13 +352,12 @@ header h1 {
         box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
 .bloc-livre {
-    width: 90%;
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: justify;
-    padding: 10px;
+    width: 90%;          /* largeur fluide sur mobile */
+    max-width: 900px;    /* limite sur grand écran */
+    margin: 0 auto;      /* centre le bloc */
+    text-align: justify; /* justifie le texte */
+    padding: 10px;       /* espace intérieur */
     box-sizing: border-box;
-}
 
 
 
