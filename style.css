@@ -356,7 +356,7 @@ header h1 {
     padding: 10px;       /* espace intérieur */
     box-sizing: border-box;
 .clignote {
-  animation: clignoter 1s infinite;
+animation: clignoter 1s infinite;
 }
 
 @keyframes clignoter {
@@ -364,6 +364,7 @@ header h1 {
   50%  { opacity: 0; }
   100% { opacity: 1; }
 }
+
 
 
 
