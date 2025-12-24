@@ -355,6 +355,15 @@ header h1 {
     text-align: justify; /* justifie le texte */
     padding: 10px;       /* espace intérieur */
     box-sizing: border-box;
+.clignote {
+  animation: clignoter 1s infinite;
+}
+
+@keyframes clignoter {
+  0%   { opacity: 1; }
+  50%  { opacity: 0; }
+  100% { opacity: 1; }
+}
 
 
 
