@@ -351,7 +351,17 @@ header h1 {
 .bloc-livre {
     width: 90%;          /* largeur fluide sur mobile */
     max-width: 900px;    /* limite sur grand écran */
-    margin: 0 auto;      /* centre le bloc */
+    margin: 0 auto;   
+.clignote-noel td {
+  animation: clignote-td 1.2s infinite;
+}
+
+@keyframes clignote-td {
+  0% { background-color: #fff3cd; }
+  50% { background-color: #ffe08a; }
+  100% { background-color: #fff3cd; }
+}
+   /* centre le bloc */
     text-align: justify; /* justifie le texte */
     padding: 10px;       /* espace intérieur */
     box-sizing: border-box;
@@ -371,6 +381,7 @@ header h1 {
     background-color: #fff3cd;
   }
 }
+
 
 
 
