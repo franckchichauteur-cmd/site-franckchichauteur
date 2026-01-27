@@ -357,16 +357,20 @@ header h1 {
     box-sizing: border-box;
 <style>
 .clignote-noel {
-  animation: pulse 1.5s infinite;
-  background-color: #fff3cd;
+  animation: surbrillance 1.2s infinite;
 }
 
-@keyframes pulse {
-  0% { background-color: #fff3cd; }
-  50% { background-color: #ffe08a; }
-  100% { background-color: #fff3cd; }
+@keyframes surbrillance {
+  0% {
+    background-color: #fff3cd;
+  }
+  50% {
+    background-color: #ffe08a;
+  }
+  100% {
+    background-color: #fff3cd;
+  }
 }
-
 
 
 
