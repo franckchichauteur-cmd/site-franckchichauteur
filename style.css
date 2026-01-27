@@ -356,6 +356,21 @@ header h1 {
     padding: 10px;       /* espace intérieur */
     box-sizing: border-box;
 <style>
+.clignote-noel {
+  animation: clignote 1s infinite;
+}
+
+@keyframes clignote {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 
 
