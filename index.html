@@ -1,146 +1,134 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta name="google-site-verification" content="_RXeF4hx7rX1R-nc8I97dVfmzIfWoFesWxzsebEPRek" />
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="_RXeF4hx7rX1R-nc8I97dVfmzIfWoFesWxzsebEPRek" />
   <meta name="msvalidate.01" content="F88FED8E4BC1570B98B7468C9C319AE2" />
-<meta name="description" content="Franck Chichauteur – auteur, conteur et poète. Découvrez ses textes, ses lectures et ses créations artistiques.">
-<meta name="keywords" content="Franck Chichauteur, auteur, conteur, écriture, littérature, art, création, histoires, livres, récits, contes">
-<meta name="author" content="Franck Chichauteur">
-  
-  
-  
+  <meta name="description" content="Franck Chichauteur – auteur, conteur et poète.">
+  <meta name="keywords" content="auteur, littérature, romans">
+  <meta name="author" content="Franck Chichauteur">
+
   <title>Accueil | Franck CHICH - Auteur</title>
+
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- ✅ STYLE LOCAL (aucun impact ailleurs) -->
+  <style>
+    .ombre-ufd {
+      width: 220px;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .ombre-ufd:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    }
+
+    .clignote-noel {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      animation: noel 1s infinite;
+      margin: 20px 0;
+    }
+
+    @keyframes noel {
+      0% { color: red; }
+      50% { color: green; }
+      100% { color: red; }
+    }
+  </style>
 </head>
 
 <body>
- 
+
 <header>
-  <!-- TITRE FIXE -->
   <div class="header-top">
     <h1>Franck CHICH - Auteur</h1>
   </div>
 
-  <!-- MENU DÉFILANT -->
   <div class="menu-container">
     <nav>
       <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="livres.html">Mes livres</a></li>
-      <li><a href="avis.html">Vos avis</a></li>
-      <li><a href="ventes_en_ligne.html">Vente en ligne</a></li>
-      <li><a href="actualites.html">Actualités</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="Newsletter.html">Newsletter</a></li>  
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="livres.html">Mes livres</a></li>
+        <li><a href="avis.html">Vos avis</a></li>
+        <li><a href="ventes_en_ligne.html">Vente en ligne</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="Newsletter.html">Newsletter</a></li>
       </ul>
-  </nav>
+    </nav>
+  </div>
 </header>
 
-<script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const menu = document.getElementById('menu').querySelector('ul');
-  menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('active');
-  });
-</script>
+<main>
 
-</section>
-
- <section class="hero">
-   
-  <img src="Images/franck2.JPG" alt="Photo de l'auteur Franck Chichauteur, écrivain et conteur français" class="portrait">
-  <h2>Bienvenue dans mon univers littéraire</h2>
-  <p>Découvrez mes romans et projets d’écriture.</p>
-</section>
+  <section class="hero">
+    <img src="Images/franck2.JPG" alt="Photo de l'auteur" class="portrait">
+    <h2>Bienvenue dans mon univers littéraire</h2>
+    <p>Découvrez mes romans et projets d’écriture.</p>
+  </section>
 
   <section class="bio">
     <h3>À propos de moi</h3>
+
     <p class="justifie decale-gauche">
-      
-Auteur passionné par les histoires humaines, j’écris des romans policiers et des thrillers où tension, profondeur psychologique et zones d’ombre se mêlent. Mes récits cherchent à révéler ce qui se cache derrière les apparences, au plus près des émotions et des fragilités de mes personnages.
-Depuis près de 30 ans, j’évolue au sein d’une organisation européenne en tant qu’assistant en business intelligence. Avant cela, j’ai exercé des métiers très variés : de plombier à comptable, en passant par vendeur, peintre ou agent de sécurité. Ces expériences multiples ont façonné mon regard sur le monde et nourrissent aujourd’hui mon écriture.
-Je m’aventure aussi dans d’autres registres, comme le montre mon roman historique "Au cœur du passé", une histoire d'amour qui explore émotions, mémoire et destins façonnés par le temps. J’ai également publié mon autobiographie auprès d’une maison d’édition.
-À travers chacun de mes livres, je m’attache à donner vie à des personnages authentiques, avec leurs forces, leurs fragilités et leurs zones d’ombre.
+      Auteur passionné par les histoires humaines...
+    </p>
 
+    <p class="clignote-noel">
+      📧 Bonne journée à tous et soyez curieux !
+    </p>
 
-</p>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<title>Clignotement Noël</title>
+    <p class="clignote-noel">
+      📧 A la une !!! Mon livre "Une famille décomposée" sort le 22 avril 2026
+    </p>
 
-<style>
-.clignote-noel {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    animation: noel 1s infinite;
-}
+    <!-- ✅ IMAGE CORRIGÉE + EFFET -->
+    <img src="Images/jaquetteUFD.png" alt="Jaquette livre" class="ombre-ufd">
 
-@keyframes noel {
-    0% {
-        color: red;
-        text-shadow: 0 0 5px red;
-    }
-    50% {
-        color: green;
-        text-shadow: 0 0 10px green;
-    }
-    100% {
-        color: red;
-        text-shadow: 0 0 5px red;
-    }
-}
-</style>
-</head>
-
-<body>
-
-<p class="clignote-noel">📧 Bonne journée à tous et soyez curieux : découvrez, aimez, détestez mais lisez, les histoires apportent toujours quelque chose !!! 📧</p>
-
-</body>
-  
-<body>
-
-<p class="clignote-noel">📧 A la une!!! Mon livre "Une famille décomposée devrait sortir le 22 avril 2026 📧</p>
-
-</body>
-</html>
-           <img src="Images/jaquetteUFD.png"
   </section>
-  </main>
+
+</main>
+
 <img src="https://hits.sh/franckchichauteur-cmd.github.io/site-franckchichauteur.svg?style=for-the-badge&label=visites&color=007ec6&labelColor=000000" alt="Compteur de visites">
-   
-<footer id="Contact" style="text-align:center;font-size:0.9rem;color:#555;margin-top:40px;padding:20px 0;background-color:#f8f8f8;border-top:1px solid #ddd;">
-  <h3 style="margin:0 0 8px;font-size:1.05rem;color:#333;">Contact</h3>
-  <p style="margin:6px 0;">📧 
-    <a href="mailto:franckchichauteur@mail.com">franckchichauteur@mail.com</a>
+
+<footer id="Contact">
+  <h3>Contact</h3>
+
+  <p>
+    📧 <a href="mailto:franckchichauteur@mail.com">franckchichauteur@mail.com</a>
   </p>
 
-  <!-- 🔗 Liens vers les réseaux sociaux -->
-  <div class="social-links" style="margin:10px 0;">
-    <a href="https://www.facebook.com/share/1BqMHTEdT4/" target="_blank" style="margin:0 10px;color:#3b5998;font-size:1.5rem;text-decoration:none;">
+  <div class="social-links">
+    <a href="https://www.facebook.com/share/1BqMHTEdT4/" target="_blank">
       <i class="fab fa-facebook"></i>
     </a>
-    <a href="https://instagram.com/franckchich" target="_blank" style="margin:0 10px;color:#C13584;font-size:1.5rem;text-decoration:none;">
+
+    <a href="https://instagram.com/franckchich" target="_blank">
       <i class="fab fa-instagram"></i>
     </a>
   </div>
 
-  <p style="margin:6px 0;font-size:0.85rem;">© 2025 Franck CHICH. Tous droits réservés.</p>
+  <p>© 2025 Franck CHICH. Tous droits réservés.</p>
 </footer>
+
 <script>
-const menuToggle = document.querySelector('.menu-toggle');
-const navUl = document.querySelector('nav ul');
-if (menuToggle) {
-  menuToggle.addEventListener('click', () => {
-    navUl.classList.toggle('active');
-  });
-}
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navUl = document.querySelector('nav ul');
+
+  if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+      navUl.classList.toggle('active');
+    });
+  }
 </script>
 
 </body>
