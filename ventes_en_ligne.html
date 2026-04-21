@@ -1,257 +1,162 @@
-
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ventes en ligne | Franck CHICH - Auteur</title>
-
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="formulaire.css">
-
-<style>
-
-/* ✅ STYLE ISOLÉ UNIQUEMENT À CETTE PAGE */
-body.page-vente {
-  font-family: 'Segoe UI', Roboto, sans-serif;
-  background: #f4f7fb;
-  color: #1e293b;
-  margin: 0;
-}
-
-/* HEADER */
-body.page-vente header {
-  background: linear-gradient(135deg, #00704A, #00945E);
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-body.page-vente nav ul {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
-}
-
-body.page-vente nav li {
-  margin: 8px 15px;
-}
-
-body.page-vente nav a {
-  color: white;
-  text-decoration: none;
-}
-
-/* CONTENU */
-body.page-vente main {
-  max-width: 1100px;
-  margin: auto;
-  padding: 40px 20px;
-}
-
-body.page-vente h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-}
-
-/* LIVRES */
-.livres-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 25px;
-  margin-bottom: 40px;
-}
-
-.livre-card {
-  background: white;
-  border-radius: 12px;
-  padding: 15px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  transition: 0.2s;
-}
-
-.livre-card:hover {
-  transform: translateY(-5px);
-}
-
-.livre-card img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-/* FORM */
-body.page-vente form {
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  max-width: 600px;
-  margin: 30px auto;
-  text-align: left;
-}
-
-body.page-vente input,
-body.page-vente textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0 15px;
-  border-radius: 6px;
-  border: 1px solid #ddd;
-}
-
-body.page-vente input[type="submit"] {
-  background: linear-gradient(135deg, #00704A, #00b36b);
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-body.page-vente input[type="reset"] {
-  background: #ddd;
-}
-
-#prix-total {
-  font-weight: bold;
-  color: #00704A;
-}
-
-/* FOOTER */
-body.page-vente footer {
-  background: #0f172a;
-  color: #cbd5f5;
-  padding: 25px;
-}
-
-</style>
-
-</head>
-
-<body class="page-vente">
-
-<header>
-  <h1>Franck CHICH - Auteur</h1>
-  <nav>
-    <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="livres.html">Mes livres</a></li>
-      <li><a href="avis.html">Vos avis</a></li>
-      <li><a href="ventes_en_ligne.html">Vente en ligne</a></li>
-      <li><a href="actualites.html">Actualités</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="Newsletter.html">Newsletter</a></li>
-    </ul>
-  </nav>
-</header>
-
-<main>
-
-<h2>Trouvez mes livres en ligne</h2>
-
-<h3>Éditions du NET</h3>
-
-<div class="livres-grid">
-  <div class="livre-card">
-    <a href="https://www.leseditionsdunet.com/recherche?keys=chich" target="_blank">
-      <img src="Images/lesfrequences.jpg">
-    </a>
-    <p>Les fréquences du chaos</p>
-  </div>
-
-  <div class="livre-card">
-    <img src="Images/aucoeur.jpg">
-    <p>Au cœur du passé</p>
-  </div>
-
-  <div class="livre-card">
-    <img src="Images/cematinla.jpg">
-    <p>Ce matin-là...</p>
-  </div>
-</div>
-
-<h3>Éditions Spinelle</h3>
-
-<div class="livres-grid">
-  <div class="livre-card">
-    <img src="Images/affairemorin.jpg">
-    <p>L’affaire Morin</p>
-  </div>
-</div>
-
-<h3>Amazon KDP</h3>
-
-<div class="livres-grid">
-  <div class="livre-card">
-    <img src="Images/souslombre.jpg">
-    <p>Sous l’ombre des apparences</p>
-  </div>
-</div>
-
-<p>Disponible également en format Kindle</p>
-
-<section>
-
-<form action="https://formspree.io/f/myznpved" method="POST">
-
-<label>Nom :</label>
-<input type="text" name="Nom" required>
-
-<label>Email :</label>
-<input type="email" name="Email" required>
-
-<label>Adresse :</label>
-<textarea name="Adresse" required></textarea>
-
-<p><strong>Livre(s) :</strong></p>
-
-<label><input type="checkbox" data-prix="18"> L'affaire Morin – 18€</label><br>
-<label><input type="checkbox" data-prix="20"> Une famille décomposée – 20€</label><br>
-<label><input type="checkbox" data-prix="18"> Sous l'ombre – 18€</label><br>
-
-<p id="prix-total">Total : 0 €</p>
-<input type="hidden" id="prix-total-input" name="Prix total">
-
-<label>Dédicace :</label>
-<textarea name="Dédicace"></textarea>
-
-<input type="submit" value="Envoyer">
-<input type="reset" value="Effacer">
-
-</form>
-
-</section>
-
-</main>
-
-<footer>
-<p>📧 franckchichauteur@mail.com</p>
-<p>© 2025 Franck CHICH</p>
-</footer>
-
-<script>
-const checkboxes = document.querySelectorAll('input[type="checkbox"][data-prix]');
-const prixTotal = document.getElementById('prix-total');
-const prixInput = document.getElementById('prix-total-input');
-
-function calculerTotal() {
-  let total = 0;
-  checkboxes.forEach(c => {
-    if (c.checked) total += parseFloat(c.dataset.prix);
-  });
-  prixTotal.textContent = "Total : " + total + " €";
-  prixInput.value = total + " €";
-}
-
-checkboxes.forEach(c => c.addEventListener('change', calculerTotal));
-</script>
-
-</body>
-</html>
-
+<!DOCTYPE html><html lang="fr"><head>  <link 
+rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">  <meta name="viewport" 
+content="width=device-width, initial-scale=1.0">  <meta 
+name="google-site-verification" 
+content="_RXeF4hx7rX1R-nc8I97dVfmzIfWoFesWxzsebEPRek" />  
+<title>Ventes en ligne | Franck CHICH - Auteur</title>  
+<link rel="stylesheet" href="style.css">  <link 
+rel="stylesheet" href="formulaire.css">  <style>    body {     
+ font-family: Georgia, serif;      background-color: #f9f6f2;      
+color: #222;      text-align: center;      padding: 50px 20px;    }    
+h2 {      color: green;      margin-bottom: 30px;    }    h3 {      
+margin-top: 30px;      color: #333;    }    .bouton {      display: 
+inline-flex;      align-items: center;      justify-content: center;    
+  background-color: #00704A;      color: white;      padding: 12px 28px;
+      border-radius: 8px;      text-decoration: none;      font-weight: 
+bold;      margin: 12px;      font-size: 1.05em;      box-shadow: 0 3px 
+6px rgba(0,0,0,0.15);      transition: background 0.3s, transform 0.2s; 
+   }    .bouton:hover {      background-color: #00945E;      transform: 
+scale(1.05);    }    .bouton svg {      margin-right: 8px;      width: 
+20px;      height: 20px;      fill: white;    }    footer {      
+text-align: center;      font-size: 0.9rem;      color: #555;      
+margin-top: 40px;      padding: 20px 0;      background-color: #f8f8f8; 
+     border-top: 1px solid #ddd;    }    footer a {      color: #00704A;
+      text-decoration: none;    }    footer a:hover {      
+text-decoration: underline;    }    .checkbox-group {      text-align: 
+left;      display: inline-block;      margin-top: 10px;    }    
+.checkbox-item {      display: block;      margin: 6px 0;      
+font-size: 1em;    }    #prix-total {      font-weight: bold;      
+margin-top: 15px;      color: #00704A;    }  
+</style></head><body><header>  <div 
+class="header-top">    <h1>Franck CHICH - Auteur</h1>  
+</div>  <div class="menu-container">    <nav>      
+<ul>        <li><a 
+href="index.html">Accueil</a></li>        <li><a
+ href="livres.html">Mes livres</a></li>        
+<li><a href="avis.html">Vos avis</a></li>       
+ <li><a href="ventes_en_ligne.html">Vente en 
+ligne</a></li>        <li><a 
+href="actualites.html">Actualités</a></li>        
+<li><a href="contact.html">Contact</a></li>     
+   <li><a 
+href="Newsletter.html">Newsletter</a></li>      
+</ul>    </nav>  </div></header><main>  
+<h3>_</h3>  <h2>Trouvez mes livres en ligne</h2>
+  <h3>Éditions du NET</h3><a 
+href="https://www.leseditionsdunet.com/recherche?keys=chich" 
+target="_blank">    <img src="Images/lesfrequences.jpg" alt="Les 
+fréquences du chaos" class="livre"></a><a 
+href="https://www.leseditionsdunet.com/recherche?keys=chich" 
+target="_blank">    <img src="Images/aucoeur.jpg" alt="Au cœur du 
+passé" class="livre"></a>  <a 
+href="https://www.leseditionsdunet.com/recherche?keys=chich" 
+target="_blank">    <img src="Images/cematinla.jpg" alt="Ce 
+matin-là..." class="livre"></a><h3>Éditions 
+Spinelle</h3><a 
+href="https://www.editions-spinelle.com/index.php/litterature/litterature-generale/romans?search=CHICH&sortby="
+ target="_blank">    <img src="Images/affairemorin.jpg" 
+alt="L’affaire Morin" class="livre"></a>  <h3>Amazon KDP 
+Editions</h3><a href="Sous l'ombre des apparences: Thriller : 
+CHICH, Franck, CHICH, Franck: Amazon.fr: Livres" target="_blank">    
+<img src="Images/souslombre.jpg" alt="Sous l'ombre des apparences" 
+class="livre"></a>    <p>Disponible également en format 
+Kindle</p>  <section id="Dédicaces">    <p 
+class="blink"><strong>Si vous souhaitez commander un livre 
+dédicacé, merci d'utiliser le formulaire suivant 
+:</strong></p>    <!-- 🧾 Nouveau formulaire avec 
+affichage des prix -->    <form 
+action="https://formspree.io/f/myznpved" method="POST">      
+<label for="nom">Nom :</label>      <input type="text" 
+id="nom" name="Nom" required>      <label for="email">Email 
+:</label>      <input type="email" id="email" name="Email" 
+required>      <label for="adresse">Adresse d’expédition 
+:</label>      <textarea id="adresse" name="Adresse" rows="3" 
+placeholder="Numéro, rue, code postal, ville, pays" 
+required></textarea>      <p><strong>Livre(s) 
+concerné(s) :</strong></p>      <div 
+class="checkbox-group">        <label class="checkbox-item">   
+       <input type="checkbox" name="Livre à dédicacer" 
+value="L'affaire Morin" data-prix="18">          
+<span>L'affaire Morin – <strong>18 
+€</strong></span>        </label>        <label 
+class="checkbox-item">          <input type="checkbox" name="Livre
+ à dédicacer" value="Une famille décomposée" data-prix="20">         
+ <span>Une famille décomposée – <strong>20 
+€</strong></span>        </label>        <label 
+class="checkbox-item">          <input type="checkbox" name="Livre
+ à dédicacer" value="Sous l'ombre des apparences" data-prix="18">    
+      <span>Sous l'ombre des apparences – <strong>18 
+€</strong></span>        </label>        <label 
+class="checkbox-item">          <input type="checkbox" name="Livre
+ à dédicacer" value="Ce matin là..." data-prix="18">          
+<span>Ce matin là... – <strong>18 
+€</strong></span>        </label>        <label 
+class="checkbox-item">          <input type="checkbox" name="Livre
+ à dédicacer" value="Les fréquences du chaos" data-prix="15">        
+  <span>Les fréquences du chaos – <strong>15 
+€</strong></span>        </label>        <label 
+class="checkbox-item">          <input type="checkbox" name="Livre
+ à dédicacer" value="Au cœur du passé" data-prix="20">          
+<span>Au cœur du passé – <strong>20 
+€</strong></span>        </label>      </div>   
+  <p id="prix-total">Total : 0 €</p><input type="hidden" 
+name="Prix total" id="prix-total-input" value="0">      <label 
+for="avis">Nom pour la dédicace et/ou votre message :</label>  
+    <textarea id="avis" name="Dédicace pour :" rows="5" 
+placeholder="Merci de préciser à quel nom vous souhaitez la dédicace..."
+ required></textarea>      <div class="form-buttons">    
+    <input type="submit" value="Envoyer">        <input 
+type="reset" value="Effacer">      </div>    </form>  
+</section></main><footer id="Contact" 
+style="text-align:center;font-size:0.9rem;color:#555;margin-top:40px;padding:20px
+ 0;background-color:#f8f8f8;border-top:1px solid #ddd;">  <h3 
+style="margin:0 0 
+8px;font-size:1.05rem;color:#333;">Contact</h3>  <p 
+style="margin:6px 0;">📧     <a 
+href="mailto:franckchichauteur@mail.com">franckchichauteur@mail.com</a>
+  </p>  <!-- 🔗 Liens vers les réseaux sociaux -->  <div 
+class="social-links" style="margin:10px 0;">    <a 
+href="https://www.facebook.com/share/1BqMHTEdT4/" target="_blank" 
+style="margin:0 
+10px;color:#3b5998;font-size:1.5rem;text-decoration:none;">      
+<i class="fab fa-facebook"></i>    </a>    <a 
+href="https://instagram.com/franckchich" target="_blank" style="margin:0
+ 10px;color:#C13584;font-size:1.5rem;text-decoration:none;">      
+<i class="fab fa-instagram"></i>    </a>  </div>
+  <p style="margin:6px 0;font-size:0.85rem;">© 2025 Franck CHICH. 
+Tous droits réservés.</p></footer><script>  // Script 
+pour afficher le prix total  const checkboxes = 
+document.querySelectorAll('input[type="checkbox"][data-prix]');  const 
+prixTotal = document.getElementById('prix-total');  function 
+calculerTotal() {    let total = 0;    checkboxes.forEach(chk => {   
+   if (chk.checked) total += parseFloat(chk.getAttribute('data-prix')); 
+   });    prixTotal.textContent = Total : ${total} €;
+  }  checkboxes.forEach(chk => chk.addEventListener('change', 
+calculerTotal));  const menuToggle = 
+document.querySelector('.menu-toggle');  const navUl = 
+document.querySelector('nav ul');  if (menuToggle) {    
+menuToggle.addEventListener('click', () => {      
+navUl.classList.toggle('active');    });  
+}</script></body></html><script>  const 
+checkboxes = 
+document.querySelectorAll('input[type="checkbox"][data-prix]');  const 
+prixTotal = document.getElementById('prix-total');  const prixTotalInput
+ = document.getElementById('prix-total-input');  const form = 
+document.querySelector('form');  function calculerTotal() {    let total
+ = 0;    checkboxes.forEach(chk => {      if (chk.checked) total += 
+parseFloat(chk.getAttribute('data-prix'));    });    
+prixTotal.textContent = Total : ${total} €;
+    prixTotalInput.value = total + " €"; // enregistre la valeur envoyée
+ à Formspree  }  // Recalcule le total quand on coche ou décoche  
+checkboxes.forEach(chk => chk.addEventListener('change', 
+calculerTotal));  // ⚡ Recalcule juste avant l’envoi du formulaire  
+form.addEventListener('submit', calculerTotal);  // Gestion du menu 
+mobile  const menuToggle = document.querySelector('.menu-toggle');  
+const navUl = document.querySelector('nav ul');  if (menuToggle) {    
+menuToggle.addEventListener('click', () => {      
+navUl.classList.toggle('active');    });  }</script>
 
 
 
