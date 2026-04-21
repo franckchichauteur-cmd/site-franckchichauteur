@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="formulaire.css">
 
   <style>
-    body {
+    body.page-vente {
       font-family: Georgia, serif;
       background-color: #f9f6f2;
       color: #222;
@@ -19,42 +19,28 @@
       padding: 50px 20px;
     }
 
-    h2 {
+    .page-vente h2 {
       color: green;
       margin-bottom: 30px;
     }
 
-    h3 {
+    .page-vente h3 {
       margin-top: 30px;
       color: #333;
     }
 
-    .bouton {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #00704A;
-      color: white;
-      padding: 12px 28px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 12px;
-      font-size: 1.05em;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.15);
-      transition: background 0.3s, transform 0.2s;
+    /* ✨ EFFET OMBRE UNIQUEMENT ICI */
+    .page-vente .livre {
+      width: 180px;
+      margin: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .bouton:hover {
-      background-color: #00945E;
-      transform: scale(1.05);
-    }
-
-    .bouton svg {
-      margin-right: 8px;
-      width: 20px;
-      height: 20px;
-      fill: white;
+    .page-vente .livre:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.3);
     }
 
     footer {
@@ -67,15 +53,6 @@
       border-top: 1px solid #ddd;
     }
 
-    footer a {
-      color: #00704A;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
     .checkbox-group {
       text-align: left;
       display: inline-block;
@@ -85,7 +62,6 @@
     .checkbox-item {
       display: block;
       margin: 6px 0;
-      font-size: 1em;
     }
 
     #prix-total {
@@ -96,172 +72,97 @@
   </style>
 </head>
 
-<body>
+<body class="page-vente">
 
 <header>
-  <div class="header-top">
-    <h1>Franck CHICH - Auteur</h1>
-  </div>
-
-  <div class="menu-container">
-    <nav>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="livres.html">Mes livres</a></li>
-        <li><a href="avis.html">Vos avis</a></li>
-        <li><a href="ventes_en_ligne.html">Vente en ligne</a></li>
-        <li><a href="actualites.html">Actualités</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="Newsletter.html">Newsletter</a></li>
-      </ul>
-    </nav>
-  </div>
+  <h1>Franck CHICH - Auteur</h1>
 </header>
 
 <main>
-  <h3>_</h3>
+
   <h2>Trouvez mes livres en ligne</h2>
 
   <a href="https://www.leseditionsdunet.com/recherche?keys=chich" target="_blank">
-    <img src="Images/lesfrequences.jpg" alt="Les fréquences du chaos" class="livre">
+    <img src="Images/lesfrequences.jpg" class="livre">
   </a>
 
   <a href="https://www.leseditionsdunet.com/recherche?keys=chich" target="_blank">
-    <img src="Images/aucoeur.jpg" alt="Au cœur du passé" class="livre">
+    <img src="Images/aucoeur.jpg" class="livre">
   </a>
 
   <a href="https://www.leseditionsdunet.com/recherche?keys=chich" target="_blank">
-    <img src="Images/cematinla.jpg" alt="Ce matin-là..." class="livre">
+    <img src="Images/cematinla.jpg" class="livre">
   </a>
 
   <a href="https://www.editions-spinelle.com/index.php/litterature/litterature-generale/romans?search=CHICH&sortby=" target="_blank">
-    <img src="Images/affairemorin.jpg" alt="L’affaire Morin" class="livre">
+    <img src="Images/affairemorin.jpg" class="livre">
   </a>
 
-  <a href="https://www.amazon.fr/-/en/Sous-lombre-apparences-Franck-CHICH/dp/B0G3L7CXPD/ref=sr_1_1?crid=XSKXKFOJB93N&dib=eyJ2IjoiMSJ9.dDuoAE0cjvXf8u_9AJ_1krtsqhOPcmthAT6W7Oua0lOqbcUB-1lhvawSuDQBbIlyOJf0fl1aBOHz3W6iJhF8MA5Yg5X4t0Ggqb4ZySeL2I8y-aQyPPeKXv8NT_CYlg2L.a3GF7zX_BDAKVgGfJ0WdTpDCOxWGCHQsw2weklW5yMc&dib_tag=se&keywords=franck+chich&qid=1776798416&sprefix=franck+chich%2Caps%2C323&sr=8-1">
-    <img src="Images/souslombre.jpg" alt="Sous l'ombre des apparences" class="livre">
+  <a href="https://www.amazon.fr/-/en/Sous-lombre-apparences-Franck-CHICH/dp/B0G3L7CXPD" target="_blank">
+    <img src="Images/souslombre.jpg" class="livre">
   </a>
 
   <p>Disponible également en format Kindle</p>
 
   <section id="Dédicaces">
-    <p class="blink">
-      <strong>Si vous souhaitez commander un livre dédicacé, merci d'utiliser le formulaire suivant :</strong>
-    </p>
+
+    <p><strong>Commande dédicacée :</strong></p>
 
     <form action="https://formspree.io/f/myznpved" method="POST">
 
-      <label for="nom">Nom :</label>
-      <input type="text" id="nom" name="Nom" required>
+      <input type="text" name="Nom" placeholder="Nom" required>
+      <input type="email" name="Email" placeholder="Email" required>
 
-      <label for="email">Email :</label>
-      <input type="email" id="email" name="Email" required>
-
-      <label for="adresse">Adresse d’expédition :</label>
-      <textarea id="adresse" name="Adresse" rows="3" placeholder="Numéro, rue, code postal, ville, pays" required></textarea>
-
-      <p><strong>Livre(s) concerné(s) :</strong></p>
+      <textarea name="Adresse" placeholder="Adresse complète" required></textarea>
 
       <div class="checkbox-group">
 
-        <label class="checkbox-item">
-          <input type="checkbox" name="Livre à dédicacer" value="L'affaire Morin" data-prix="18">
-          <span>L'affaire Morin – <strong>18 €</strong></span>
-        </label>
-
-        <label class="checkbox-item">
-          <input type="checkbox" name="Livre à dédicacer" value="Une famille décomposée" data-prix="20">
-          <span>Une famille décomposée – <strong>20 €</strong></span>
-        </label>
-
-        <label class="checkbox-item">
-          <input type="checkbox" name="Livre à dédicacer" value="Sous l'ombre des apparences" data-prix="18">
-          <span>Sous l'ombre des apparences – <strong>18 €</strong></span>
-        </label>
-
-        <label class="checkbox-item">
-          <input type="checkbox" name="Livre à dédicacer" value="Ce matin là..." data-prix="18">
-          <span>Ce matin là... – <strong>18 €</strong></span>
-        </label>
-
-        <label class="checkbox-item">
-          <input type="checkbox" name="Livre à dédicacer" value="Les fréquences du chaos" data-prix="15">
-          <span>Les fréquences du chaos – <strong>15 €</strong></span>
-        </label>
-
-        <label class="checkbox-item">
-          <input type="checkbox" name="Livre à dédicacer" value="Au cœur du passé" data-prix="20">
-          <span>Au cœur du passé – <strong>20 €</strong></span>
-        </label>
+        <label><input type="checkbox" data-prix="18"> L'affaire Morin – 18 €</label>
+        <label><input type="checkbox" data-prix="20"> Une famille décomposée – 20 €</label>
+        <label><input type="checkbox" data-prix="18"> Sous l'ombre – 18 €</label>
+        <label><input type="checkbox" data-prix="18"> Ce matin-là – 18 €</label>
+        <label><input type="checkbox" data-prix="15"> Les fréquences – 15 €</label>
+        <label><input type="checkbox" data-prix="20"> Au cœur du passé – 20 €</label>
 
       </div>
 
       <p id="prix-total">Total : 0 €</p>
-      <input type="hidden" name="Prix total" id="prix-total-input" value="0">
+      <input type="hidden" id="prix-total-input" name="Prix total">
 
-      <label for="avis">Nom pour la dédicace et/ou votre message :</label>
-      <textarea id="avis" name="Dédicace pour :" rows="5" placeholder="Merci de préciser à quel nom vous souhaitez la dédicace..." required></textarea>
+      <textarea name="Message" placeholder="Dédicace..."></textarea>
 
-      <div class="form-buttons">
-        <input type="submit" value="Envoyer">
-        <input type="reset" value="Effacer">
-      </div>
+      <button type="submit">Envoyer</button>
 
     </form>
+
   </section>
+
 </main>
 
-<footer id="Contact">
-  <h3>Contact</h3>
-
-  <p>
-    📧 <a href="mailto:franckchichauteur@mail.com">franckchichauteur@mail.com</a>
-  </p>
-
-  <div class="social-links">
-    <a href="https://www.facebook.com/share/1BqMHTEdT4/" target="_blank">
-      <i class="fab fa-facebook"></i>
-    </a>
-
-    <a href="https://instagram.com/franckchich" target="_blank">
-      <i class="fab fa-instagram"></i>
-    </a>
-  </div>
-
-  <p>© 2025 Franck CHICH. Tous droits réservés.</p>
+<footer>
+  <p>📧 <a href="mailto:franckchichauteur@mail.com">franckchichauteur@mail.com</a></p>
 </footer>
 
 <script>
-  const checkboxes = document.querySelectorAll('input[type="checkbox"][data-prix]');
-  const prixTotal = document.getElementById('prix-total');
-  const prixTotalInput = document.getElementById('prix-total-input');
-  const form = document.querySelector('form');
+  const checkboxes = document.querySelectorAll('[data-prix]');
+  const totalDisplay = document.getElementById('prix-total');
+  const totalInput = document.getElementById('prix-total-input');
 
   function calculerTotal() {
     let total = 0;
-
-    checkboxes.forEach(chk => {
-      if (chk.checked) {
-        total += parseFloat(chk.getAttribute('data-prix'));
-      }
+    checkboxes.forEach(c => {
+      if (c.checked) total += parseFloat(c.dataset.prix);
     });
 
-    prixTotal.textContent = `Total : ${total} €`;
-    prixTotalInput.value = total + " €";
+    totalDisplay.textContent = `Total : ${total} €`;
+    totalInput.value = total + " €";
   }
 
-  checkboxes.forEach(chk => chk.addEventListener('change', calculerTotal));
-  form.addEventListener('submit', calculerTotal);
-
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navUl = document.querySelector('nav ul');
-
-  if (menuToggle) {
-    menuToggle.addEventListener('click', () => {
-      navUl.classList.toggle('active');
-    });
-  }
+  checkboxes.forEach(c => c.addEventListener('change', calculerTotal));
 </script>
+
+</body>
+</html>
 
 
 
