@@ -381,7 +381,9 @@ header h1 {
     background-color: #fff3cd;
   }
 }
-
+.header-top h1 {
+  color: #ffffff;
+}
 
 
 
