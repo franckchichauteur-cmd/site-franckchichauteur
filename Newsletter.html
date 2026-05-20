@@ -1,13 +1,139 @@
 
-<div class="container">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes livres | Franck CHICH - Auteur</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <h1>📖</h1>
-  <h1>🖋️ Ma Newsletter</h1>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #fafafa;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    h1 {
+      font-size: 24px;
+      color: #ffffff
+;
+      text-align: center;
+    }
+    p {
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    a.button {
+      display: inline-block;
+      background-color: #007ec6;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
 
-  <section class="hero" style="text-align:center;">
-    <img src="Images/franck2.JPG"
-         alt="Photo de l'auteur Franck Chichauteur, écrivain et conteur français"
-         class="portrait">
+    /* --- FORMULAIRE NEWSLETTER --- */
+    .newsletter-form {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      background: #f8f8f8;
+      border-radius: 10px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.05);
+    }
+    .newsletter-form h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      color: #222;
+    }
+    .newsletter-form p {
+      font-size: 1.1em;
+      color: #444;
+      margin-bottom: 20px;
+    }
+    .newsletter-form input[type="email"] {
+      padding: 12px;
+      width: 90%;
+      max-width: 350px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+      margin-bottom: 15px;
+    }
+    .newsletter-form button {
+      background-color: #b71c1c;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .newsletter-form button:hover {
+      background-color: #9c1313;
+    }
+    .newsletter-form small {
+      display: block;
+      font-size: 0.9em;
+      color: #777;
+      margin-top: 10px;
+    }
+    .confirmation-message {
+      display: none;
+      margin-top: 20px;
+      color: #2e7d32;
+      font-weight: bold;
+      font-size: 1em;
+      background: #e8f5e9;
+      padding: 10px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+  <!-- TITRE FIXE -->
+  <div class="header-top">
+    <h1>Franck CHICH - Auteur</h1>
+  </div>
+
+  <!-- MENU DÉFILANT -->
+  <div class="menu-container">
+    <nav>
+      <ul>
+     
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="livres.html">Mes livres</a></li>
+      <li><a href="avis.html">Vos avis</a></li>
+      <li><a href="ventes_en_ligne.html">Vente en ligne</a></li>
+      <li><a href="actualites.html">Actualités</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="Newsletter.html">Newsletter</a></li>
+      </ul>
+  </nav>
+  </header>
+
+  <div class="container">
+    <h1>📖 </h1>
+    <h1>🖋️ Ma Newsletter </h1>
+    <section class="hero">
+   
+  <img src="Images/franck2.JPG" alt="Photo de l'auteur Franck Chichauteur, écrivain et conteur français" class="portrait">
+    </section>
 
     <p style="color:#777; font-style:italic; margin-top:10px;">
       Auteur de thrillers et romans autobiographiques
