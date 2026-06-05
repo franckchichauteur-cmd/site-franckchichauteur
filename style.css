@@ -392,6 +392,10 @@ header h1 {
 /* la main */
 .main-pointer {
     display: inline-block;
+}
+
+.hand {
+    display: inline-block;
     transform: scaleX(-1);
     animation: pointerBounce 1.2s infinite;
 }
@@ -404,7 +408,6 @@ header h1 {
         transform: scaleX(-1) translateX(6px);
     }
 }
-
 
 
 
