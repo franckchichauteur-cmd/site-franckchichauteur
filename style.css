@@ -391,34 +391,9 @@ header h1 {
 
 /* la main */
 .main-pointer {
-    display: inline-block;
-    transform: scaleX(-1);
-    animation: clickHere 1s infinite ease-in-out;
+    color: red;
+    font-size: 40px;
 }
-
-/* Animation principale */
-@keyframes clickHere {
-    0% {
-        transform: scaleX(-1) translateX(0) scale(1);
-        filter: drop-shadow(0 0 0px rgba(255, 200, 0, 0));
-    }
-
-    40% {
-        transform: scaleX(-1) translateX(6px) scale(1.15);
-        filter: drop-shadow(0 0 6px rgba(255, 200, 0, 0.8));
-    }
-
-    60% {
-        transform: scaleX(-1) translateX(10px) scale(1.05);
-        filter: drop-shadow(0 0 10px rgba(255, 200, 0, 1));
-    }
-
-    100% {
-        transform: scaleX(-1) translateX(0) scale(1);
-        filter: drop-shadow(0 0 0px rgba(255, 200, 0, 0));
-    }
-}
-
 
 
 
