@@ -384,23 +384,35 @@ header h1 {
 .header-top h1 {
   color: #ffffff;
 }
-.main-clique {
+.titre-livre {
+    cursor: pointer;
+    position: relative;
+}
+
+/* la main */
+.main-pointer {
     display: inline-block;
-    margin-left: 10px;
-    font-size: 1.3em;
-    animation: pointer 1s infinite ease-in-out,
-               clignote 1s infinite;
+    margin-left: 12px;
+    font-size: 1.6em;
+    animation: pointerMove 1s infinite ease-in-out;
 }
 
-@keyframes pointer {
-    0%   { transform: translateY(0); }
-    50%  { transform: translateY(-8px); }
-    100% { transform: translateY(0); }
-}
+/* mouvement gauche ↔ droite (effet “qui insiste”) */
+@keyframes pointerMove {
+    0% {
+        transform: translateX(0) rotate(0deg);
+        opacity: 1;
+    }
 
-@keyframes clignote {
-    0%,100% { opacity: 1; }
-    50% { opacity: 0.4; }
+    50% {
+        transform: translateX(-15px) rotate(-10deg);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translateX(0) rotate(0deg);
+        opacity: 1;
+    }
 }
 
 
