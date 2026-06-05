@@ -392,18 +392,32 @@ header h1 {
 /* la main */
 .main-pointer {
     display: inline-block;
-    animation: movePointer 0.8s ease-in-out infinite alternate;
+    transform: scaleX(-1);
+    animation: clickHere 1s infinite ease-in-out;
 }
 
-@keyframes movePointer {
-    from {
-        transform: translateX(0) scaleX(-1);
+/* Animation principale */
+@keyframes clickHere {
+    0% {
+        transform: scaleX(-1) translateX(0) scale(1);
+        filter: drop-shadow(0 0 0px rgba(255, 200, 0, 0));
     }
-    to {
-        transform: translateX(12px) scaleX(-1);
+
+    40% {
+        transform: scaleX(-1) translateX(6px) scale(1.15);
+        filter: drop-shadow(0 0 6px rgba(255, 200, 0, 0.8));
+    }
+
+    60% {
+        transform: scaleX(-1) translateX(10px) scale(1.05);
+        filter: drop-shadow(0 0 10px rgba(255, 200, 0, 1));
+    }
+
+    100% {
+        transform: scaleX(-1) translateX(0) scale(1);
+        filter: drop-shadow(0 0 0px rgba(255, 200, 0, 0));
     }
 }
-
 
 
 
