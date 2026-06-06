@@ -116,6 +116,9 @@
     <p id="livraison-info">Frais de livraison : 0 €</p>
 
     <input type="hidden" id="prix-total-input" name="Prix total">
+    <input type="hidden" id="livres-commandes" name="Livres commandés">
+    <input type="hidden" id="frais-port" name="Frais de port">
+    <input type="hidden" id="total-final" name="Total final">
 
     <textarea name="Message" placeholder="Dédicace..."></textarea>
 
@@ -139,92 +142,59 @@
 </footer>
 
 <script>
-  
-const livresInput = document.getElementById('livres-commandes');
-const fraisInput = document.getElementById('frais-port');
-const totalFinalInput = document.getElementById('total-final');
 document.addEventListener("DOMContentLoaded", () => {
 
   const checkboxes = document.querySelectorAll('[data-prix]');
   const totalDisplay = document.getElementById('prix-total');
   const livraisonDisplay = document.getElementById('livraison-info');
   const totalInput = document.getElementById('prix-total-input');
+  const livresInput = document.getElementById('livres-commandes');
+  const fraisInput = document.getElementById('frais-port');
+  const totalFinalInput = document.getElementById('total-final');
   const payerBtn = document.getElementById('payer-btn');
 
-  let totalLivres = 0;
-  let frais = 0;
+  function calculerTotal() {
 
- 
-function calculerTotal() {
+    let totalLivres = 0;
+    let livres = [];
 
-  totalLivres = 0;
-  let livres = [];
-
-  checkboxes.forEach(c => {
-    if (c.checked) {
-      totalLivres += parseFloat(c.dataset.prix);
-      livres.push(c.parentElement.textContent.trim());
-    }
-  });
-
-  if (totalLivres === 0) {
-    frais = 0;
-  } else if (totalLivres < 35) {
-    frais = 4.90;
-  } else {
-    frais = 0;
-  }
-
-  const totalFinal = totalLivres + frais;
-
-  totalDisplay.textContent =
-    `Total livres : ${totalLivres.toFixed(2)} €`;
-
-  livraisonDisplay.textContent =
-    `Frais de livraison : ${frais.toFixed(2)} €`;
-
-  prixTotalInput.value =
-    totalLivres.toFixed(2) + " €";
-
-  livresInput.value =
-    livres.join(" | ");
-
-  fraisInput.value =
-    frais.toFixed(2) + " €";
-
-  totalFinalInput.value =
-    totalFinal.toFixed(2) + " €";
-
-  payerBtn.style.display =
-    totalLivres > 0 ? "inline-block" : "none";
-}
-
-  try {
-    const response = await fetch("https://TON-BACKEND-STRIPE/create-checkout", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        amount: Math.round(totalFinal * 100)
-      })
+    checkboxes.forEach(c => {
+      if (c.checked) {
+        totalLivres += parseFloat(c.dataset.prix);
+        livres.push(c.parentElement.textContent.trim());
+      }
     });
 
-    const data = await response.json();
+    let frais = 0;
 
-    if (data.url) {
-      window.location.href = data.url;
-    } else {
-      alert("Erreur Stripe : URL manquante");
+    if (totalLivres > 0 && totalLivres < 35) {
+      frais = 4.90;
     }
 
-  } catch (error) {
-    console.error(error);
-    alert("Erreur connexion Stripe");
+    const totalFinal = totalLivres + frais;
+
+    totalDisplay.textContent =
+      `Total livres : ${totalLivres.toFixed(2)} €`;
+
+    livraisonDisplay.textContent =
+      `Frais de livraison : ${frais.toFixed(2)} €`;
+
+    totalInput.value = totalLivres.toFixed(2) + " €";
+    livresInput.value = livres.join(" | ");
+    fraisInput.value = frais.toFixed(2) + " €";
+    totalFinalInput.value = totalFinal.toFixed(2) + " €";
+
+    payerBtn.style.display =
+      totalLivres > 0 ? "inline-block" : "none";
   }
 
+  checkboxes.forEach(c => {
+    c.addEventListener("change", calculerTotal);
+  });
+
+  calculerTotal();
+
 });
- 
 </script>
 
 </body>
