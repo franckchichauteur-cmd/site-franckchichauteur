@@ -30,4 +30,66 @@ const menu = document.getElementById('menu');
 menuToggle.addEventListener('click', () => {
   menu.classList.toggle('active');  // Affiche ou masque le menu
 });
+<script>
+const checkboxes = document.querySelectorAll('[data-prix]');
+const totalDisplay = document.getElementById('prix-total');
+const livraisonDisplay = document.getElementById('livraison-info');
+const totalInput = document.getElementById('prix-total-input');
+const payerBtn = document.getElementById('payer-btn');
 
+let totalLivres = 0;
+let frais = 0;
+let livres = [];
+
+function calculerTotal() {
+  totalLivres = 0;
+  livres = [];
+
+  checkboxes.forEach(c => {
+    if (c.checked) {
+      totalLivres += parseFloat(c.dataset.prix);
+      livres.push(c.parentElement.innerText);
+    }
+  });
+
+  frais = (totalLivres > 0 && totalLivres < 35) ? 4.90 : 0;
+
+  let totalFinal = totalLivres + frais;
+
+  totalDisplay.textContent = `Total livres : ${totalLivres.toFixed(2)} €`;
+  livraisonDisplay.textContent = `Frais de livraison : ${frais.toFixed(2)} €`;
+
+  totalInput.value = totalFinal.toFixed(2) + " €";
+
+  payerBtn.style.display = totalLivres > 0 ? "inline-block" : "none";
+}
+
+checkboxes.forEach(c => c.addEventListener('change', calculerTotal));
+
+payerBtn.onclick = async () => {
+
+  let totalFinal = totalLivres + frais;
+
+  const form = document.querySelector("form");
+  const formData = new FormData(form);
+
+  formData.append("Livres commandés", livres.join(", "));
+  formData.append("Total final", totalFinal.toFixed(2) + " €");
+
+  await fetch(form.action, {
+    method: "POST",
+    body: formData
+  });
+
+  const response = await fetch("https://TON-BACKEND-STRIPE/create-checkout", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      amount: Math.round(totalFinal * 100)
+    })
+  });
+
+  const data = await response.json();
+  window.location.href = data.url;
+};
+</script>
