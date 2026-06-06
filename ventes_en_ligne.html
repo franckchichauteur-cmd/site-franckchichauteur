@@ -137,48 +137,50 @@ href="https://www.mvoeditions.com/product-page/une-famille-d%C3%A9compos%C3%A9e"
   
   <p>Disponible également en format Kindle</p>
 
-  <section id="Dédicaces">
+    
+<section id="Dédicaces">
 
-    <p><strong>Commande dédicacée :</strong></p>
+  <p><strong>Commande dédicacée :</strong></p>
 
-    <form action="https://formspree.io/f/myznpved" method="POST">
+  <form action="https://formspree.io/f/myznpved" method="POST">
 
-      <input type="text" name="Nom" placeholder="Nom" required>
-      <input type="email" name="Email" placeholder="Email" 
-required>
+    <input type="text" name="Nom" placeholder="Nom" required>
+    <input type="email" name="Email" placeholder="Email" required>
 
-      <textarea name="Adresse" placeholder="Adresse complète" 
-required></textarea>
+    <textarea name="Adresse" placeholder="Adresse complète" required></textarea>
 
-      <div class="checkbox-group">
+    <div class="checkbox-group">
 
-        <label><input type="checkbox" data-prix="18"> 
-L'affaire Morin – 18 €</label>
-        <label><input type="checkbox" data-prix="20"> Une 
-famille décomposée – 20 €</label>
-        <label><input type="checkbox" data-prix="18"> Sous 
-l'ombre – 18 €</label>
-        <label><input type="checkbox" data-prix="18"> Ce 
-matin-là – 18 €</label>
-        <label><input type="checkbox" data-prix="15"> Les 
-fréquences – 15 €</label>
-        <label><input type="checkbox" data-prix="20"> Au 
-cœur du passé – 20 €</label>
+      <label><input type="checkbox" data-prix="18"> L'affaire Morin – 18 €</label>
+      <label><input type="checkbox" data-prix="20"> Une famille décomposée – 20 €</label>
+      <label><input type="checkbox" data-prix="18"> Sous l'ombre – 18 €</label>
+      <label><input type="checkbox" data-prix="18"> Ce matin-là – 18 €</label>
+      <label><input type="checkbox" data-prix="15"> Les fréquences – 15 €</label>
+      <label><input type="checkbox" data-prix="20"> Au cœur du passé – 20 €</label>
 
-      </div>
+    </div>
 
-      <p id="prix-total">Total : 0 €</p>
-      <input type="hidden" id="prix-total-input" name="Prix 
-total">
+    <!-- 💰 TOTAL + LIVRAISON -->
+    <p id="prix-total">Total livres : 0 €</p>
+    <p id="livraison-info">Frais de livraison : 0 €</p>
 
-      <textarea name="Message" 
-placeholder="Dédicace..."></textarea>
+    <input type="hidden" id="prix-total-input" name="Prix total">
 
-      <button type="submit">Envoyer</button>
+    <textarea name="Message" placeholder="Dédicace..."></textarea>
 
-    </form>
+    <!-- 💳 NOUVEAU BOUTON STRIPE -->
+    <button type="button" id="payer-btn" style="display:none;margin-top:10px;">
+      Payer ma commande
+    </button>
 
-  </section>
+    <!-- 🔁 fallback Formspree -->
+    <button type="submit" id="backup-btn" style="display:none;">
+      Envoyer (backup)
+    </button>
+
+  </form>
+
+</section>
 
 </main>
 
