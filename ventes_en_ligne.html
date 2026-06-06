@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <link rel="stylesheet" 
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, 
-initial-scale=1.0">
-  <meta name="google-site-verification" 
-content="_RXeF4hx7rX1R-nc8I97dVfmzIfWoFesWxzsebEPRek" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="_RXeF4hx7rX1R-nc8I97dVfmzIfWoFesWxzsebEPRek" />
   <title>Ventes en ligne | Franck CHICH - Auteur</title>
 
   <link rel="stylesheet" href="style.css">
@@ -22,17 +19,6 @@ content="_RXeF4hx7rX1R-nc8I97dVfmzIfWoFesWxzsebEPRek" />
       padding: 50px 20px;
     }
 
-    .page-vente h2 {
-      color: green;
-      margin-bottom: 30px;
-    }
-
-    .page-vente h3 {
-      margin-top: 30px;
-      color: #333;
-    }
-
-    /* ✨ EFFET OMBRE UNIQUEMENT ICI */
     .page-vente .livre {
       width: 180px;
       margin: 15px;
@@ -55,14 +41,11 @@ content="_RXeF4hx7rX1R-nc8I97dVfmzIfWoFesWxzsebEPRek" />
       background-color: #f8f8f8;
       border-top: 1px solid #ddd;
     }
+
     .checkbox-group {
       text-align: left;
       display: inline-block;
       margin-top: 10px;
-    }
-    .checkbox-item {
-      display: block;
-      margin: 6px 0;
     }
 
     #prix-total {
@@ -72,130 +55,50 @@ content="_RXeF4hx7rX1R-nc8I97dVfmzIfWoFesWxzsebEPRek" />
     }
   </style>
 </head>
-<script>
-const menuToggle = document.getElementById('menu-toggle');
-const menu = document.getElementById('menu');
-menuToggle.addEventListener('click', () => {
-  menu.classList.toggle('active');  // Affiche ou masque le menu
-});
-</script>
-document.addEventListener("DOMContentLoaded",
-() => {
-  const checkboxes = document.querySelectorAll('[data-prix]');
-  const totalDisplay = document.getElementById('prix-total');
-  const livraisonDisplay = document.getElementById('livraison-info');
-  const totalInput = document.getElementById('prix-total-input');
-  const payerBtn = document.getElementById('payer-btn');
-  let totalLivres = 0;
-  let frais = 0;
-  function calculerTotal() {
-    totalLivres = 0;
-    checkboxes.forEach(c => {
-      if (c.checked) {
-        totalLivres += parseFloat(c.dataset.prix);
-      }
 
-    });
-    // 🚚 frais de port
-    if (totalLivres === 0) {
-      frais = 0;
-    } else if (totalLivres < 35) {
-      frais = 4.90;
-    } else {
-      frais = 0;
-    }
-    const totalFinal = totalLivres + frais;
-    // affichage correct
-    totalDisplay.textContent = `Total : ${total} €`;
-livres : ${totalLivres.toFixed(2)} €`;
-
-    livraisonDisplay.textContent = `Frais
-de livraison : ${frais.toFixed(2)} €`;
-    totalInput.value = totalFinal.toFixed(2) + "
-€";
-    // bouton Stripe
-    if (payerBtn) {
-      payerBtn.style.display = totalLivres
-> 0 ? "inline-block" : "none";
-
-    }
-  }
-  checkboxes.forEach(cb => cb.addEventListener("change",
-calculerTotal));
-});
-</script>
 <body class="page-vente">
 
 <header>
   <h1>Franck CHICH - Auteur</h1>
-   <!-- MENU DÉFILANT -->
-  <div class="menu-container">
-    <nav>
-      <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="livres.html">Mes 
-livres</a></li>
-      <li><a href="avis.html">Vos avis</a></li>
-      <li><a href="ventes_en_ligne.html">Vente en 
-ligne</a></li>
-      <li><a 
-href="actualites.html">Actualités</a></li>
-      <li><a 
-href="contact.html">Contact</a></li>
-      <li><a 
-href="Newsletter.html">Newsletter</a></li>  
-      </ul>
-    </nav>
 </header>
 
 <main>
-<h2>-</h2>
-  <h2>Trouvez mes livres en ligne</h2>
 
-  <a href="https://www.leseditionsdunet.com/recherche?keys=chich" 
-target="_blank">
-    <img src="Images/lesfrequences.jpg" class="livre">
-  </a>
+<h2>Trouvez mes livres en ligne</h2>
 
-  <a href="https://www.leseditionsdunet.com/recherche?keys=chich" 
-target="_blank">
-    <img src="Images/aucoeur.jpg" class="livre">
-  </a>
+<!-- TES IMAGES (inchangées) -->
+<a href="https://www.leseditionsdunet.com/recherche?keys=chich" target="_blank">
+  <img src="Images/lesfrequences.jpg" class="livre">
+</a>
 
-  <a href="https://www.leseditionsdunet.com/recherche?keys=chich" 
-target="_blank">
-    <img src="Images/cematinla.jpg" class="livre">
-  </a>
+<a href="https://www.leseditionsdunet.com/recherche?keys=chich" target="_blank">
+  <img src="Images/aucoeur.jpg" class="livre">
+</a>
 
-  <a 
-href="https://www.editions-spinelle.com/index.php/litterature/litterature-generale/romans?search=CHICH&sortby="
- target="_blank">
-    <img src="Images/affairemorin.jpg" class="livre">
-  </a>
+<a href="https://www.leseditionsdunet.com/recherche?keys=chich" target="_blank">
+  <img src="Images/cematinla.jpg" class="livre">
+</a>
 
-  <a 
-href="https://www.amazon.fr/-/en/Sous-lombre-apparences-Franck-CHICH/dp/B0G3L7CXPD"
- target="_blank">
-    <img src="Images/couv appearances.png" class="livre">
-  </a>
-  
-  <a 
-href="https://www.mvoeditions.com/product-page/une-famille-d%C3%A9compos%C3%A9e">
-    <img src="Images/couvessai.jpg" class="livre">
-  </a>
-  
-  <p>Disponible également en format Kindle</p>
+<a href="https://www.editions-spinelle.com/index.php/litterature/litterature-generale/romans?search=CHICH&sortby=" target="_blank">
+  <img src="Images/affairemorin.jpg" class="livre">
+</a>
 
-    
+<a href="https://www.amazon.fr/-/en/Sous-lombre-apparences-Franck-CHICH/dp/B0G3L7CXPD" target="_blank">
+  <img src="Images/couv appearances.png" class="livre">
+</a>
+
+<a href="https://www.mvoeditions.com/product-page/une-famille-d%C3%A9compos%C3%A9e">
+  <img src="Images/couvessai.jpg" class="livre">
+</a>
+
+<p>Disponible également en format Kindle</p>
+
 <section id="Dédicaces">
-
-  <p><strong>Commande dédicacée :</strong></p>
 
   <form action="https://formspree.io/f/myznpved" method="POST">
 
     <input type="text" name="Nom" placeholder="Nom" required>
     <input type="email" name="Email" placeholder="Email" required>
-
     <textarea name="Adresse" placeholder="Adresse complète" required></textarea>
 
     <div class="checkbox-group">
@@ -209,7 +112,6 @@ href="https://www.mvoeditions.com/product-page/une-famille-d%C3%A9compos%C3%A9e"
 
     </div>
 
-    <!-- 💰 TOTAL + LIVRAISON -->
     <p id="prix-total">Total livres : 0 €</p>
     <p id="livraison-info">Frais de livraison : 0 €</p>
 
@@ -217,12 +119,10 @@ href="https://www.mvoeditions.com/product-page/une-famille-d%C3%A9compos%C3%A9e"
 
     <textarea name="Message" placeholder="Dédicace..."></textarea>
 
-    <!-- 💳 NOUVEAU BOUTON STRIPE -->
     <button type="button" id="payer-btn" style="display:none;margin-top:10px;">
       Payer ma commande
     </button>
 
-    <!-- 🔁 fallback Formspree -->
     <button type="submit" id="backup-btn" style="display:none;">
       Envoyer (backup)
     </button>
@@ -234,50 +134,52 @@ href="https://www.mvoeditions.com/product-page/une-famille-d%C3%A9compos%C3%A9e"
 </main>
 
 <footer>
- <footer id="Contact" 
-style="text-align:center;font-size:0.9rem;color:#555;margin-top:40px;padding:20px
- 0;background-color:#f8f8f8;border-top:1px solid #ddd;">
-  <h3 style="margin:0 0 
-8px;font-size:1.05rem;color:#333;">Contact</h3>
-  <p style="margin:6px 0;">📧 
-    <a 
-href="mailto:franckchichauteur@mail.com">franckchichauteur@mail.com</a>
-  </p>
-
-  <!-- 🔗 Liens vers les réseaux sociaux -->
-  <div class="social-links" style="margin:10px 0;">
-    <a href="https://www.facebook.com/share/1BqMHTEdT4/" 
-target="_blank" style="margin:0 
-10px;color:#3b5998;font-size:1.5rem;text-decoration:none;">
-      <i class="fab fa-facebook"></i>
-    </a>
-    <a href="https://instagram.com/franckchich" target="_blank" 
-style="margin:0 
-10px;color:#C13584;font-size:1.5rem;text-decoration:none;">
-      <i class="fab fa-instagram"></i>
-    </a>
-  </div>
-
-  <p style="margin:6px 0;font-size:0.85rem;">© 2025 Franck CHICH. 
-Tous droits réservés.</p>
- </footer>
+  <p>© 2025 Franck CHICH</p>
+</footer>
 
 <script>
+document.addEventListener("DOMContentLoaded", () => {
+
   const checkboxes = document.querySelectorAll('[data-prix]');
   const totalDisplay = document.getElementById('prix-total');
+  const livraisonDisplay = document.getElementById('livraison-info');
   const totalInput = document.getElementById('prix-total-input');
+  const payerBtn = document.getElementById('payer-btn');
+
+  let totalLivres = 0;
+  let frais = 0;
 
   function calculerTotal() {
-    let total = 0;
+
+    totalLivres = 0;
+
     checkboxes.forEach(c => {
-      if (c.checked) total += parseFloat(c.dataset.prix);
+      if (c.checked) {
+        totalLivres += parseFloat(c.dataset.prix);
+      }
     });
 
-    totalDisplay.textContent = Total : ${total} €;
-    totalInput.value = total + " €";
+    if (totalLivres === 0) {
+      frais = 0;
+    } else if (totalLivres < 35) {
+      frais = 4.90;
+    } else {
+      frais = 0;
+    }
+
+    const totalFinal = totalLivres + frais;
+
+    totalDisplay.textContent = `Total livres : ${totalLivres.toFixed(2)} €`;
+    livraisonDisplay.textContent = `Frais de livraison : ${frais.toFixed(2)} €`;
+
+    totalInput.value = totalFinal.toFixed(2) + " €";
+
+    payerBtn.style.display = totalLivres > 0 ? "inline-block" : "none";
   }
 
-  checkboxes.forEach(c => c.addEventListener('change', calculerTotal));
+  checkboxes.forEach(c => c.addEventListener("change", calculerTotal));
+
+});
 </script>
 
 </body>
