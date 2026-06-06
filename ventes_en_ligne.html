@@ -55,13 +55,11 @@ content="_RXeF4hx7rX1R-nc8I97dVfmzIfWoFesWxzsebEPRek" />
       background-color: #f8f8f8;
       border-top: 1px solid #ddd;
     }
-
     .checkbox-group {
       text-align: left;
       display: inline-block;
       margin-top: 10px;
     }
-
     .checkbox-item {
       display: block;
       margin: 6px 0;
@@ -74,65 +72,56 @@ content="_RXeF4hx7rX1R-nc8I97dVfmzIfWoFesWxzsebEPRek" />
     }
   </style>
 </head>
-</script>
+----
 const menuToggle = document.getElementById('menu-toggle');
 const menu = document.getElementById('menu');
-
 menuToggle.addEventListener('click', () => {
   menu.classList.toggle('active');  // Affiche ou masque le menu
 });
-<script>
-document.addEventListener("DOMContentLoaded", function () {
+----
+document.addEventListener("DOMContentLoaded",
+() => {
+  const checkboxes = document.querySelectorAll('[data-prix]');
+  const totalDisplay = document.getElementById('prix-total');
+  const livraisonDisplay = document.getElementById('livraison-info');
+  const totalInput = document.getElementById('prix-total-input');
+  const payerBtn = document.getElementById('payer-btn');
+  let totalLivres = 0;
+  let frais = 0;
+  function calculerTotal() {
+    totalLivres = 0;
+    checkboxes.forEach(c => {
+      if (c.checked) {
+        totalLivres += parseFloat(c.dataset.prix);
+      }
 
-  const checkboxes = document.querySelectorAll('[data-prix]');
-  const totalDisplay = document.getElementById('prix-total');
-  const livraisonDisplay = document.getElementById('livraison-info');
-  const totalInput = document.getElementById('prix-total-input');
-  const payerBtn = document.getElementById('payer-btn');
+    });
+    // 🚚 frais de port
+    if (totalLivres === 0) {
+      frais = 0;
+    } else if (totalLivres < 35) {
+      frais = 4.90;
+    } else {
+      frais = 0;
+    }
+    const totalFinal = totalLivres + frais;
+    // affichage correct
+    totalDisplay.textContent = `Total
+livres : ${totalLivres.toFixed(2)} €`;
 
-  let totalLivres = 0;
-  let frais = 0;
-  let livres = [];
+    livraisonDisplay.textContent = `Frais
+de livraison : ${frais.toFixed(2)} €`;
+    totalInput.value = totalFinal.toFixed(2) + "
+€";
+    // bouton Stripe
+    if (payerBtn) {
+      payerBtn.style.display = totalLivres
+> 0 ? "inline-block" : "none";
 
-  function calculerTotal() {
-
-    totalLivres = 0;
-    livres = [];
-
-    checkboxes.forEach(c => {
-      if (c.checked) {
-        totalLivres += parseFloat(c.dataset.prix);
-        livres.push(c.parentElement.innerText.trim());
-      }
-    });
-
-    // 🚚 frais de port
-    if (totalLivres === 0) {
-      frais = 0;
-    } else if (totalLivres < 35) {
-      frais = 4.90;
-    } else {
-      frais = 0;
-    }
-
-    let totalFinal = totalLivres + frais;
-
-    // affichage
-    totalDisplay.textContent = `Total livres : ${totalLivres.toFixed(2)} €`;
-    livraisonDisplay.textContent = `Frais de livraison : ${frais.toFixed(2)} €`;
-
-    totalInput.value = totalFinal.toFixed(2) + " €";
-
-    // bouton paiement visible uniquement si panier
-    if (payerBtn) {
-      payerBtn.style.display = totalLivres > 0 ? "inline-block" : "none";
-    }
-  }
-
-  checkboxes.forEach(c => {
-    c.addEventListener('change', calculerTotal);
-  });
-
+    }
+  }
+  checkboxes.forEach(cb => cb.addEventListener("change",
+calculerTotal));
 });
 </script>
 <body class="page-vente">
