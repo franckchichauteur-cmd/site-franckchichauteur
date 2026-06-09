@@ -115,8 +115,8 @@
 <p>Disponible également en format Kindle</p>
 
 <section id="Dédicaces">
-
-  <form action="https://formspree.io/f/myznpved" method="POST">
+<form action="https://formspree.io/f/myznpved" method="POST" id="order-form">
+  
 
     <input type="text" name="Nom" placeholder="Nom" required>
     <input type="email" name="Email" placeholder="Email" required>
@@ -225,10 +225,10 @@ document.addEventListener("DOMContentLoaded", () => {
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
-  const form = document.querySelector("form");
+  const form = document.getElementById("order-form");
 
- 
-<form action="https://formspree.io/f/myznpved" method="POST">
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
     const formData = new FormData(form);
 
@@ -242,14 +242,16 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       if (response.ok) {
+        // EMAIL ENVOYÉ → REDIRECTION STRIPE
         window.location.href = "https://buy.stripe.com/TON_LIEN_STRIPE";
       } else {
         alert("Erreur lors de l'envoi de la commande.");
       }
 
-    } catch (error) {
-      alert("Erreur de connexion.");
+    } catch (err) {
+      alert("Erreur réseau.");
     }
+
   });
 
 });
