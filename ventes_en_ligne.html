@@ -153,9 +153,6 @@
   name="_next"
   value="https://buy.stripe.com/3cIfZh1aifJS4kncIqgYU00">
   
-<input type="hidden" name="_next" value="https://buy.stripe.com/3cIfZh1aifJS4kncIqgYU00">
-  
-
 
   </form>
 
@@ -219,64 +216,47 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   calculerTotal();
-totalFinalGlobal = totalFinal;
+
 });
 </script>
 let totalFinalGlobal = 0;
 <script>
+
 document.addEventListener("DOMContentLoaded", () => {
 
   const form = document.getElementById("order-form");
 
-  form.addEventListener("submit", async (e) => {
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const formData = new FormData(form);
+    // envoi email Formspree
+    form.submit();
 
-    try {
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: formData,
-        headers: {
-          "Accept": "application/json"
-        }
-      });
+    // choix Stripe selon total
+    let stripeLink = "";
 
-      if (response.ok) {
-
-        // ==========================
-        // REDIRECTION STRIPE (TOTAL)
-        // ==========================
-
-        let stripeLink = "";
-
-        if (totalFinalGlobal <= 20) {
-          stripeLink = "https://buy.stripe.com/3cIfZh1aifJS4kncIqgYU00";
-        } 
-        else if (totalFinalGlobal <= 40) {
-          stripeLink = "https://buy.stripe.com/TON_LIEN_40";
-        } 
-        else if (totalFinalGlobal <= 80) {
-          stripeLink = "https://buy.stripe.com/TON_LIEN_80";
-        } 
-        else {
-          stripeLink = "https://buy.stripe.com/TON_LIEN_MAX";
-        }
-
-        window.location.href = stripeLink;
-
-      } else {
-        alert("Erreur lors de l'envoi de la commande.");
-      }
-
-    } catch (err) {
-      alert("Erreur réseau.");
+    if (totalFinalGlobal <= 20) {
+      stripeLink = "https://buy.stripe.com/3cIfZh1aifJS4kncIqgYU00";
+    } 
+    else if (totalFinalGlobal <= 40) {
+      stripeLink = "https://buy.stripe.com/TON_LIEN_40";
+    } 
+    else if (totalFinalGlobal <= 80) {
+      stripeLink = "https://buy.stripe.com/TON_LIEN_80";
+    } 
+    else {
+      stripeLink = "https://buy.stripe.com/TON_LIEN_MAX";
     }
+
+    setTimeout(() => {
+      window.location.href = stripeLink;
+    }, 500);
 
   });
 
 });
 </script>
+
 </body>
 </html>
 
