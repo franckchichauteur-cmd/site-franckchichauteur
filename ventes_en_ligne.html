@@ -144,14 +144,17 @@
     <textarea name="Message" placeholder="Dédicace..."></textarea>
 
     
-<button type="submit" id="payer-btn" style="display:none;margin-top:10px;">
+<button type="submit" id="payer-btn">
   Payer ma commande
+
 </button>
 <input
   type="hidden"
   name="_next"
   value="https://buy.stripe.com/TON_LIEN_STRIPE">
-    
+  
+<input type="hidden" name="_next" value="https://buy.stripe.com/TON_LIEN_STRIPE">
+  
 
 
   </form>
@@ -224,8 +227,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const form = document.querySelector("form");
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+ 
+<form action="https://formspree.io/f/myznpved" method="POST">
 
     const formData = new FormData(form);
 
