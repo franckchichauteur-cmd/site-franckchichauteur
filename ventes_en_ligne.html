@@ -143,14 +143,16 @@
 
     <textarea name="Message" placeholder="Dédicace..."></textarea>
 
-    <button type="button" id="payer-btn" style="display:none;margin-top:10px;">
-      Payer ma commande
-    </button>
-
     
-<button type="submit" id="backup-btn">
-  Envoyer la commande
+<button type="submit" id="payer-btn" style="display:none;margin-top:10px;">
+  Payer ma commande
 </button>
+<input
+  type="hidden"
+  name="_next"
+  value="https://buy.stripe.com/TON_LIEN_STRIPE">
+    
+
 
   </form>
 
