@@ -219,9 +219,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   calculerTotal();
-
+totalFinalGlobal = totalFinal;
 });
 </script>
+let totalFinalGlobal = 0;
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -242,8 +243,28 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       if (response.ok) {
-        // EMAIL ENVOYÉ → REDIRECTION STRIPE
-        window.location.href = "https://buy.stripe.com/3cIfZh1aifJS4kncIqgYU00";
+
+        // ==========================
+        // REDIRECTION STRIPE (TOTAL)
+        // ==========================
+
+        let stripeLink = "";
+
+        if (totalFinalGlobal <= 20) {
+          stripeLink = "https://buy.stripe.com/3cIfZh1aifJS4kncIqgYU00";
+        } 
+        else if (totalFinalGlobal <= 40) {
+          stripeLink = "https://buy.stripe.com/TON_LIEN_40";
+        } 
+        else if (totalFinalGlobal <= 80) {
+          stripeLink = "https://buy.stripe.com/TON_LIEN_80";
+        } 
+        else {
+          stripeLink = "https://buy.stripe.com/TON_LIEN_MAX";
+        }
+
+        window.location.href = stripeLink;
+
       } else {
         alert("Erreur lors de l'envoi de la commande.");
       }
