@@ -196,11 +196,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const totalFinal = totalLivres + frais;
 
-    totalDisplay.textContent =
-      `Total livres : ${totalLivres.toFixed(2)} €`;
+    
+totalDisplay.textContent =
+  `Total de la commande : ${totalFinal.toFixed(2)} €`;
 
-    livraisonDisplay.textContent =
-      `Frais de livraison : ${frais.toFixed(2)} €`;
+livraisonDisplay.textContent =
+  `Livres : ${totalLivres.toFixed(2)} € + Livraison : ${frais.toFixed(2)} €`;
 
     totalInput.value = totalLivres.toFixed(2) + " €";
     livresInput.value = livres.join(" | ");
