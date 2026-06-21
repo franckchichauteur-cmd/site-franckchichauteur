@@ -338,7 +338,29 @@ L’idée d’écrire "Au cœur du passé" m’est venue d’un fait tout simple
       fenetre.document.close();
     }
   </script>
+.livre {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
 
+    /* Encadrement */
+    border: 3px solid #b8860b;
+    border-radius: 20px;
+
+    /* Fond élégant */
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.98),
+        rgba(248,244,230,0.98)
+    );
+
+    /* Ombre */
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.15),
+        inset 0 0 15px rgba(184,134,11,0.15);
+
+    position: relative;
+}
 </body>
 </html>
 
